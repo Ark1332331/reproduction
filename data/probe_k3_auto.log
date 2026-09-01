@@ -1,0 +1,14 @@
+[INFO] train: 5 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_corridors_s0', 'isaac_anymal_poles_s0', 'isaac_anymal_stairs_s0', 'isaac_anymal_walls_s0']
+[INFO] generative kernels: ((3, 3, 3, 2), (3, 3, 3, 2), (3, 3, 3, 2), (3, 3, 3, 2))
+[step 000] loss 2.1723 lr 0.003000 pre 120.8s
+[step 001] loss 2.1710 lr 0.003000 pre 119.2s
+[step 002] loss 2.1698 lr 0.003000 pre 118.4s
+[step 003] loss 2.1686 lr 0.003000 pre 118.5s
+[step 004] loss 2.1673 lr 0.003000 pre 118.2s
+[step 005] loss 2.1661 lr 0.003000 pre 118.5s
+[step 006] loss 2.1649 lr 0.003000 pre 117.7s
+[step 007] loss 2.1637 lr 0.003000 pre 117.5s
+[step 008] loss 2.1625 lr 0.003000 pre 117.8s
+[step 009] loss 2.1614 lr 0.003000 pre 118.0s
+[step 010] loss 2.1602 lr 0.003000 pre 117.7s
+[step 011] loss 2.1590 lr 0.003000 pre 2054.5s

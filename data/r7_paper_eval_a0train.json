@@ -1,0 +1,995 @@
+{
+  "checkpoint": "reproduction/data/r7_train_a0.pt",
+  "trained_steps": 149,
+  "config": {
+    "channels": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "pruning_alpha": 0.0,
+    "train_trajectories": [
+      "isaac_anymal_boxes_s0",
+      "isaac_anymal_boxes_s1",
+      "isaac_anymal_boxes_s2",
+      "isaac_anymal_boxes_s3",
+      "isaac_anymal_corridors_s0",
+      "isaac_anymal_corridors_s1",
+      "isaac_anymal_corridors_s2",
+      "isaac_anymal_corridors_s3",
+      "isaac_anymal_poles_s0",
+      "isaac_anymal_poles_s1",
+      "isaac_anymal_poles_s2",
+      "isaac_anymal_poles_s3",
+      "isaac_anymal_stairs_s0",
+      "isaac_anymal_stairs_s1",
+      "isaac_anymal_stairs_s2",
+      "isaac_anymal_stairs_s3",
+      "isaac_anymal_walls_s0",
+      "isaac_anymal_walls_s1",
+      "isaac_anymal_walls_s2",
+      "isaac_anymal_walls_s3"
+    ]
+  },
+  "alpha_0.05": {
+    "mean": {
+      "model_f1": 0.0013211501735244974,
+      "baseline_f1": 0.3098569768443569,
+      "model_precision": 0.0062158203125,
+      "model_recall": 0.0007412909717467904,
+      "model_height_mae": Infinity,
+      "baseline_height_mae": 0.07401475437671198
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s14",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3191420785841953,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06482151959602359
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.019859249975898968,
+        "model_precision": 0.1005859375,
+        "model_recall": 0.011017221093165044,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": 0.6072420577445701,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": 0.9402137186282901,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": 0.9772294351164419,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.0065637534945909804,
+        "model_precision": 0.02373046875,
+        "model_recall": 0.003808598341770763,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": 0.8093345990951464,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  },
+  "alpha_0.1": {
+    "mean": {
+      "model_f1": 0.0013978817770647375,
+      "baseline_f1": 0.3098569768443569,
+      "model_precision": 0.01488037109375,
+      "model_recall": 0.0007341600843078485,
+      "model_height_mae": Infinity,
+      "baseline_height_mae": 0.07401475437671198
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s14",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3191420785841953,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06482151959602359
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.020799945442766053,
+        "model_precision": 0.23828125,
+        "model_recall": 0.010874603344386209,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": 0.20230444406679454,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.007157690098528697,
+        "model_precision": 0.059326171875,
+        "model_recall": 0.003808598341770763,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": 0.6369267389071589,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  },
+  "alpha_0.2": {
+    "mean": {
+      "model_f1": 0.00027854726885933364,
+      "baseline_f1": 0.3098569768443569,
+      "model_precision": 0.0059244791666666664,
+      "model_recall": 0.0001426265222638434,
+      "model_height_mae": Infinity,
+      "baseline_height_mae": 0.07401475437671198
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s14",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3191420785841953,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06482151959602359
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.005570945377186672,
+        "model_precision": 0.11848958333333333,
+        "model_recall": 0.0028525304452768677,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": 0.3502171601143226,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  },
+  "alpha_0.3": {
+    "mean": {
+      "model_f1": 0.0,
+      "baseline_f1": 0.3098569768443569,
+      "model_precision": 0.0,
+      "model_recall": 0.0,
+      "model_height_mae": Infinity,
+      "baseline_height_mae": 0.07401475437671198
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s14",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3191420785841953,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06482151959602359
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  },
+  "alpha_0.5": {
+    "mean": {
+      "model_f1": 0.0,
+      "baseline_f1": 0.3098569768443569,
+      "model_precision": 0.0,
+      "model_recall": 0.0,
+      "model_height_mae": Infinity,
+      "baseline_height_mae": 0.07401475437671198
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s14",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3191420785841953,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06482151959602359
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  }
+}

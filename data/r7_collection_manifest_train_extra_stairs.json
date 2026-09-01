@@ -1,0 +1,47 @@
+{
+  "purpose": "serial, recoverable IsaacLab R7 data collection; not a claim of paper-scale data",
+  "created_at": "2026-08-27T05:39:12.926706+00:00",
+  "split": "train-extra",
+  "trajectory_steps_requested": 12,
+  "points_per_camera": 1500,
+  "jobs": [
+    {
+      "job": {
+        "terrain": "stairs",
+        "seed": 4,
+        "output": "reproduction/data/isaac_anymal_stairs_s4.npz",
+        "log": "reproduction/data/collection_logs/isaac_anymal_stairs_s4.log"
+      },
+      "status": "completed",
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "isaaclab",
+        "/home/ark/projects/IsaacLab/isaaclab.sh",
+        "-p",
+        "/media/ark/Data/devpy/projects/allinone/reproduction/collect_isaaclab_anymal_trajectory.py",
+        "--headless",
+        "--enable_cameras",
+        "--terrain",
+        "stairs",
+        "--seed",
+        "4",
+        "--trajectory-steps",
+        "12",
+        "--points-per-camera",
+        "1500",
+        "--output",
+        "/media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_stairs_s4.npz"
+      ],
+      "started_at": "2026-08-27T05:39:12.927225+00:00",
+      "returncode": 0,
+      "duration_seconds": 54.1,
+      "finished_at": "2026-08-27T05:40:06.992478+00:00",
+      "captured_frames": 12,
+      "terrain": "stairs",
+      "scene_seed": 4
+    }
+  ]
+}

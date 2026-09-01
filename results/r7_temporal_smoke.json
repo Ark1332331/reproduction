@@ -1,0 +1,23 @@
+{
+  "trajectory": "reproduction/data/isaac_trajectory_000.npz",
+  "trajectory_frames": 12,
+  "config": {
+    "trajectory": "reproduction/data/isaac_trajectory_000.npz",
+    "steps": 1,
+    "device": "cuda",
+    "voxel_size": 0.2,
+    "grid_size": 16,
+    "pruning_alpha": 0.5,
+    "feedback_alpha": 0.0,
+    "results": "reproduction/results/r7_temporal_smoke.json",
+    "checkpoint": "reproduction/results/r7_temporal_smoke.pt"
+  },
+  "training": {
+    "initial_loss": 2.0234248638153076,
+    "final_loss": 2.0234248638153076,
+    "loss_history": [
+      2.0234248638153076
+    ]
+  },
+  "scope": "temporal rollout smoke; no reconstruction-quality claim without held-out trajectories"
+}

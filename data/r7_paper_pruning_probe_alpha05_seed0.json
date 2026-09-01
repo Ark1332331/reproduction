@@ -1,0 +1,3729 @@
+{
+  "purpose": "paper alpha pruning contract, not a training result",
+  "alpha": 0.5,
+  "model_seed": 0,
+  "frame_count": 43,
+  "summary": {
+    "l3": {
+      "unpruned_coverage_mean": 0.5989876067073927,
+      "surviving_coverage_mean": 0.5989876067073927,
+      "positive_count_mean": 40.16279069767442,
+      "bce_mean": 0.6931345518245253
+    },
+    "l2": {
+      "unpruned_coverage_mean": 0.6062933442926017,
+      "surviving_coverage_mean": 0.6062933442926017,
+      "positive_count_mean": 163.51162790697674,
+      "bce_mean": 0.6932041742080866
+    },
+    "l1": {
+      "unpruned_coverage_mean": 0.6152763000702913,
+      "surviving_coverage_mean": 0.6152763000702913,
+      "positive_count_mean": 673.2790697674419,
+      "bce_mean": 0.6932750344276428
+    },
+    "l0": {
+      "surviving_coverage_mean": 0.6227900743384303
+    }
+  },
+  "per_frame": [
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 0,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931357383728027
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 415,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.693199634552002
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3320,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3191,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.693278431892395
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23586,
+            "target_count": 4018,
+            "target_covered": 2526,
+            "target_coverage": 0.6286709805873569
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 1,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.693133533000946
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 434,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932024955749512
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3472,
+            "target_count": 1016,
+            "target_covered": 640,
+            "target_coverage": 0.6299212598425197
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3349,
+            "target_count": 1016,
+            "target_covered": 640,
+            "target_coverage": 0.6299212598425197
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932798027992249
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24895,
+            "target_count": 3994,
+            "target_covered": 2526,
+            "target_coverage": 0.6324486730095142
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 2,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931332945823669
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 428,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932011842727661
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3424,
+            "target_count": 1038,
+            "target_covered": 662,
+            "target_coverage": 0.6377649325626205
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3303,
+            "target_count": 1038,
+            "target_covered": 662,
+            "target_coverage": 0.6377649325626205
+          },
+          "positive_count_for_bce": 662,
+          "bce": 0.6932776570320129
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24528,
+            "target_count": 4116,
+            "target_covered": 2642,
+            "target_coverage": 0.641885325558795
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 3,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931359767913818
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 424,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6931995749473572
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3392,
+            "target_count": 1101,
+            "target_covered": 715,
+            "target_coverage": 0.6494096276112625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3272,
+            "target_count": 1101,
+            "target_covered": 715,
+            "target_coverage": 0.6494096276112625
+          },
+          "positive_count_for_bce": 715,
+          "bce": 0.6932792067527771
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24269,
+            "target_count": 4398,
+            "target_covered": 2868,
+            "target_coverage": 0.6521145975443383
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 4,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931357383728027
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 427,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932002305984497
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3416,
+            "target_count": 1132,
+            "target_covered": 749,
+            "target_coverage": 0.661660777385159
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3298,
+            "target_count": 1132,
+            "target_covered": 749,
+            "target_coverage": 0.661660777385159
+          },
+          "positive_count_for_bce": 749,
+          "bce": 0.6932756304740906
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24539,
+            "target_count": 4562,
+            "target_covered": 3055,
+            "target_coverage": 0.6696624287593161
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 5,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931323409080505
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 456,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932047009468079
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3648,
+            "target_count": 1175,
+            "target_covered": 765,
+            "target_coverage": 0.6510638297872341
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3533,
+            "target_count": 1175,
+            "target_covered": 765,
+            "target_coverage": 0.6510638297872341
+          },
+          "positive_count_for_bce": 765,
+          "bce": 0.6932621002197266
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 26464,
+            "target_count": 4769,
+            "target_covered": 3139,
+            "target_coverage": 0.6582092681903963
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 6,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 88,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 86,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.693134605884552
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 688,
+            "target_count": 258,
+            "target_covered": 160,
+            "target_coverage": 0.6201550387596899
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 480,
+            "target_count": 258,
+            "target_covered": 160,
+            "target_coverage": 0.6201550387596899
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.693210780620575
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3840,
+            "target_count": 1212,
+            "target_covered": 721,
+            "target_coverage": 0.5948844884488449
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3711,
+            "target_count": 1212,
+            "target_covered": 721,
+            "target_coverage": 0.5948844884488449
+          },
+          "positive_count_for_bce": 721,
+          "bce": 0.6932673454284668
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 27730,
+            "target_count": 4934,
+            "target_covered": 2955,
+            "target_coverage": 0.5989055533036076
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 0,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931349635124207
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 422,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932007670402527
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3376,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3255,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.693278968334198
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24132,
+            "target_count": 4018,
+            "target_covered": 2526,
+            "target_coverage": 0.6286709805873569
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 1,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 68,
+            "target_covered": 40,
+            "target_coverage": 0.5882352941176471
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 68,
+            "target_covered": 40,
+            "target_coverage": 0.5882352941176471
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931377649307251
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 263,
+            "target_covered": 160,
+            "target_coverage": 0.6083650190114068
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 420,
+            "target_count": 263,
+            "target_covered": 160,
+            "target_coverage": 0.6083650190114068
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6931948065757751
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3360,
+            "target_count": 1029,
+            "target_covered": 640,
+            "target_coverage": 0.6219630709426628
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3237,
+            "target_count": 1029,
+            "target_covered": 640,
+            "target_coverage": 0.6219630709426628
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932774186134338
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23976,
+            "target_count": 4011,
+            "target_covered": 2526,
+            "target_coverage": 0.6297681376215407
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 2,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 74,
+            "target_covered": 40,
+            "target_coverage": 0.5405405405405406
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 74,
+            "target_covered": 40,
+            "target_coverage": 0.5405405405405406
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931347250938416
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 282,
+            "target_covered": 160,
+            "target_coverage": 0.5673758865248227
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 427,
+            "target_count": 282,
+            "target_covered": 160,
+            "target_coverage": 0.5673758865248227
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932026743888855
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3416,
+            "target_count": 1104,
+            "target_covered": 640,
+            "target_coverage": 0.5797101449275363
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3293,
+            "target_count": 1104,
+            "target_covered": 640,
+            "target_coverage": 0.5797101449275363
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932809352874756
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24457,
+            "target_count": 4248,
+            "target_covered": 2526,
+            "target_coverage": 0.594632768361582
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 3,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 77,
+            "target_covered": 40,
+            "target_coverage": 0.5194805194805194
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 77,
+            "target_covered": 40,
+            "target_coverage": 0.5194805194805194
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931331157684326
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 299,
+            "target_covered": 160,
+            "target_coverage": 0.5351170568561873
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 422,
+            "target_count": 299,
+            "target_covered": 160,
+            "target_coverage": 0.5351170568561873
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932048797607422
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3376,
+            "target_count": 1175,
+            "target_covered": 640,
+            "target_coverage": 0.5446808510638298
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3247,
+            "target_count": 1175,
+            "target_covered": 640,
+            "target_coverage": 0.5446808510638298
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932783126831055
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24013,
+            "target_count": 4420,
+            "target_covered": 2522,
+            "target_coverage": 0.5705882352941176
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 4,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 77,
+            "target_covered": 41,
+            "target_coverage": 0.5324675324675324
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 77,
+            "target_covered": 41,
+            "target_coverage": 0.5324675324675324
+          },
+          "positive_count_for_bce": 41,
+          "bce": 0.6931340098381042
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 305,
+            "target_covered": 166,
+            "target_coverage": 0.5442622950819672
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 430,
+            "target_count": 305,
+            "target_covered": 166,
+            "target_coverage": 0.5442622950819672
+          },
+          "positive_count_for_bce": 166,
+          "bce": 0.6932023167610168
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3440,
+            "target_count": 1203,
+            "target_covered": 666,
+            "target_coverage": 0.5536159600997507
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3323,
+            "target_count": 1203,
+            "target_covered": 666,
+            "target_coverage": 0.5536159600997507
+          },
+          "positive_count_for_bce": 666,
+          "bce": 0.693280041217804
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24659,
+            "target_count": 4575,
+            "target_covered": 2606,
+            "target_coverage": 0.5696174863387978
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 5,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 79,
+            "target_covered": 42,
+            "target_coverage": 0.5316455696202531
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 79,
+            "target_covered": 42,
+            "target_coverage": 0.5316455696202531
+          },
+          "positive_count_for_bce": 42,
+          "bce": 0.6931394338607788
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 311,
+            "target_covered": 169,
+            "target_coverage": 0.5434083601286174
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 425,
+            "target_count": 311,
+            "target_covered": 169,
+            "target_coverage": 0.5434083601286174
+          },
+          "positive_count_for_bce": 169,
+          "bce": 0.6932033896446228
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3400,
+            "target_count": 1250,
+            "target_covered": 680,
+            "target_coverage": 0.544
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3282,
+            "target_count": 1250,
+            "target_covered": 680,
+            "target_coverage": 0.544
+          },
+          "positive_count_for_bce": 680,
+          "bce": 0.6932842135429382
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24297,
+            "target_count": 4710,
+            "target_covered": 2653,
+            "target_coverage": 0.5632696390658174
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 6,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 79,
+            "target_covered": 41,
+            "target_coverage": 0.5189873417721519
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 78,
+            "target_count": 79,
+            "target_covered": 41,
+            "target_coverage": 0.5189873417721519
+          },
+          "positive_count_for_bce": 41,
+          "bce": 0.6931334733963013
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 624,
+            "target_count": 305,
+            "target_covered": 163,
+            "target_coverage": 0.5344262295081967
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 392,
+            "target_count": 305,
+            "target_covered": 163,
+            "target_coverage": 0.5344262295081967
+          },
+          "positive_count_for_bce": 163,
+          "bce": 0.6932258009910583
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3136,
+            "target_count": 1196,
+            "target_covered": 647,
+            "target_coverage": 0.5409698996655519
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 2990,
+            "target_count": 1196,
+            "target_covered": 647,
+            "target_coverage": 0.5409698996655519
+          },
+          "positive_count_for_bce": 647,
+          "bce": 0.6933004856109619
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 21762,
+            "target_count": 4499,
+            "target_covered": 2539,
+            "target_coverage": 0.5643476328072905
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 0,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931358575820923
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 414,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932032108306885
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3312,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3181,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932810544967651
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23479,
+            "target_count": 4018,
+            "target_covered": 2526,
+            "target_coverage": 0.6286709805873569
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 1,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931366324424744
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 420,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6931993365287781
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3360,
+            "target_count": 1016,
+            "target_covered": 640,
+            "target_coverage": 0.6299212598425197
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3234,
+            "target_count": 1016,
+            "target_covered": 640,
+            "target_coverage": 0.6299212598425197
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932787299156189
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23925,
+            "target_count": 3994,
+            "target_covered": 2526,
+            "target_coverage": 0.6324486730095142
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 2,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931353807449341
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 432,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6931978464126587
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3456,
+            "target_count": 1012,
+            "target_covered": 640,
+            "target_coverage": 0.6324110671936759
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3336,
+            "target_count": 1012,
+            "target_covered": 640,
+            "target_coverage": 0.6324110671936759
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932751536369324
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24774,
+            "target_count": 3978,
+            "target_covered": 2526,
+            "target_coverage": 0.6349924585218703
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 3,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 66,
+            "target_covered": 42,
+            "target_coverage": 0.6363636363636364
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 66,
+            "target_covered": 42,
+            "target_coverage": 0.6363636363636364
+          },
+          "positive_count_for_bce": 42,
+          "bce": 0.6931338310241699
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 268,
+            "target_covered": 172,
+            "target_coverage": 0.6417910447761194
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 428,
+            "target_count": 268,
+            "target_covered": 172,
+            "target_coverage": 0.6417910447761194
+          },
+          "positive_count_for_bce": 172,
+          "bce": 0.693200409412384
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3424,
+            "target_count": 1043,
+            "target_covered": 675,
+            "target_coverage": 0.6471716203259827
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3296,
+            "target_count": 1043,
+            "target_covered": 675,
+            "target_coverage": 0.6471716203259827
+          },
+          "positive_count_for_bce": 675,
+          "bce": 0.693280041217804
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24476,
+            "target_count": 4067,
+            "target_covered": 2629,
+            "target_coverage": 0.6464224243914434
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 4,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 66,
+            "target_covered": 42,
+            "target_coverage": 0.6363636363636364
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 66,
+            "target_covered": 42,
+            "target_coverage": 0.6363636363636364
+          },
+          "positive_count_for_bce": 42,
+          "bce": 0.6931304931640625
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 262,
+            "target_covered": 166,
+            "target_coverage": 0.6335877862595419
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 425,
+            "target_count": 262,
+            "target_covered": 166,
+            "target_coverage": 0.6335877862595419
+          },
+          "positive_count_for_bce": 166,
+          "bce": 0.693200945854187
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3400,
+            "target_count": 1039,
+            "target_covered": 675,
+            "target_coverage": 0.6496631376323387
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3277,
+            "target_count": 1039,
+            "target_covered": 675,
+            "target_coverage": 0.6496631376323387
+          },
+          "positive_count_for_bce": 675,
+          "bce": 0.6932769417762756
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24272,
+            "target_count": 4040,
+            "target_covered": 2624,
+            "target_coverage": 0.6495049504950495
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 5,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 68,
+            "target_covered": 44,
+            "target_coverage": 0.6470588235294118
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 68,
+            "target_covered": 44,
+            "target_coverage": 0.6470588235294118
+          },
+          "positive_count_for_bce": 44,
+          "bce": 0.6931361556053162
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 268,
+            "target_covered": 172,
+            "target_coverage": 0.6417910447761194
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 436,
+            "target_count": 268,
+            "target_covered": 172,
+            "target_coverage": 0.6417910447761194
+          },
+          "positive_count_for_bce": 172,
+          "bce": 0.6931944489479065
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3488,
+            "target_count": 1032,
+            "target_covered": 668,
+            "target_coverage": 0.6472868217054264
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3365,
+            "target_count": 1032,
+            "target_covered": 668,
+            "target_coverage": 0.6472868217054264
+          },
+          "positive_count_for_bce": 668,
+          "bce": 0.6932756304740906
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 25091,
+            "target_count": 4051,
+            "target_covered": 2635,
+            "target_coverage": 0.6504566773636139
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 6,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 71,
+            "target_covered": 40,
+            "target_coverage": 0.5633802816901409
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 71,
+            "target_covered": 40,
+            "target_coverage": 0.5633802816901409
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931319236755371
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 278,
+            "target_covered": 160,
+            "target_coverage": 0.5755395683453237
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 400,
+            "target_count": 278,
+            "target_covered": 160,
+            "target_coverage": 0.5755395683453237
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932143568992615
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3200,
+            "target_count": 1109,
+            "target_covered": 636,
+            "target_coverage": 0.5734896302975654
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3050,
+            "target_count": 1109,
+            "target_covered": 636,
+            "target_coverage": 0.5734896302975654
+          },
+          "positive_count_for_bce": 636,
+          "bce": 0.6932914853096008
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 22227,
+            "target_count": 4193,
+            "target_covered": 2488,
+            "target_coverage": 0.5933699022179824
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 7,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 56,
+            "target_count": 64,
+            "target_covered": 31,
+            "target_coverage": 0.484375
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 56,
+            "target_count": 64,
+            "target_covered": 31,
+            "target_coverage": 0.484375
+          },
+          "positive_count_for_bce": 31,
+          "bce": 0.6931291222572327
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 448,
+            "target_count": 244,
+            "target_covered": 124,
+            "target_coverage": 0.5081967213114754
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 306,
+            "target_count": 244,
+            "target_covered": 124,
+            "target_coverage": 0.5081967213114754
+          },
+          "positive_count_for_bce": 124,
+          "bce": 0.6932346224784851
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 2448,
+            "target_count": 922,
+            "target_covered": 472,
+            "target_coverage": 0.5119305856832972
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 2328,
+            "target_count": 922,
+            "target_covered": 472,
+            "target_coverage": 0.5119305856832972
+          },
+          "positive_count_for_bce": 472,
+          "bce": 0.6933201551437378
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 16589,
+            "target_count": 2969,
+            "target_covered": 1524,
+            "target_coverage": 0.5133041428090266
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 8,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 72,
+            "target_count": 64,
+            "target_covered": 39,
+            "target_coverage": 0.609375
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 71,
+            "target_count": 64,
+            "target_covered": 39,
+            "target_coverage": 0.609375
+          },
+          "positive_count_for_bce": 39,
+          "bce": 0.6931315660476685
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 568,
+            "target_count": 238,
+            "target_covered": 153,
+            "target_coverage": 0.6428571428571429
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 400,
+            "target_count": 238,
+            "target_covered": 153,
+            "target_coverage": 0.6428571428571429
+          },
+          "positive_count_for_bce": 153,
+          "bce": 0.6932057738304138
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3200,
+            "target_count": 926,
+            "target_covered": 615,
+            "target_coverage": 0.6641468682505399
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3077,
+            "target_count": 926,
+            "target_covered": 615,
+            "target_coverage": 0.6641468682505399
+          },
+          "positive_count_for_bce": 615,
+          "bce": 0.693259060382843
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 22717,
+            "target_count": 3050,
+            "target_covered": 2073,
+            "target_coverage": 0.679672131147541
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 9,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 72,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 71,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931334733963013
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 568,
+            "target_count": 238,
+            "target_covered": 156,
+            "target_coverage": 0.6554621848739496
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 398,
+            "target_count": 238,
+            "target_covered": 156,
+            "target_coverage": 0.6554621848739496
+          },
+          "positive_count_for_bce": 156,
+          "bce": 0.6932110786437988
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3184,
+            "target_count": 922,
+            "target_covered": 625,
+            "target_coverage": 0.6778741865509761
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3056,
+            "target_count": 922,
+            "target_covered": 625,
+            "target_coverage": 0.6778741865509761
+          },
+          "positive_count_for_bce": 625,
+          "bce": 0.6932584643363953
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 22347,
+            "target_count": 2885,
+            "target_covered": 1974,
+            "target_coverage": 0.6842287694974003
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 10,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 72,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 71,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931303143501282
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 568,
+            "target_count": 238,
+            "target_covered": 156,
+            "target_coverage": 0.6554621848739496
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 399,
+            "target_count": 238,
+            "target_covered": 156,
+            "target_coverage": 0.6554621848739496
+          },
+          "positive_count_for_bce": 156,
+          "bce": 0.6932153105735779
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3192,
+            "target_count": 922,
+            "target_covered": 625,
+            "target_coverage": 0.6778741865509761
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3055,
+            "target_count": 922,
+            "target_covered": 625,
+            "target_coverage": 0.6778741865509761
+          },
+          "positive_count_for_bce": 625,
+          "bce": 0.6932544112205505
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 22348,
+            "target_count": 2916,
+            "target_covered": 1997,
+            "target_coverage": 0.6848422496570644
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 11,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 72,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 71,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.693132758140564
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 568,
+            "target_count": 238,
+            "target_covered": 156,
+            "target_coverage": 0.6554621848739496
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 389,
+            "target_count": 238,
+            "target_covered": 156,
+            "target_coverage": 0.6554621848739496
+          },
+          "positive_count_for_bce": 156,
+          "bce": 0.6932129263877869
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3112,
+            "target_count": 929,
+            "target_covered": 633,
+            "target_coverage": 0.6813778256189451
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 2984,
+            "target_count": 929,
+            "target_covered": 633,
+            "target_coverage": 0.6813778256189451
+          },
+          "positive_count_for_bce": 633,
+          "bce": 0.6932594180107117
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 21859,
+            "target_count": 3097,
+            "target_covered": 2129,
+            "target_coverage": 0.6874394575395544
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 0,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.693135678768158
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 408,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932023763656616
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3264,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3143,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932874321937561
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23236,
+            "target_count": 4014,
+            "target_covered": 2526,
+            "target_coverage": 0.6292974588938715
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 1,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931347250938416
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 435,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932061314582825
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3480,
+            "target_count": 1016,
+            "target_covered": 640,
+            "target_coverage": 0.6299212598425197
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3358,
+            "target_count": 1016,
+            "target_covered": 640,
+            "target_coverage": 0.6299212598425197
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932746171951294
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24938,
+            "target_count": 3990,
+            "target_covered": 2526,
+            "target_coverage": 0.6330827067669172
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 2,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.693135678768158
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 431,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6931982040405273
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3448,
+            "target_count": 1012,
+            "target_covered": 640,
+            "target_coverage": 0.6324110671936759
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3323,
+            "target_count": 1012,
+            "target_covered": 640,
+            "target_coverage": 0.6324110671936759
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932765245437622
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24636,
+            "target_count": 3978,
+            "target_covered": 2526,
+            "target_coverage": 0.6349924585218703
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 3,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931349039077759
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 259,
+            "target_covered": 162,
+            "target_coverage": 0.6254826254826255
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 417,
+            "target_count": 259,
+            "target_covered": 162,
+            "target_coverage": 0.6254826254826255
+          },
+          "positive_count_for_bce": 162,
+          "bce": 0.6932039260864258
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3336,
+            "target_count": 1039,
+            "target_covered": 664,
+            "target_coverage": 0.6390760346487007
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3215,
+            "target_count": 1039,
+            "target_covered": 664,
+            "target_coverage": 0.6390760346487007
+          },
+          "positive_count_for_bce": 664,
+          "bce": 0.6932854652404785
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23860,
+            "target_count": 4310,
+            "target_covered": 2835,
+            "target_coverage": 0.6577726218097448
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 4,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931363940238953
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 275,
+            "target_covered": 176,
+            "target_coverage": 0.64
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 430,
+            "target_count": 275,
+            "target_covered": 176,
+            "target_coverage": 0.64
+          },
+          "positive_count_for_bce": 176,
+          "bce": 0.6931964755058289
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3440,
+            "target_count": 1169,
+            "target_covered": 783,
+            "target_coverage": 0.669803250641574
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3323,
+            "target_count": 1169,
+            "target_covered": 783,
+            "target_coverage": 0.669803250641574
+          },
+          "positive_count_for_bce": 783,
+          "bce": 0.693270742893219
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24723,
+            "target_count": 4870,
+            "target_covered": 3357,
+            "target_coverage": 0.6893223819301848
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 5,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 72,
+            "target_count": 69,
+            "target_covered": 38,
+            "target_coverage": 0.5507246376811594
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 72,
+            "target_count": 69,
+            "target_covered": 38,
+            "target_coverage": 0.5507246376811594
+          },
+          "positive_count_for_bce": 38,
+          "bce": 0.6931331753730774
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 576,
+            "target_count": 303,
+            "target_covered": 170,
+            "target_coverage": 0.5610561056105611
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 407,
+            "target_count": 303,
+            "target_covered": 170,
+            "target_coverage": 0.5610561056105611
+          },
+          "positive_count_for_bce": 170,
+          "bce": 0.6932104825973511
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3256,
+            "target_count": 1317,
+            "target_covered": 746,
+            "target_coverage": 0.5664388762338648
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3128,
+            "target_count": 1317,
+            "target_covered": 746,
+            "target_coverage": 0.5664388762338648
+          },
+          "positive_count_for_bce": 746,
+          "bce": 0.6932823657989502
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23159,
+            "target_count": 5514,
+            "target_covered": 3255,
+            "target_coverage": 0.5903155603917302
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 6,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 74,
+            "target_covered": 32,
+            "target_coverage": 0.43243243243243246
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 74,
+            "target_covered": 32,
+            "target_coverage": 0.43243243243243246
+          },
+          "positive_count_for_bce": 32,
+          "bce": 0.6931343078613281
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 336,
+            "target_covered": 152,
+            "target_coverage": 0.4523809523809524
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 420,
+            "target_count": 336,
+            "target_covered": 152,
+            "target_coverage": 0.4523809523809524
+          },
+          "positive_count_for_bce": 152,
+          "bce": 0.6932008266448975
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3360,
+            "target_count": 1466,
+            "target_covered": 685,
+            "target_coverage": 0.46725784447476126
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3249,
+            "target_count": 1466,
+            "target_covered": 685,
+            "target_coverage": 0.46725784447476126
+          },
+          "positive_count_for_bce": 685,
+          "bce": 0.6932765245437622
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24291,
+            "target_count": 6107,
+            "target_covered": 2914,
+            "target_coverage": 0.47715736040609136
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 7,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 74,
+            "target_covered": 37,
+            "target_coverage": 0.5
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 77,
+            "target_count": 74,
+            "target_covered": 37,
+            "target_coverage": 0.5
+          },
+          "positive_count_for_bce": 37,
+          "bce": 0.6931338906288147
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 616,
+            "target_count": 339,
+            "target_covered": 177,
+            "target_coverage": 0.5221238938053098
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 445,
+            "target_count": 339,
+            "target_covered": 177,
+            "target_coverage": 0.5221238938053098
+          },
+          "positive_count_for_bce": 177,
+          "bce": 0.693202793598175
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3560,
+            "target_count": 1457,
+            "target_covered": 772,
+            "target_coverage": 0.5298558682223747
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3449,
+            "target_count": 1457,
+            "target_covered": 772,
+            "target_coverage": 0.5298558682223747
+          },
+          "positive_count_for_bce": 772,
+          "bce": 0.6932621598243713
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 26030,
+            "target_count": 6085,
+            "target_covered": 3138,
+            "target_coverage": 0.5156943303204602
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 8,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 74,
+            "target_covered": 42,
+            "target_coverage": 0.5675675675675675
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 74,
+            "target_covered": 42,
+            "target_coverage": 0.5675675675675675
+          },
+          "positive_count_for_bce": 42,
+          "bce": 0.6931392550468445
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 334,
+            "target_covered": 181,
+            "target_coverage": 0.5419161676646707
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 454,
+            "target_count": 334,
+            "target_covered": 181,
+            "target_coverage": 0.5419161676646707
+          },
+          "positive_count_for_bce": 181,
+          "bce": 0.6932079792022705
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3632,
+            "target_count": 1468,
+            "target_covered": 792,
+            "target_coverage": 0.5395095367847411
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3530,
+            "target_count": 1468,
+            "target_covered": 792,
+            "target_coverage": 0.5395095367847411
+          },
+          "positive_count_for_bce": 792,
+          "bce": 0.6932380795478821
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 26864,
+            "target_count": 6089,
+            "target_covered": 3373,
+            "target_coverage": 0.5539497454426014
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 9,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 104,
+            "target_count": 76,
+            "target_covered": 54,
+            "target_coverage": 0.7105263157894737
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 100,
+            "target_count": 76,
+            "target_covered": 54,
+            "target_coverage": 0.7105263157894737
+          },
+          "positive_count_for_bce": 54,
+          "bce": 0.693140983581543
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 800,
+            "target_count": 335,
+            "target_covered": 242,
+            "target_coverage": 0.7223880597014926
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 609,
+            "target_count": 335,
+            "target_covered": 242,
+            "target_coverage": 0.7223880597014926
+          },
+          "positive_count_for_bce": 242,
+          "bce": 0.6931886076927185
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 4872,
+            "target_count": 1420,
+            "target_covered": 1035,
+            "target_coverage": 0.7288732394366197
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 4760,
+            "target_count": 1420,
+            "target_covered": 1035,
+            "target_coverage": 0.7288732394366197
+          },
+          "positive_count_for_bce": 1035,
+          "bce": 0.6932000517845154
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 36689,
+            "target_count": 5781,
+            "target_covered": 4296,
+            "target_coverage": 0.7431240269849507
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 0,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931358575820923
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 414,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932032108306885
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3312,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3181,
+            "target_count": 1022,
+            "target_covered": 640,
+            "target_coverage": 0.6262230919765166
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932810544967651
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23479,
+            "target_count": 4018,
+            "target_covered": 2526,
+            "target_coverage": 0.6286709805873569
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 1,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931366324424744
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 420,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6931993365287781
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3360,
+            "target_count": 1016,
+            "target_covered": 640,
+            "target_coverage": 0.6299212598425197
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3234,
+            "target_count": 1016,
+            "target_covered": 640,
+            "target_coverage": 0.6299212598425197
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932787299156189
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23925,
+            "target_count": 3994,
+            "target_covered": 2526,
+            "target_coverage": 0.6324486730095142
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 2,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931353807449341
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 432,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6931978464126587
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3456,
+            "target_count": 1012,
+            "target_covered": 640,
+            "target_coverage": 0.6324110671936759
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3336,
+            "target_count": 1012,
+            "target_covered": 640,
+            "target_coverage": 0.6324110671936759
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932751536369324
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24774,
+            "target_count": 3978,
+            "target_covered": 2526,
+            "target_coverage": 0.6349924585218703
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 3,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 64,
+            "target_covered": 40,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931338906288147
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 416,
+            "target_count": 256,
+            "target_covered": 160,
+            "target_coverage": 0.625
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6932011246681213
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3328,
+            "target_count": 1008,
+            "target_covered": 640,
+            "target_coverage": 0.6349206349206349
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3202,
+            "target_count": 1008,
+            "target_covered": 640,
+            "target_coverage": 0.6349206349206349
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.6932839751243591
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 23722,
+            "target_count": 3958,
+            "target_covered": 2520,
+            "target_coverage": 0.6366851945426983
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 4,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 66,
+            "target_covered": 40,
+            "target_coverage": 0.6060606060606061
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 79,
+            "target_count": 66,
+            "target_covered": 40,
+            "target_coverage": 0.6060606060606061
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931337118148804
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 632,
+            "target_count": 262,
+            "target_covered": 160,
+            "target_coverage": 0.6106870229007634
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 427,
+            "target_count": 262,
+            "target_covered": 160,
+            "target_coverage": 0.6106870229007634
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.693204402923584
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3416,
+            "target_count": 1018,
+            "target_covered": 640,
+            "target_coverage": 0.6286836935166994
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3288,
+            "target_count": 1018,
+            "target_covered": 640,
+            "target_coverage": 0.6286836935166994
+          },
+          "positive_count_for_bce": 640,
+          "bce": 0.693280041217804
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24388,
+            "target_count": 3969,
+            "target_covered": 2514,
+            "target_coverage": 0.6334089191232048
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 5,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 68,
+            "target_covered": 40,
+            "target_coverage": 0.5882352941176471
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 68,
+            "target_covered": 40,
+            "target_coverage": 0.5882352941176471
+          },
+          "positive_count_for_bce": 40,
+          "bce": 0.6931359171867371
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 274,
+            "target_covered": 160,
+            "target_coverage": 0.583941605839416
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 425,
+            "target_count": 274,
+            "target_covered": 160,
+            "target_coverage": 0.583941605839416
+          },
+          "positive_count_for_bce": 160,
+          "bce": 0.6931980848312378
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3400,
+            "target_count": 1084,
+            "target_covered": 638,
+            "target_coverage": 0.5885608856088561
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3278,
+            "target_count": 1084,
+            "target_covered": 638,
+            "target_coverage": 0.5885608856088561
+          },
+          "positive_count_for_bce": 638,
+          "bce": 0.6932767629623413
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24306,
+            "target_count": 4206,
+            "target_covered": 2506,
+            "target_coverage": 0.5958155016642891
+          }
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 6,
+      "layers": {
+        "l3": {
+          "tensor_stride": [
+            8,
+            8,
+            8,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 80,
+            "target_count": 68,
+            "target_covered": 42,
+            "target_coverage": 0.6176470588235294
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 80,
+            "target_count": 68,
+            "target_covered": 42,
+            "target_coverage": 0.6176470588235294
+          },
+          "positive_count_for_bce": 42,
+          "bce": 0.6931291222572327
+        },
+        "l2": {
+          "tensor_stride": [
+            4,
+            4,
+            4,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 640,
+            "target_count": 286,
+            "target_covered": 178,
+            "target_coverage": 0.6223776223776224
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 431,
+            "target_count": 286,
+            "target_covered": 178,
+            "target_coverage": 0.6223776223776224
+          },
+          "positive_count_for_bce": 178,
+          "bce": 0.6932141780853271
+        },
+        "l1": {
+          "tensor_stride": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "unpruned": {
+            "k0_candidate_count": 3448,
+            "target_count": 1201,
+            "target_covered": 727,
+            "target_coverage": 0.6053288925895087
+          },
+          "after_target_guarded_pruning": {
+            "k0_candidate_count": 3312,
+            "target_count": 1201,
+            "target_covered": 727,
+            "target_coverage": 0.6053288925895087
+          },
+          "positive_count_for_bce": 727,
+          "bce": 0.6932857036590576
+        },
+        "l0": {
+          "tensor_stride": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "after_final_target_guarded_pruning": {
+            "k0_candidate_count": 24382,
+            "target_count": 4629,
+            "target_covered": 2801,
+            "target_coverage": 0.605098293367898
+          }
+        }
+      }
+    }
+  ]
+}

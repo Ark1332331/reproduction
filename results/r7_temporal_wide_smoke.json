@@ -1,0 +1,122 @@
+{
+  "trajectory": "reproduction/data/isaac_trajectory_000.npz",
+  "trajectory_frames": 12,
+  "config": {
+    "trajectory": "reproduction/data/isaac_trajectory_000.npz",
+    "validation_trajectory": "reproduction/data/isaac_trajectory_001.npz",
+    "steps": 10,
+    "device": "cuda",
+    "voxel_size": 0.2,
+    "grid_size": 16,
+    "pruning_alpha": 0.5,
+    "feedback_alpha": 0.0,
+    "learning_rate": 0.01,
+    "final_learning_rate": 0.0001,
+    "channels": [
+      16,
+      32,
+      48,
+      64
+    ],
+    "seed": 0,
+    "results": "reproduction/results/r7_temporal_wide_smoke.json",
+    "checkpoint": "reproduction/results/r7_temporal_wide_smoke.pt"
+  },
+  "training": {
+    "initial_loss": 2.04353666305542,
+    "final_loss": 1.8710325956344604,
+    "loss_history": [
+      2.04353666305542,
+      1.9504565000534058,
+      1.9235455989837646,
+      1.896789312362671,
+      1.882315993309021,
+      1.8763597011566162,
+      1.8736803531646729,
+      1.872284173965454,
+      1.871496558189392,
+      1.8710325956344604
+    ],
+    "learning_rate_history": [
+      0.01,
+      0.0059948425031894105,
+      0.0035938136638046275,
+      0.002154434690031884,
+      0.001291549665014884,
+      0.0007742636826811272,
+      0.000464158883361278,
+      0.0002782559402207125,
+      0.0001668100537200059,
+      0.00010000000000000003
+    ]
+  },
+  "evaluation": {
+    "train": {
+      "frame_count": 12,
+      "current_measurement_baseline": {
+        "occupancy": {
+          "true_positive": 1259,
+          "false_positive": 0,
+          "false_negative": 2173,
+          "precision": 1.0,
+          "recall": 0.36684149184149184,
+          "f1": 0.536772543167768
+        },
+        "height": {
+          "matched_cell_count": 1236,
+          "target_cell_count": 3072,
+          "mean_absolute_error": 0.010293809088206216
+        }
+      },
+      "autoregressive_model": {
+        "occupancy": {
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 3432,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "height": {
+          "matched_cell_count": 0,
+          "target_cell_count": 3072,
+          "mean_absolute_error": Infinity
+        }
+      }
+    },
+    "validation": {
+      "frame_count": 12,
+      "current_measurement_baseline": {
+        "occupancy": {
+          "true_positive": 1261,
+          "false_positive": 0,
+          "false_negative": 2117,
+          "precision": 1.0,
+          "recall": 0.37329780935464774,
+          "f1": 0.5436516490622979
+        },
+        "height": {
+          "matched_cell_count": 1230,
+          "target_cell_count": 3072,
+          "mean_absolute_error": 0.013226747621093098
+        }
+      },
+      "autoregressive_model": {
+        "occupancy": {
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 3378,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "height": {
+          "matched_cell_count": 0,
+          "target_cell_count": 3072,
+          "mean_absolute_error": Infinity
+        }
+      }
+    }
+  },
+  "scope": "temporal rollout diagnostic; no paper-performance claim without many held-out trajectories"
+}

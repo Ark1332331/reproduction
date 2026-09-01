@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "k0_only_mean": 0.627,
+    "k0_only_min": 0.627,
+    "k1_previous_observation_mean": 0.627,
+    "k1_previous_observation_min": 0.627,
+    "k1_oracle_target_mean": 0.627,
+    "k1_oracle_target_min": 0.627
+  },
+  "per_frame": [
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_previous_observation": 0.627,
+      "coverage_k1_oracle_target": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 1,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_previous_observation": 0.627,
+      "coverage_k1_oracle_target": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    }
+  ]
+}

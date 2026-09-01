@@ -1,0 +1,32 @@
+[INFO] train: 20 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_boxes_s1', 'isaac_anymal_boxes_s2', 'isaac_anymal_boxes_s3', 'isaac_anymal_corridors_s0', 'isaac_anymal_corridors_s1', 'isaac_anymal_corridors_s2', 'isaac_anymal_corridors_s3', 'isaac_anymal_poles_s0', 'isaac_anymal_poles_s1', 'isaac_anymal_poles_s2', 'isaac_anymal_poles_s3', 'isaac_anymal_stairs_s0', 'isaac_anymal_stairs_s1', 'isaac_anymal_stairs_s2', 'isaac_anymal_stairs_s3', 'isaac_anymal_walls_s0', 'isaac_anymal_walls_s1', 'isaac_anymal_walls_s2', 'isaac_anymal_walls_s3']
+[step 000] loss 1.9220 lr 0.009696 pre 52.5s
+[step 001] loss 1.9196 lr 0.009401 pre 51.2s
+[step 002] loss 1.9175 lr 0.009114 pre 50.7s
+[step 003] loss 1.9156 lr 0.008837 pre 50.2s
+[step 004] loss 1.9139 lr 0.008568 pre 50.2s
+[step 005] loss 1.9123 lr 0.008307 pre 51.2s
+[step 006] loss 1.9109 lr 0.008055 pre 51.9s
+[step 007] loss 1.9095 lr 0.007809 pre 53.0s
+[step 008] loss 1.9080 lr 0.007572 pre 51.9s
+[step 009] loss 1.9064 lr 0.007341 pre 53.3s
+[save] reproduction/data/r7_train_pw20_noLL.pt (step 9)
+[step 010] loss 1.9045 lr 0.007118 pre 53.5s
+[step 011] loss 1.9023 lr 0.006901 pre 53.5s
+[step 012] loss 1.8998 lr 0.006691 pre 54.2s
+[step 013] loss 1.8969 lr 0.006488 pre 52.8s
+[step 014] loss 1.8934 lr 0.006290 pre 54.2s
+[step 015] loss 1.8887 lr 0.006099 pre 53.5s
+[step 016] loss 1.8827 lr 0.005913 pre 54.8s
+[step 017] loss 1.8731 lr 0.005733 pre 54.9s
+[step 018] loss 1.8581 lr 0.005559 pre 51.6s
+[step 019] loss 1.8343 lr 0.005389 pre 51.2s
+[save] reproduction/data/r7_train_pw20_noLL.pt (step 19)
+[step 020] loss 1.7999 lr 0.005225 pre 51.4s
+[step 021] loss 1.7529 lr 0.005066 pre 51.2s
+[step 022] loss 1.7072 lr 0.004912 pre 52.9s
+[step 023] loss 1.7101 lr 0.004763 pre 54.4s
+[step 024] loss 1.7240 lr 0.004618 pre 52.5s
+[step 025] loss 1.7021 lr 0.004477 pre 51.4s
+[step 026] loss 1.6697 lr 0.004341 pre 51.1s
+[step 027] loss 1.6496 lr 0.004209 pre 51.4s
+[step 028] loss 1.6421 lr 0.004081 pre 52.3s

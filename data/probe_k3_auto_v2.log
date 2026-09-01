@@ -1,0 +1,39 @@
+[INFO] train: 5 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_corridors_s0', 'isaac_anymal_poles_s0', 'isaac_anymal_stairs_s0', 'isaac_anymal_walls_s0']
+[INFO] generative kernels: ((3, 3, 3, 2), (3, 3, 3, 2), (3, 3, 3, 2), (3, 3, 3, 2))
+[step 000] loss 2.1723 lr 0.003000 pre 120.0s
+[step 001] loss 2.1710 lr 0.003000 pre 118.5s
+[step 002] loss 2.1698 lr 0.003000 pre 117.6s
+[step 003] loss 2.1686 lr 0.003000 pre 117.6s
+[step 004] loss 2.1673 lr 0.003000 pre 117.2s
+[save] reproduction/data/probe_k3_auto_v2.pt (step 4)
+[step 005] loss 2.1661 lr 0.003000 pre 118.3s
+[step 006] loss 2.1649 lr 0.003000 pre 117.6s
+[step 007] loss 2.1637 lr 0.003000 pre 118.3s
+[step 008] loss 2.1625 lr 0.003000 pre 117.9s
+[step 009] loss 2.1614 lr 0.003000 pre 118.0s
+[save] reproduction/data/probe_k3_auto_v2.pt (step 9)
+[step 010] loss 2.1602 lr 0.003000 pre 117.2s
+[step 011] loss 2.1590 lr 0.003000 pre 117.3s
+[step 012] loss 2.1577 lr 0.003000 pre 117.7s
+[step 013] loss 2.1565 lr 0.003000 pre 117.5s
+[step 014] loss 2.1551 lr 0.003000 pre 117.6s
+[save] reproduction/data/probe_k3_auto_v2.pt (step 14)
+[step 015] loss 2.1537 lr 0.003000 pre 118.4s
+[step 016] loss 2.1522 lr 0.003000 pre 117.8s
+[step 017] loss 2.1505 lr 0.003000 pre 118.4s
+[step 018] loss 2.1487 lr 0.003000 pre 118.3s
+[step 019] loss 2.1464 lr 0.003000 pre 118.8s
+[save] reproduction/data/probe_k3_auto_v2.pt (step 19)
+[step 020] loss 2.1437 lr 0.003000 pre 117.8s
+[step 021] loss 2.1400 lr 0.003000 pre 117.8s
+[step 022] loss 2.1348 lr 0.003000 pre 118.0s
+[step 023] loss 2.1270 lr 0.003000 pre 118.1s
+[step 024] loss 2.1152 lr 0.003000 pre 118.0s
+[save] reproduction/data/probe_k3_auto_v2.pt (step 24)
+[step 025] loss 2.0975 lr 0.003000 pre 118.4s
+[step 026] loss 2.0719 lr 0.003000 pre 118.0s
+[step 027] loss 2.0379 lr 0.003000 pre 118.7s
+[step 028] loss 2.0002 lr 0.003000 pre 117.8s
+[step 029] loss 1.9765 lr 0.003000 pre 118.2s
+[save] reproduction/data/probe_k3_auto_v2.pt (step 29)
+[DONE] trained 30 steps; loss 2.1723 -> 1.9765

@@ -1,0 +1,2193 @@
+{
+  "purpose": "unpruned per-layer candidate support for paper-style likelihood/pruning",
+  "history_input": "empty (conservative current-measurement lower bound)",
+  "trajectories": [
+    "isaac_anymal_boxes_s0",
+    "isaac_anymal_corridors_s0",
+    "isaac_anymal_poles_s0",
+    "isaac_anymal_stairs_s0",
+    "isaac_anymal_walls_s0"
+  ],
+  "summary": {
+    "l3_stride8": {
+      "target_coverage_mean": 0.0,
+      "target_coverage_min": 0.0,
+      "positive_rate_mean": 0.0,
+      "k0_candidates_mean": 79.25581395348837,
+      "target_count_mean": 67.30232558139535
+    },
+    "l2_stride4": {
+      "target_coverage_mean": 0.0,
+      "target_coverage_min": 0.0,
+      "positive_rate_mean": 0.0,
+      "k0_candidates_mean": 634.046511627907,
+      "target_count_mean": 270.93023255813955
+    },
+    "l1_stride2": {
+      "target_coverage_mean": 0.1244767482328299,
+      "target_coverage_min": 0.09890859481582538,
+      "positive_rate_mean": 0.02681582790594419,
+      "k0_candidates_mean": 5072.372093023256,
+      "target_count_mean": 1100.3720930232557
+    },
+    "l0_stride1": {
+      "target_coverage_mean": 0.6227900743384303,
+      "target_coverage_min": 0.47715736040609136,
+      "positive_rate_mean": 0.06505944520797355,
+      "k0_candidates_mean": 40578.976744186046,
+      "target_count_mean": 4279.53488372093
+    }
+  },
+  "per_frame": [
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 0,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1022,
+          "target_covered": 128,
+          "target_coverage": 0.12524461839530332,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4018,
+          "target_covered": 2526,
+          "target_coverage": 0.6286709805873569,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 1,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1016,
+          "target_covered": 128,
+          "target_coverage": 0.12598425196850394,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3994,
+          "target_covered": 2526,
+          "target_coverage": 0.6324486730095142,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 2,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1038,
+          "target_covered": 128,
+          "target_coverage": 0.1233140655105973,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4116,
+          "target_covered": 2642,
+          "target_coverage": 0.641885325558795,
+          "positive_rate_among_k0_candidates": 0.064501953125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 3,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1101,
+          "target_covered": 128,
+          "target_coverage": 0.11625794732061762,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4398,
+          "target_covered": 2868,
+          "target_coverage": 0.6521145975443383,
+          "positive_rate_among_k0_candidates": 0.07001953125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 4,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1132,
+          "target_covered": 128,
+          "target_coverage": 0.11307420494699646,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4562,
+          "target_covered": 3055,
+          "target_coverage": 0.6696624287593161,
+          "positive_rate_among_k0_candidates": 0.0745849609375
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 5,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1175,
+          "target_covered": 128,
+          "target_coverage": 0.10893617021276596,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4769,
+          "target_covered": 3139,
+          "target_coverage": 0.6582092681903963,
+          "positive_rate_among_k0_candidates": 0.0766357421875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s0",
+      "frame": 6,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 88,
+          "k0_candidate_count": 88,
+          "candidate_k_counts": {
+            "0": 88
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 704,
+          "k0_candidate_count": 704,
+          "candidate_k_counts": {
+            "0": 704
+          },
+          "target_count": 258,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5632,
+          "k0_candidate_count": 5632,
+          "candidate_k_counts": {
+            "0": 5632
+          },
+          "target_count": 1212,
+          "target_covered": 128,
+          "target_coverage": 0.10561056105610561,
+          "positive_rate_among_k0_candidates": 0.022727272727272728
+        },
+        "l0_stride1": {
+          "candidate_count": 45056,
+          "k0_candidate_count": 45056,
+          "candidate_k_counts": {
+            "0": 45056
+          },
+          "target_count": 4934,
+          "target_covered": 2955,
+          "target_coverage": 0.5989055533036076,
+          "positive_rate_among_k0_candidates": 0.06558504971590909
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 0,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1022,
+          "target_covered": 128,
+          "target_coverage": 0.12524461839530332,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4018,
+          "target_covered": 2526,
+          "target_coverage": 0.6286709805873569,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 1,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 68,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 263,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1029,
+          "target_covered": 128,
+          "target_coverage": 0.12439261418853255,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4011,
+          "target_covered": 2526,
+          "target_coverage": 0.6297681376215407,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 2,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 74,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 282,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1104,
+          "target_covered": 136,
+          "target_coverage": 0.12318840579710146,
+          "positive_rate_among_k0_candidates": 0.0265625
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4248,
+          "target_covered": 2526,
+          "target_coverage": 0.594632768361582,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 3,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 77,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 299,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1175,
+          "target_covered": 148,
+          "target_coverage": 0.12595744680851065,
+          "positive_rate_among_k0_candidates": 0.02890625
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4420,
+          "target_covered": 2522,
+          "target_coverage": 0.5705882352941176,
+          "positive_rate_among_k0_candidates": 0.061572265625
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 4,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 77,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 305,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1203,
+          "target_covered": 165,
+          "target_coverage": 0.1371571072319202,
+          "positive_rate_among_k0_candidates": 0.0322265625
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4575,
+          "target_covered": 2606,
+          "target_coverage": 0.5696174863387978,
+          "positive_rate_among_k0_candidates": 0.063623046875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 5,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 79,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 311,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1250,
+          "target_covered": 171,
+          "target_coverage": 0.1368,
+          "positive_rate_among_k0_candidates": 0.0333984375
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4710,
+          "target_covered": 2653,
+          "target_coverage": 0.5632696390658174,
+          "positive_rate_among_k0_candidates": 0.0647705078125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s0",
+      "frame": 6,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 79,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 305,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1196,
+          "target_covered": 128,
+          "target_coverage": 0.10702341137123746,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4499,
+          "target_covered": 2539,
+          "target_coverage": 0.5643476328072905,
+          "positive_rate_among_k0_candidates": 0.0619873046875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 0,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1022,
+          "target_covered": 128,
+          "target_coverage": 0.12524461839530332,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4018,
+          "target_covered": 2526,
+          "target_coverage": 0.6286709805873569,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 1,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1016,
+          "target_covered": 128,
+          "target_coverage": 0.12598425196850394,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3994,
+          "target_covered": 2526,
+          "target_coverage": 0.6324486730095142,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 2,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1012,
+          "target_covered": 128,
+          "target_coverage": 0.12648221343873517,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3978,
+          "target_covered": 2526,
+          "target_coverage": 0.6349924585218703,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 3,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 66,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 268,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1043,
+          "target_covered": 134,
+          "target_coverage": 0.12847555129434324,
+          "positive_rate_among_k0_candidates": 0.026171875
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4067,
+          "target_covered": 2629,
+          "target_coverage": 0.6464224243914434,
+          "positive_rate_among_k0_candidates": 0.0641845703125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 4,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 66,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 262,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1039,
+          "target_covered": 130,
+          "target_coverage": 0.12512030798845045,
+          "positive_rate_among_k0_candidates": 0.025390625
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4040,
+          "target_covered": 2624,
+          "target_coverage": 0.6495049504950495,
+          "positive_rate_among_k0_candidates": 0.0640625
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 5,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 68,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 268,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1032,
+          "target_covered": 130,
+          "target_coverage": 0.12596899224806202,
+          "positive_rate_among_k0_candidates": 0.025390625
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4051,
+          "target_covered": 2635,
+          "target_coverage": 0.6504566773636139,
+          "positive_rate_among_k0_candidates": 0.0643310546875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 6,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 71,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 278,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1109,
+          "target_covered": 129,
+          "target_coverage": 0.11632100991884581,
+          "positive_rate_among_k0_candidates": 0.0251953125
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4193,
+          "target_covered": 2488,
+          "target_coverage": 0.5933699022179824,
+          "positive_rate_among_k0_candidates": 0.0607421875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 7,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 56,
+          "k0_candidate_count": 56,
+          "candidate_k_counts": {
+            "0": 56
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 448,
+          "k0_candidate_count": 448,
+          "candidate_k_counts": {
+            "0": 448
+          },
+          "target_count": 244,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 3584,
+          "k0_candidate_count": 3584,
+          "candidate_k_counts": {
+            "0": 3584
+          },
+          "target_count": 922,
+          "target_covered": 111,
+          "target_coverage": 0.12039045553145336,
+          "positive_rate_among_k0_candidates": 0.030970982142857144
+        },
+        "l0_stride1": {
+          "candidate_count": 28672,
+          "k0_candidate_count": 28672,
+          "candidate_k_counts": {
+            "0": 28672
+          },
+          "target_count": 2969,
+          "target_covered": 1524,
+          "target_coverage": 0.5133041428090266,
+          "positive_rate_among_k0_candidates": 0.05315290178571429
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 8,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 72,
+          "k0_candidate_count": 72,
+          "candidate_k_counts": {
+            "0": 72
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 576,
+          "k0_candidate_count": 576,
+          "candidate_k_counts": {
+            "0": 576
+          },
+          "target_count": 238,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 4608,
+          "k0_candidate_count": 4608,
+          "candidate_k_counts": {
+            "0": 4608
+          },
+          "target_count": 926,
+          "target_covered": 112,
+          "target_coverage": 0.12095032397408208,
+          "positive_rate_among_k0_candidates": 0.024305555555555556
+        },
+        "l0_stride1": {
+          "candidate_count": 36864,
+          "k0_candidate_count": 36864,
+          "candidate_k_counts": {
+            "0": 36864
+          },
+          "target_count": 3050,
+          "target_covered": 2073,
+          "target_coverage": 0.679672131147541,
+          "positive_rate_among_k0_candidates": 0.056233723958333336
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 9,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 72,
+          "k0_candidate_count": 72,
+          "candidate_k_counts": {
+            "0": 72
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 576,
+          "k0_candidate_count": 576,
+          "candidate_k_counts": {
+            "0": 576
+          },
+          "target_count": 238,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 4608,
+          "k0_candidate_count": 4608,
+          "candidate_k_counts": {
+            "0": 4608
+          },
+          "target_count": 922,
+          "target_covered": 167,
+          "target_coverage": 0.18112798264642083,
+          "positive_rate_among_k0_candidates": 0.03624131944444445
+        },
+        "l0_stride1": {
+          "candidate_count": 36864,
+          "k0_candidate_count": 36864,
+          "candidate_k_counts": {
+            "0": 36864
+          },
+          "target_count": 2885,
+          "target_covered": 1974,
+          "target_coverage": 0.6842287694974003,
+          "positive_rate_among_k0_candidates": 0.053548177083333336
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 10,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 72,
+          "k0_candidate_count": 72,
+          "candidate_k_counts": {
+            "0": 72
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 576,
+          "k0_candidate_count": 576,
+          "candidate_k_counts": {
+            "0": 576
+          },
+          "target_count": 238,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 4608,
+          "k0_candidate_count": 4608,
+          "candidate_k_counts": {
+            "0": 4608
+          },
+          "target_count": 922,
+          "target_covered": 167,
+          "target_coverage": 0.18112798264642083,
+          "positive_rate_among_k0_candidates": 0.03624131944444445
+        },
+        "l0_stride1": {
+          "candidate_count": 36864,
+          "k0_candidate_count": 36864,
+          "candidate_k_counts": {
+            "0": 36864
+          },
+          "target_count": 2916,
+          "target_covered": 1997,
+          "target_coverage": 0.6848422496570644,
+          "positive_rate_among_k0_candidates": 0.05417209201388889
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s0",
+      "frame": 11,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 72,
+          "k0_candidate_count": 72,
+          "candidate_k_counts": {
+            "0": 72
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 576,
+          "k0_candidate_count": 576,
+          "candidate_k_counts": {
+            "0": 576
+          },
+          "target_count": 238,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 4608,
+          "k0_candidate_count": 4608,
+          "candidate_k_counts": {
+            "0": 4608
+          },
+          "target_count": 929,
+          "target_covered": 168,
+          "target_coverage": 0.18083961248654468,
+          "positive_rate_among_k0_candidates": 0.036458333333333336
+        },
+        "l0_stride1": {
+          "candidate_count": 36864,
+          "k0_candidate_count": 36864,
+          "candidate_k_counts": {
+            "0": 36864
+          },
+          "target_count": 3097,
+          "target_covered": 2129,
+          "target_coverage": 0.6874394575395544,
+          "positive_rate_among_k0_candidates": 0.05775282118055555
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 0,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1022,
+          "target_covered": 128,
+          "target_coverage": 0.12524461839530332,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4014,
+          "target_covered": 2526,
+          "target_coverage": 0.6292974588938715,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 1,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1016,
+          "target_covered": 128,
+          "target_coverage": 0.12598425196850394,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3990,
+          "target_covered": 2526,
+          "target_coverage": 0.6330827067669172,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 2,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1012,
+          "target_covered": 128,
+          "target_coverage": 0.12648221343873517,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3978,
+          "target_covered": 2526,
+          "target_coverage": 0.6349924585218703,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 3,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 259,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1039,
+          "target_covered": 128,
+          "target_coverage": 0.12319538017324351,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4310,
+          "target_covered": 2835,
+          "target_coverage": 0.6577726218097448,
+          "positive_rate_among_k0_candidates": 0.0692138671875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 4,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 275,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1169,
+          "target_covered": 127,
+          "target_coverage": 0.1086398631308811,
+          "positive_rate_among_k0_candidates": 0.0248046875
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4870,
+          "target_covered": 3357,
+          "target_coverage": 0.6893223819301848,
+          "positive_rate_among_k0_candidates": 0.0819580078125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 5,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 72,
+          "k0_candidate_count": 72,
+          "candidate_k_counts": {
+            "0": 72
+          },
+          "target_count": 69,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 576,
+          "k0_candidate_count": 576,
+          "candidate_k_counts": {
+            "0": 576
+          },
+          "target_count": 303,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 4608,
+          "k0_candidate_count": 4608,
+          "candidate_k_counts": {
+            "0": 4608
+          },
+          "target_count": 1317,
+          "target_covered": 135,
+          "target_coverage": 0.10250569476082004,
+          "positive_rate_among_k0_candidates": 0.029296875
+        },
+        "l0_stride1": {
+          "candidate_count": 36864,
+          "k0_candidate_count": 36864,
+          "candidate_k_counts": {
+            "0": 36864
+          },
+          "target_count": 5514,
+          "target_covered": 3255,
+          "target_coverage": 0.5903155603917302,
+          "positive_rate_among_k0_candidates": 0.08829752604166667
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 6,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 74,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 336,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1466,
+          "target_covered": 145,
+          "target_coverage": 0.09890859481582538,
+          "positive_rate_among_k0_candidates": 0.0283203125
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 6107,
+          "target_covered": 2914,
+          "target_coverage": 0.47715736040609136,
+          "positive_rate_among_k0_candidates": 0.071142578125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 7,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 74,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 339,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1457,
+          "target_covered": 149,
+          "target_coverage": 0.10226492793411118,
+          "positive_rate_among_k0_candidates": 0.0291015625
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 6085,
+          "target_covered": 3138,
+          "target_coverage": 0.5156943303204602,
+          "positive_rate_among_k0_candidates": 0.076611328125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 8,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 74,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 334,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1468,
+          "target_covered": 148,
+          "target_coverage": 0.1008174386920981,
+          "positive_rate_among_k0_candidates": 0.02890625
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 6089,
+          "target_covered": 3373,
+          "target_coverage": 0.5539497454426014,
+          "positive_rate_among_k0_candidates": 0.0823486328125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s0",
+      "frame": 9,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 104,
+          "k0_candidate_count": 104,
+          "candidate_k_counts": {
+            "0": 104
+          },
+          "target_count": 76,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 832,
+          "k0_candidate_count": 832,
+          "candidate_k_counts": {
+            "0": 832
+          },
+          "target_count": 335,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 6656,
+          "k0_candidate_count": 6656,
+          "candidate_k_counts": {
+            "0": 6656
+          },
+          "target_count": 1420,
+          "target_covered": 149,
+          "target_coverage": 0.10492957746478873,
+          "positive_rate_among_k0_candidates": 0.022385817307692308
+        },
+        "l0_stride1": {
+          "candidate_count": 53248,
+          "k0_candidate_count": 53248,
+          "candidate_k_counts": {
+            "0": 53248
+          },
+          "target_count": 5781,
+          "target_covered": 4296,
+          "target_coverage": 0.7431240269849507,
+          "positive_rate_among_k0_candidates": 0.08067908653846154
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 0,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1022,
+          "target_covered": 128,
+          "target_coverage": 0.12524461839530332,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4018,
+          "target_covered": 2526,
+          "target_coverage": 0.6286709805873569,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 1,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1016,
+          "target_covered": 128,
+          "target_coverage": 0.12598425196850394,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3994,
+          "target_covered": 2526,
+          "target_coverage": 0.6324486730095142,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 2,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1012,
+          "target_covered": 128,
+          "target_coverage": 0.12648221343873517,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3978,
+          "target_covered": 2526,
+          "target_coverage": 0.6349924585218703,
+          "positive_rate_among_k0_candidates": 0.061669921875
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 3,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 64,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 256,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1008,
+          "target_covered": 128,
+          "target_coverage": 0.12698412698412698,
+          "positive_rate_among_k0_candidates": 0.025
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3958,
+          "target_covered": 2520,
+          "target_coverage": 0.6366851945426983,
+          "positive_rate_among_k0_candidates": 0.0615234375
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 4,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 66,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 262,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1018,
+          "target_covered": 127,
+          "target_coverage": 0.12475442043222004,
+          "positive_rate_among_k0_candidates": 0.0248046875
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 3969,
+          "target_covered": 2514,
+          "target_coverage": 0.6334089191232048,
+          "positive_rate_among_k0_candidates": 0.061376953125
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 5,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 68,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 274,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1084,
+          "target_covered": 136,
+          "target_coverage": 0.12546125461254612,
+          "positive_rate_among_k0_candidates": 0.0265625
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4206,
+          "target_covered": 2506,
+          "target_coverage": 0.5958155016642891,
+          "positive_rate_among_k0_candidates": 0.061181640625
+        }
+      }
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s0",
+      "frame": 6,
+      "layers": {
+        "l3_stride8": {
+          "candidate_count": 80,
+          "k0_candidate_count": 80,
+          "candidate_k_counts": {
+            "0": 80
+          },
+          "target_count": 68,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l2_stride4": {
+          "candidate_count": 640,
+          "k0_candidate_count": 640,
+          "candidate_k_counts": {
+            "0": 640
+          },
+          "target_count": 286,
+          "target_covered": 0,
+          "target_coverage": 0.0,
+          "positive_rate_among_k0_candidates": 0.0
+        },
+        "l1_stride2": {
+          "candidate_count": 5120,
+          "k0_candidate_count": 5120,
+          "candidate_k_counts": {
+            "0": 5120
+          },
+          "target_count": 1201,
+          "target_covered": 147,
+          "target_coverage": 0.12239800166527894,
+          "positive_rate_among_k0_candidates": 0.0287109375
+        },
+        "l0_stride1": {
+          "candidate_count": 40960,
+          "k0_candidate_count": 40960,
+          "candidate_k_counts": {
+            "0": 40960
+          },
+          "target_count": 4629,
+          "target_covered": 2801,
+          "target_coverage": 0.605098293367898,
+          "positive_rate_among_k0_candidates": 0.0683837890625
+        }
+      }
+    }
+  ]
+}

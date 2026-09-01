@@ -1,0 +1,72 @@
+{
+  "trajectory": "reproduction/data/isaac_trajectory_structured_smoke.npz",
+  "trajectory_frames": 3,
+  "config": {
+    "trajectory": "reproduction/data/isaac_trajectory_structured_smoke.npz",
+    "validation_trajectory": null,
+    "steps": 1,
+    "device": "cuda",
+    "voxel_size": 0.05,
+    "grid_size": 64,
+    "pruning_alpha": 0.5,
+    "feedback_alpha": 0.0,
+    "learning_rate": 0.01,
+    "final_learning_rate": 0.0001,
+    "channels": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "seed": 0,
+    "results": "reproduction/results/r7_structured_yaw_smoke.json",
+    "checkpoint": "reproduction/results/r7_structured_yaw_smoke.pt"
+  },
+  "training": {
+    "initial_loss": 2.134965419769287,
+    "final_loss": 2.134965419769287,
+    "loss_history": [
+      2.134965419769287
+    ],
+    "learning_rate_history": [
+      0.01
+    ]
+  },
+  "evaluation": {
+    "train": {
+      "frame_count": 3,
+      "current_measurement_baseline": {
+        "occupancy": {
+          "true_positive": 1360,
+          "false_positive": 420,
+          "false_negative": 24786,
+          "precision": 0.7640449438202247,
+          "recall": 0.05201560468140442,
+          "f1": 0.09740027214781923
+        },
+        "height": {
+          "matched_cell_count": 1086,
+          "target_cell_count": 9829,
+          "mean_absolute_error": 0.09273502804633937
+        }
+      },
+      "autoregressive_model": {
+        "occupancy": {
+          "true_positive": 804,
+          "false_positive": 3882,
+          "false_negative": 25342,
+          "precision": 0.17157490396927016,
+          "recall": 0.030750401591065554,
+          "f1": 0.0521536066424494
+        },
+        "height": {
+          "matched_cell_count": 663,
+          "target_cell_count": 9829,
+          "mean_absolute_error": 0.38490284170732614
+        }
+      }
+    },
+    "validation": null
+  },
+  "scope": "temporal rollout diagnostic; no paper-performance claim without many held-out trajectories"
+}

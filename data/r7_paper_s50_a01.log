@@ -1,0 +1,24 @@
+[INFO] train: 20 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_boxes_s1', 'isaac_anymal_boxes_s2', 'isaac_anymal_boxes_s3', 'isaac_anymal_corridors_s0', 'isaac_anymal_corridors_s1', 'isaac_anymal_corridors_s2', 'isaac_anymal_corridors_s3', 'isaac_anymal_poles_s0', 'isaac_anymal_poles_s1', 'isaac_anymal_poles_s2', 'isaac_anymal_poles_s3', 'isaac_anymal_stairs_s0', 'isaac_anymal_stairs_s1', 'isaac_anymal_stairs_s2', 'isaac_anymal_stairs_s3', 'isaac_anymal_walls_s0', 'isaac_anymal_walls_s1', 'isaac_anymal_walls_s2', 'isaac_anymal_walls_s3']
+[INFO] trained 50 steps; loss history: [2.1667, 2.1631, 2.16, 2.157, 2.1537, 2.1501, 2.1456, 2.1399, 2.1332, 2.1244, 2.1122, 2.0994, 2.0881, 2.0802, 2.0734, 2.0675, 2.0627, 2.0587, 2.0551, 2.0517, 2.0486, 2.0454, 2.042, 2.0388, 2.0356, 2.0325, 2.0295, 2.0268, 2.024, 2.0215, 2.0191, 2.0171, 2.0149, 2.0128, 2.011, 2.0092, 2.0073, 2.0056, 2.0041, 2.0027, 2.0014, 2.0005, 1.9994, 1.9983, 1.9973, 1.9966, 1.9938, 1.993, 1.9924, 1.9918]
+[INFO] lr history: [0.01, 0.009103, 0.008286, 0.007543, 0.006866, 0.006251, 0.00569, 0.005179, 0.004715, 0.004292, 0.003907, 0.003556, 0.003237, 0.002947, 0.002683, 0.002442, 0.002223, 0.002024, 0.001842, 0.001677, 0.001526, 0.001389, 0.001265, 0.001151, 0.001048, 0.000954, 0.000869, 0.000791, 0.00072, 0.000655, 0.000596, 0.000543, 0.000494, 0.00045, 0.000409, 0.000373, 0.000339, 0.000309, 0.000281, 0.000256, 0.000233, 0.000212, 0.000193, 0.000176, 0.00016, 0.000146, 0.000133, 0.000121, 0.00011, 0.0001]
+[eval] isaac_anymal_boxes_s10: model F1=0.1102 (baseline 0.3594) MAE=0.7500 (baseline 0.0680)
+[eval] isaac_anymal_boxes_s12: model F1=0.1207 (baseline 0.3059) MAE=0.7283 (baseline 0.0779)
+[eval] isaac_anymal_boxes_s13: model F1=0.1196 (baseline 0.3142) MAE=0.7380 (baseline 0.0787)
+[eval] isaac_anymal_boxes_s14: model F1=0.1298 (baseline 0.3191) MAE=0.7255 (baseline 0.0648)
+[eval] isaac_anymal_corridors_s10: model F1=0.1105 (baseline 0.3298) MAE=0.7486 (baseline 0.0612)
+[eval] isaac_anymal_corridors_s11: model F1=0.1164 (baseline 0.1801) MAE=0.7372 (baseline 0.1585)
+[eval] isaac_anymal_corridors_s12: model F1=0.1042 (baseline 0.2286) MAE=0.7395 (baseline 0.1371)
+[eval] isaac_anymal_corridors_s13: model F1=0.1084 (baseline 0.3198) MAE=0.7481 (baseline 0.0552)
+[eval] isaac_anymal_poles_s10: model F1=0.1094 (baseline 0.3455) MAE=0.7452 (baseline 0.0567)
+[eval] isaac_anymal_poles_s11: model F1=0.1158 (baseline 0.3555) MAE=0.7438 (baseline 0.0662)
+[eval] isaac_anymal_poles_s12: model F1=0.1151 (baseline 0.3527) MAE=0.7482 (baseline 0.0681)
+[eval] isaac_anymal_poles_s13: model F1=0.1128 (baseline 0.3608) MAE=0.7485 (baseline 0.0602)
+[eval] isaac_anymal_stairs_s10: model F1=0.1379 (baseline 0.2418) MAE=0.7569 (baseline 0.0657)
+[eval] isaac_anymal_stairs_s11: model F1=0.1421 (baseline 0.2587) MAE=0.7582 (baseline 0.0646)
+[eval] isaac_anymal_stairs_s12: model F1=0.1370 (baseline 0.2766) MAE=0.7665 (baseline 0.0586)
+[eval] isaac_anymal_stairs_s13: model F1=0.1489 (baseline 0.2193) MAE=0.7204 (baseline 0.0819)
+[eval] isaac_anymal_walls_s10: model F1=0.1112 (baseline 0.3659) MAE=0.7498 (baseline 0.0623)
+[eval] isaac_anymal_walls_s11: model F1=0.1242 (baseline 0.3316) MAE=0.7420 (baseline 0.0666)
+[eval] isaac_anymal_walls_s12: model F1=0.1104 (baseline 0.3635) MAE=0.7488 (baseline 0.0658)
+[eval] isaac_anymal_walls_s13: model F1=0.1109 (baseline 0.3684) MAE=0.7501 (baseline 0.0625)
+[INFO] wrote reproduction/data/r7_paper_s50_a01.json

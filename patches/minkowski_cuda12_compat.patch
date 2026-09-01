@@ -1,0 +1,65 @@
+diff --git a/src/3rdparty/concurrent_unordered_map.cuh b/src/3rdparty/concurrent_unordered_map.cuh
+index ed8e1b2..377e30f 100644
+--- a/src/3rdparty/concurrent_unordered_map.cuh
++++ b/src/3rdparty/concurrent_unordered_map.cuh
+@@ -17,7 +17,9 @@
+ #ifndef CONCURRENT_UNORDERED_MAP_CUH
+ #define CONCURRENT_UNORDERED_MAP_CUH
+ 
+-#include <cudf/detail/nvtx/ranges.hpp>
++// CUDA 12.x ships a newer NVTX C++ wrapper than this vendored cuDF header.
++// The range is only profiling instrumentation, so disable it for compatibility.
++#define CUDF_FUNC_RANGE() ((void)0)
+ #include <hash/hash_allocator.cuh>
+ #include <hash/helper_functions.cuh>
+ #include <hash/managed.cuh>
+@@ -27,6 +29,7 @@
+ 
+ #include <thrust/pair.h>
+ #include <thrust/count.h>
++#include <thrust/execution_policy.h>
+ 
+ #include <functional>
+ #include <memory>
+diff --git a/src/convolution_kernel.cuh b/src/convolution_kernel.cuh
+index aed7227..690af7b 100644
+--- a/src/convolution_kernel.cuh
++++ b/src/convolution_kernel.cuh
+@@ -28,6 +28,8 @@
+ #include <array>
+ #include <vector>
+ 
++#include <thrust/execution_policy.h>
++
+ #include "gpu.cuh"
+ #include "kernel_map.cuh"
+ #include "math_functions.cuh"
+diff --git a/src/coordinate_map_gpu.cu b/src/coordinate_map_gpu.cu
+index fb7325d..ab5be63 100644
+--- a/src/coordinate_map_gpu.cu
++++ b/src/coordinate_map_gpu.cu
+@@ -35,7 +35,9 @@
+ #include <thrust/execution_policy.h>
+ #include <thrust/iterator/counting_iterator.h>
+ #include <thrust/iterator/transform_iterator.h>
++#include <thrust/remove.h>
+ #include <thrust/sort.h>
++#include <thrust/unique.h>
+ 
+ namespace minkowski {
+ 
+diff --git a/src/spmm.cu b/src/spmm.cu
+index 8891a56..c4961d5 100644
+--- a/src/spmm.cu
++++ b/src/spmm.cu
+@@ -29,6 +29,10 @@
+ 
+ #include <cusparse.h>
+ 
++#include <thrust/execution_policy.h>
++#include <thrust/reduce.h>
++#include <thrust/sort.h>
++
+ #include <ATen/core/Tensor.h>
+ #include <ATen/cuda/CUDAContext.h>
+ #include <ATen/cuda/CUDAUtils.h>

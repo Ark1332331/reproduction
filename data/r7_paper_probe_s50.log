@@ -1,0 +1,47 @@
+[INFO] train: 4 trajectories ['isaac_anymal_stairs_s0', 'isaac_anymal_stairs_s1', 'isaac_anymal_stairs_s2', 'isaac_anymal_stairs_s3']
+Traceback (most recent call last):
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/run_r7_paper_experiment.py", line 148, in <module>
+    main()
+    ~~~~^^
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/run_r7_paper_experiment.py", line 71, in main
+    run = train_detached_rollout(
+        model,
+    ...<5 lines>...
+        feedback_alpha=args.feedback_alpha,
+    )
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/r7_autoregressive_rollout.py", line 285, in train_detached_rollout
+    feedback = model(input_tensor, alpha=feedback_alpha)
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/r5_sparse_model.py", line 171, in forward
+    candidates = self.dec0(ME.cat(u0, align_skip_to_candidates(sparse_input, u0)))
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/r5_sparse_model.py", line 49, in align_skip_to_candidates
+    features = skip.features_at_coordinates(candidates.C.float())
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/MinkowskiEngine/MinkowskiSparseTensor.py", line 713, in features_at_coordinates
+    return MinkowskiInterpolationFunction().apply(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._F,
+        ^^^^^^^^
+    ...<2 lines>...
+        self.coordinate_manager,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )[0]
+    ^
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/autograd/function.py", line 581, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/MinkowskiEngine/MinkowskiInterpolation.py", line 52, in forward
+    out_feat, in_map, out_map, weights = fw_fn(
+                                         ~~~~~^
+        input_features,
+        ^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        coordinate_manager._manager,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.53 GiB of which 65.38 MiB is free. Process 1903700 has 4.21 GiB memory in use. Including non-PyTorch memory, this process has 3.19 GiB memory in use. Of the allocated memory 2.95 GiB is allocated by PyTorch, and 78.90 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

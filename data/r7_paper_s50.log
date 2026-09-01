@@ -1,0 +1,24 @@
+[INFO] train: 20 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_boxes_s1', 'isaac_anymal_boxes_s2', 'isaac_anymal_boxes_s3', 'isaac_anymal_corridors_s0', 'isaac_anymal_corridors_s1', 'isaac_anymal_corridors_s2', 'isaac_anymal_corridors_s3', 'isaac_anymal_poles_s0', 'isaac_anymal_poles_s1', 'isaac_anymal_poles_s2', 'isaac_anymal_poles_s3', 'isaac_anymal_stairs_s0', 'isaac_anymal_stairs_s1', 'isaac_anymal_stairs_s2', 'isaac_anymal_stairs_s3', 'isaac_anymal_walls_s0', 'isaac_anymal_walls_s1', 'isaac_anymal_walls_s2', 'isaac_anymal_walls_s3']
+[INFO] trained 50 steps; final loss 0.0000
+[eval] isaac_anymal_boxes_s10: model F1=0.0000 (baseline 0.3594) MAE=inf (baseline 0.0680)
+[eval] isaac_anymal_boxes_s12: model F1=0.0000 (baseline 0.3059) MAE=inf (baseline 0.0779)
+[eval] isaac_anymal_boxes_s13: model F1=0.0000 (baseline 0.3142) MAE=inf (baseline 0.0787)
+[eval] isaac_anymal_boxes_s14: model F1=0.0000 (baseline 0.3191) MAE=inf (baseline 0.0648)
+[eval] isaac_anymal_corridors_s10: model F1=0.0000 (baseline 0.3298) MAE=inf (baseline 0.0612)
+[eval] isaac_anymal_corridors_s11: model F1=0.0000 (baseline 0.1801) MAE=inf (baseline 0.1585)
+[eval] isaac_anymal_corridors_s12: model F1=0.0000 (baseline 0.2286) MAE=inf (baseline 0.1371)
+[eval] isaac_anymal_corridors_s13: model F1=0.0000 (baseline 0.3198) MAE=inf (baseline 0.0552)
+[eval] isaac_anymal_poles_s10: model F1=0.0000 (baseline 0.3455) MAE=inf (baseline 0.0567)
+[eval] isaac_anymal_poles_s11: model F1=0.0000 (baseline 0.3555) MAE=inf (baseline 0.0662)
+[eval] isaac_anymal_poles_s12: model F1=0.0000 (baseline 0.3527) MAE=inf (baseline 0.0681)
+[eval] isaac_anymal_poles_s13: model F1=0.0000 (baseline 0.3608) MAE=inf (baseline 0.0602)
+[eval] isaac_anymal_stairs_s10: model F1=0.0000 (baseline 0.2418) MAE=inf (baseline 0.0657)
+[eval] isaac_anymal_stairs_s11: model F1=0.0000 (baseline 0.2587) MAE=inf (baseline 0.0646)
+[eval] isaac_anymal_stairs_s12: model F1=0.0000 (baseline 0.2766) MAE=inf (baseline 0.0586)
+[eval] isaac_anymal_stairs_s13: model F1=0.0000 (baseline 0.2193) MAE=inf (baseline 0.0819)
+[eval] isaac_anymal_walls_s10: model F1=0.0000 (baseline 0.3659) MAE=inf (baseline 0.0623)
+[eval] isaac_anymal_walls_s11: model F1=0.0000 (baseline 0.3316) MAE=inf (baseline 0.0666)
+[eval] isaac_anymal_walls_s12: model F1=0.0000 (baseline 0.3635) MAE=inf (baseline 0.0658)
+[eval] isaac_anymal_walls_s13: model F1=0.0000 (baseline 0.3684) MAE=inf (baseline 0.0625)
+[INFO] wrote reproduction/data/r7_paper_s50.json
+EXIT=0

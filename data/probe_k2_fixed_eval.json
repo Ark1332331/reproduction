@@ -1,0 +1,936 @@
+{
+  "checkpoint": "reproduction/data/probe_k2_fixed.pt",
+  "trained_steps": 59,
+  "config": {
+    "channels": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "pruning_alpha": 0.0,
+    "generative_kernels": null,
+    "train_trajectories": [
+      "isaac_anymal_boxes_s0",
+      "isaac_anymal_corridors_s0",
+      "isaac_anymal_poles_s0",
+      "isaac_anymal_stairs_s0",
+      "isaac_anymal_walls_s0"
+    ]
+  },
+  "alpha_0.05": {
+    "mean": {
+      "model_f1": 0.13674173949436172,
+      "baseline_f1": 0.30936828727910226,
+      "model_precision": 0.08834903721232303,
+      "model_recall": 0.3178730777759685,
+      "model_height_mae": 0.5755108389207916,
+      "baseline_height_mae": 0.07449860883885347
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.12763992483469405,
+        "model_precision": 0.0777421875,
+        "model_recall": 0.35637288256992444,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": 0.5784852274935693,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.14650195386360773,
+        "model_precision": 0.09283934049079755,
+        "model_recall": 0.3471740948739395,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": 0.5488565160632731,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.13924442210278024,
+        "model_precision": 0.08718846849173553,
+        "model_recall": 0.3455633036913825,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": 0.5618775080734576,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.12477102684788198,
+        "model_precision": 0.08090177091963546,
+        "model_recall": 0.2725766001526551,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": 0.5841048447885776,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.1472788046738851,
+        "model_precision": 0.10986088379705401,
+        "model_recall": 0.22335060568774587,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": 0.5608571553652039,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.14491076210821827,
+        "model_precision": 0.11091111278648974,
+        "model_recall": 0.20897032972886592,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": 0.5393616129855853,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.11992918787342333,
+        "model_precision": 0.07881724683544304,
+        "model_recall": 0.25069385338415423,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": 0.5773730672155768,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.1226481338110585,
+        "model_precision": 0.07843588798820929,
+        "model_recall": 0.2810926797061979,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": 0.5811789638506598,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.13210226093310196,
+        "model_precision": 0.08314172240802675,
+        "model_recall": 0.3213232621076867,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": 0.5708854774214847,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.13677886808189008,
+        "model_precision": 0.08167330677290836,
+        "model_recall": 0.42047912827497796,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": 0.5788601363939717,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.12686923272373468,
+        "model_precision": 0.07953132769766286,
+        "model_recall": 0.3134204966471723,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": 0.5818549973827207,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.14845547668333942,
+        "model_precision": 0.09886170011359334,
+        "model_recall": 0.2978928227617927,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": 0.6014044082110238,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.14601454441751033,
+        "model_precision": 0.09584425308873082,
+        "model_recall": 0.3064033512866547,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": 0.6019872698121472,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.152596409605279,
+        "model_precision": 0.09755996397421313,
+        "model_recall": 0.3500956836062088,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": 0.5730406537804162,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.16094948024024147,
+        "model_precision": 0.10292214605484051,
+        "model_recall": 0.3689795150698243,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": 0.5823058323289173,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.12859598853868193,
+        "model_precision": 0.0783811475409836,
+        "model_recall": 0.35785668722092284,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": 0.5828326985838878,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.13390536896298114,
+        "model_precision": 0.08585890342052314,
+        "model_recall": 0.3040525495435315,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": 0.5695771598556579,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.12999575177281789,
+        "model_precision": 0.07964665556125064,
+        "model_recall": 0.35339895526100706,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": 0.5782598543856461,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.12890545231774556,
+        "model_precision": 0.07851368159203981,
+        "model_recall": 0.3598916761687571,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": 0.5816025555032625,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  },
+  "alpha_0.1": {
+    "mean": {
+      "model_f1": 0.15783927498374126,
+      "baseline_f1": 0.30936828727910226,
+      "model_precision": 0.10736303834874128,
+      "model_recall": 0.3118723390446954,
+      "model_height_mae": 0.45411314033421923,
+      "baseline_height_mae": 0.07449860883885347
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.15392230411681454,
+        "model_precision": 0.09815932765151515,
+        "model_recall": 0.35637288256992444,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": 0.4476536825302657,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.16625818214424487,
+        "model_precision": 0.11085977359693877,
+        "model_recall": 0.33232763771059864,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": 0.43804365424873015,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.16635490902345137,
+        "model_precision": 0.10968077299412916,
+        "model_recall": 0.3442198195892777,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": 0.43290531975933755,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.14651745567213076,
+        "model_precision": 0.10058237896928683,
+        "model_recall": 0.26967615309126597,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": 0.45705300074534616,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.15563125256149263,
+        "model_precision": 0.1270847963483146,
+        "model_recall": 0.20071746702944387,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": 0.45225672228371705,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.13942518569651474,
+        "model_precision": 0.11715728924980665,
+        "model_recall": 0.17214439176831975,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": 0.4430928533797041,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.142457419635192,
+        "model_precision": 0.09981731226235742,
+        "model_recall": 0.24869555563779003,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": 0.4446971800602118,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.14507677440137443,
+        "model_precision": 0.09805358801672086,
+        "model_recall": 0.278761244532475,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": 0.4521722989086015,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.15674018278796004,
+        "model_precision": 0.10367539649415693,
+        "model_recall": 0.3210809064103082,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": 0.44627245537479787,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.1647758563718471,
+        "model_precision": 0.1025219298245614,
+        "model_recall": 0.4195176668536175,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": 0.44940876186246526,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.15116115411681913,
+        "model_precision": 0.09970098499061913,
+        "model_recall": 0.3124100554211703,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": 0.4528883523462214,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.17000912044106042,
+        "model_precision": 0.11929072710538426,
+        "model_recall": 0.29575355653011015,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": 0.4786080921971643,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.16638303171177155,
+        "model_precision": 0.11513384650735294,
+        "model_recall": 0.2998578695391981,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": 0.4807686956666811,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.17411192214111923,
+        "model_precision": 0.11674158932714618,
+        "model_recall": 0.34235594301509675,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": 0.46178419263258863,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.1763789462346565,
+        "model_precision": 0.11687398042414356,
+        "model_recall": 0.35932479663965644,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": 0.49257263322382355,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.1540871372465119,
+        "model_precision": 0.09822124376558604,
+        "model_recall": 0.35732511163087394,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": 0.45465658058703873,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.1582362825192653,
+        "model_precision": 0.10694705513784461,
+        "model_recall": 0.3040525495435315,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": 0.4463580833928178,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.15651113240873485,
+        "model_precision": 0.10070123939986954,
+        "model_recall": 0.3510891581677979,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": 0.4442914218322348,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.1549079754601227,
+        "model_precision": 0.09869449656035022,
+        "model_recall": 0.3598916761687571,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": 0.45266568531841767,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  },
+  "alpha_0.2": {
+    "mean": {
+      "model_f1": 0.16009748096364665,
+      "baseline_f1": 0.30936828727910226,
+      "model_precision": 0.12349381831838584,
+      "model_recall": 0.23505789741392097,
+      "model_height_mae": 0.3829088944391333,
+      "baseline_height_mae": 0.07449860883885347
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.1629299238938628,
+        "model_precision": 0.1167607994041708,
+        "model_recall": 0.26949110052644776,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": 0.3637336739339188,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.17189907149102718,
+        "model_precision": 0.13191781697341512,
+        "model_recall": 0.24665431951248656,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": 0.35376214550280377,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.1821988381015017,
+        "model_precision": 0.1385905816435432,
+        "model_recall": 0.26584991363316485,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": 0.3280537106469975,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.1477342966084688,
+        "model_precision": 0.11689532520325203,
+        "model_recall": 0.20067604405190273,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": 0.37752305162991545,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.11954557409874177,
+        "model_precision": 0.11710438829787234,
+        "model_recall": 0.12209070585584805,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": 0.43667552110043045,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.10983688039401746,
+        "model_precision": 0.11184113663133098,
+        "model_recall": 0.10790319430387614,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": 0.4254049472786995,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.14562143388737286,
+        "model_precision": 0.12021732845026985,
+        "model_recall": 0.18463901121267068,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": 0.3555191362077666,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.14808116453462727,
+        "model_precision": 0.11502878289473684,
+        "model_recall": 0.2077865808368408,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": 0.37353167792208314,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.16605583334468713,
+        "model_precision": 0.12528782894736842,
+        "model_recall": 0.246152603304116,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": 0.3599430596099225,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.17937907244154852,
+        "model_precision": 0.1248117469879518,
+        "model_recall": 0.3187244611809951,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": 0.3574008159963503,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.15697620921982192,
+        "model_precision": 0.1178321463654224,
+        "model_recall": 0.23506537248537923,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": 0.37139751634729234,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.17049576783555018,
+        "model_precision": 0.13417853634577603,
+        "model_recall": 0.23376831746710877,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": 0.42298988788501196,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.16821709547097596,
+        "model_precision": 0.1304625659630607,
+        "model_recall": 0.23672202274087373,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": 0.43137802688821075,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.17787862736396043,
+        "model_precision": 0.13407501726519336,
+        "model_recall": 0.2641930682543058,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": 0.40373360891138,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.17753203891817754,
+        "model_precision": 0.12751067206654992,
+        "model_recall": 0.2921335987336019,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": 0.4530438586297028,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.16351998625340983,
+        "model_precision": 0.1173107741617357,
+        "model_recall": 0.26979233113615425,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": 0.36926351851969746,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.1678603041763901,
+        "model_precision": 0.1314264112903226,
+        "model_recall": 0.23224226230238254,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": 0.3556549587785031,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.16214229222594764,
+        "model_precision": 0.11808800623052959,
+        "model_recall": 0.25862620375963896,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": 0.36441057700560786,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.1639477280491971,
+        "model_precision": 0.11704268292682928,
+        "model_recall": 0.27358893956670466,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": 0.37184930154923823,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  },
+  "alpha_0.3": {
+    "mean": {
+      "model_f1": 0.14264861983848573,
+      "baseline_f1": 0.30936828727910226,
+      "model_precision": 0.13364870984686072,
+      "model_recall": 0.1572581170365084,
+      "model_height_mae": 0.3527221801196683,
+      "baseline_height_mae": 0.07449860883885347
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.15183695603054814,
+        "model_precision": 0.13103161397670549,
+        "model_recall": 0.18049636500376035,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": 0.31936800766631795,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.1553740278632574,
+        "model_precision": 0.14609638047138046,
+        "model_recall": 0.1659099056040148,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": 0.31566428846838024,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.16055201306102332,
+        "model_precision": 0.15482414448669202,
+        "model_recall": 0.1667199795278613,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": 0.2842909058063962,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.12748509212371664,
+        "model_precision": 0.12521029609690443,
+        "model_recall": 0.12984407371060952,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": 0.35076638692931983,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.09521327063631907,
+        "model_precision": 0.1195037688442211,
+        "model_recall": 0.07912933469663622,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": 0.3864407617833073,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.08776551028414503,
+        "model_precision": 0.11901142996108949,
+        "model_recall": 0.0695147285995845,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": 0.3648546744940968,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.12396644816799825,
+        "model_precision": 0.13428004143646408,
+        "model_recall": 0.11512415349887133,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": 0.3165683220728165,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.12613804997393013,
+        "model_precision": 0.1226981897627965,
+        "model_recall": 0.12977634728068005,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": 0.3417927397346485,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.152365470230728,
+        "model_precision": 0.1403867102396514,
+        "model_recall": 0.1665791493315022,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": 0.32013949435677164,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.1722987480593268,
+        "model_precision": 0.14658273381294964,
+        "model_recall": 0.20895761557567502,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": 0.29917570865735793,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.14571219424609477,
+        "model_precision": 0.13272443639291465,
+        "model_recall": 0.1615174990048685,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": 0.3237780518781414,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.15107426031305662,
+        "model_precision": 0.13539783001808317,
+        "model_recall": 0.17085606303704495,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": 0.4500193609371131,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.14923271173271171,
+        "model_precision": 0.13154965753424658,
+        "model_recall": 0.17240798922800718,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": 0.4575473650894734,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.15079561696045737,
+        "model_precision": 0.13661947513812156,
+        "model_recall": 0.1682543057622794,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": 0.4045644292220467,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.16155669348939283,
+        "model_precision": 0.1289132546323969,
+        "model_recall": 0.21633778975910223,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": 0.4550088238353279,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.14535137494543865,
+        "model_precision": 0.1232968009478673,
+        "model_recall": 0.17701467148628536,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": 0.3481414376543755,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.1586481541276504,
+        "model_precision": 0.15354166666666666,
+        "model_recall": 0.16410598975729238,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": 0.30410256902416744,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.14683425716293233,
+        "model_precision": 0.1309603386809269,
+        "model_recall": 0.16708716818876373,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": 0.3229023802691589,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.14812292752250117,
+        "model_precision": 0.12669671799027551,
+        "model_recall": 0.17827109464082097,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": 0.3365957143944809,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  },
+  "alpha_0.5": {
+    "mean": {
+      "model_f1": 0.0,
+      "baseline_f1": 0.30936828727910226,
+      "model_precision": 0.0,
+      "model_recall": 0.0,
+      "model_height_mae": Infinity,
+      "baseline_height_mae": 0.07449860883885347
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06795751930526764
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3058545937177407,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07785360905601851
+      },
+      {
+        "trajectory": "isaac_anymal_boxes_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31423222921324945,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.07869543852375499
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.32981755986316985,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06117522267551896
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.18009623462919117,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.15847769329588804
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2285950135285935,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.13706438960889167
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.31977754605491837,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.055194400759746125
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3454862552944108,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05670433689030814
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.3555211058359978,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06619667206912717
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35270618556701033,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06807275606465299
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36083484395669,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.0601568723902756
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.24184325597040024,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06574711860166438
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2586814132496135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06456008826226572
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2765700265204135,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.05863127602434013
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.2192504674416714,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.08185950425098461
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36589296316191233,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062282047856523415
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s11",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.33157511822480906,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06655041853490573
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s12",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36348200135838804,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06580383521748631
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s13",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.36840162421557765,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.062490368550595844
+      }
+    ]
+  }
+}

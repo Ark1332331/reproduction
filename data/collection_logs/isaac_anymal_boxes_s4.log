@@ -1,0 +1,132 @@
+[3gH    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H   [INFO] Using python from: /home/ark/miniconda3/envs/isaaclab/bin/python
+Loading user config located at: '/home/ark/miniconda3/envs/isaaclab/lib/python3.11/site-packages/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/ark/miniconda3/envs/isaaclab/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20260827_133558.log
+2026-08-27T05:36:00Z [1,748ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Graphics (ARL)
+2026-08-27T05:36:00Z [1,749ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Graphics (ARL)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.173.02    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5070 Laptop.. | Yes: 0 |     | 8151    MB | 10de      | 0          |
+|     |                                  |        |     |            | 2d58      | 8f3fc4c9.. |
+|     |                                  |        |     |            | 2         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Graphics (ARL)          |        |     | 23633   MB | 8086      | 0          |
+|     |                                  |        |     |            | 7d67      | 8680677d.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 24.04.4 LTS (Noble Numbat) ubuntu, Version: 24.04.4, Kernel: 7.0.0-30-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101011 (1.21.1.11)
+| Processor: Intel(R) Core(TM) Ultra 9 275HX
+| Cores: 24 | Logical Cores: 24
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31511 | Free Memory: 11414
+| Total Page/Swap (MB): 9536 | Free Page/Swap: 4299
+|---------------------------------------------------------------------------------------------|
+2026-08-27T05:36:01Z [2,389ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-08-27T05:36:01Z [2,400ms] [Warning] [gpu.foundation.plugin] PCIe link width current (8) and maximum (16) for device 0 don't match.
+2026-08-27T05:36:01Z [2,400ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-08-27T05:36:01Z [2,400ms] [Warning] [gpu.foundation.plugin] Detected IOMMU is enabled. Running CUDA peer-to-peer bandwidth and latency validation.
+Unidirectional P2P=Enabled Bandwidth (P2P Writes) Matrix (GB/s)
+   D\D     0 
+     0 263.37 
+P2P=Enabled Latency (P2P Writes) Matrix (us)
+   GPU     0 
+     0   2.07 
+
+   CPU     0 
+     0   3.93 
+2026-08-27T05:36:04Z [5,499ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-08-27T05:36:04Z [5,879ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-08-27T05:36:04Z [6,221ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-08-27T05:36:10Z [11,359ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-08-27T05:36:10Z [11,815ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-08-27T05:36:10Z [11,815ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ark/projects/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+[INFO]: Parsing configuration from: isaaclab_tasks.direct.anymal_c.agents.rsl_rl_ppo_cfg:AnymalCRoughPPORunnerCfg
+[INFO]: Parsing configuration from: isaaclab_tasks.direct.anymal_c.anymal_c_env_cfg:AnymalCRoughEnvCfg
+
+[36m===========================================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /run/user/1000/mihomo-tmp/isaaclab/logs/isaaclab_2026-08-27_13-36-21.log[0m
+[36m===========================================================================================================[0m
+
+[33m13:36:21 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+/home/ark/miniconda3/envs/isaaclab/lib/python3.11/site-packages/torch/nn/modules/module.py:1762: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at /pytorch/aten/src/ATen/native/cudnn/RNN.cpp:1481.)
+  return forward_call(*args, **kwargs)
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 4
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO] Generating terrains randomly took : 0.009367 seconds
+[INFO]: Time taken for scene creation : 1.535094 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 5.904643 seconds
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++----------+---------------------------+
+|  Index   | Name                      |
++----------+---------------------------+
+|    0     | physics_material          |
+|    1     | add_base_mass             |
++----------+---------------------------+
+
+[INFO]: Completed setting up the environment...
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 policy :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor MLP: MLP(
+  (0): Linear(in_features=235, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=12, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=235, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+[INFO] checkpoint loaded (iter 1499); terrain=boxes seed=4
+[INFO] env origin [-4. -4.  0.]  terrain origin [-4. -4.  0.]
+[DBG] settle done; base pos=[-3.3381102  -3.9505067   0.63928705]
+[DBG] structures raw: 8
+[DBG] structure shift: [-4. -4.] first=Box(center_x=7.186808580648022, center_y=0.0679653168861698, size_x=1.4687565420165365, size_y=1.8970466224325009, height=0.19316176088417808)
+[trajectory] frame=00 measurement=6000 target=4301 base=(-2.92,-3.95,0.640) yaw=-0.021
+[trajectory] frame=01 measurement=6000 target=4459 base=(-2.52,-3.97,0.639) yaw=-0.033
+[trajectory] frame=02 measurement=6000 target=4679 base=(-2.10,-3.98,0.639) yaw=-0.042
+[trajectory] frame=03 measurement=6000 target=4930 base=(-1.69,-3.99,0.647) yaw=-0.051
+[trajectory] frame=04 measurement=6000 target=4991 base=(-1.29,-4.01,0.651) yaw=-0.073
+[trajectory] frame=05 measurement=6000 target=5045 base=(-0.87,-4.05,0.643) yaw=-0.095
+[trajectory] frame=06 measurement=6000 target=5628 base=(-0.47,-4.08,0.593) yaw=-0.081
+[trajectory] frame=07 measurement=6000 target=5290 base=(-0.09,-4.23,0.584) yaw=-0.358
+[trajectory] frame=08 measurement=6000 target=5359 base=(0.25,-4.60,0.548) yaw=-0.333
+[WARN] robot terminated at frame 9 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s4.npz (9 frames)
+2026-08-27T05:36:10Z [11,817ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-08-27T05:36:17Z [19,301ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+2026-08-27T05:36:28Z [29,866ms] [Warning] [omni.hydra] Mesh '/__Prototype_5758510811026756779/mesh_0' has corrupted data in primvar 'st': buffer size 702 doesn't match expected size 12828 in faceVarying primvars
+2026-08-27T05:36:28Z [29,982ms] [Warning] [rtx.postprocessing.plugin] DLSS increasing input dimensions: Render resolution of (93, 70) is below minimal input resolution of 300.
+2026-08-27T05:36:32Z [33,835ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)

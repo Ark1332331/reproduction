@@ -1,0 +1,91 @@
+{
+  "purpose": "recoverable vectorized R7 collection; not a paper-scale or training-result claim",
+  "created_at": "2026-08-27T14:11:06.795477+00:00",
+  "split": "planned-train",
+  "num_envs": 4,
+  "camera_count_per_environment": 4,
+  "trajectory_steps_requested": 12,
+  "points_per_camera": 1500,
+  "jobs": [
+    {
+      "job": {
+        "terrain": "boxes",
+        "base_seed": 60,
+        "output_dir": "reproduction/data/vectorized_plan",
+        "log": "reproduction/data/vectorized_plan_logs/vectorized_boxes_s60_n4.log"
+      },
+      "outputs": [
+        "reproduction/data/vectorized_plan/isaac_anymal_boxes_s60_e0.npz",
+        "reproduction/data/vectorized_plan/isaac_anymal_boxes_s61_e1.npz",
+        "reproduction/data/vectorized_plan/isaac_anymal_boxes_s62_e2.npz",
+        "reproduction/data/vectorized_plan/isaac_anymal_boxes_s63_e3.npz"
+      ],
+      "status": "dry_run",
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "isaaclab",
+        "/home/ark/projects/IsaacLab/isaaclab.sh",
+        "-p",
+        "/media/ark/Data/devpy/projects/allinone/reproduction/collect_isaaclab_anymal_vectorized.py",
+        "--headless",
+        "--enable_cameras",
+        "--terrain",
+        "boxes",
+        "--seed",
+        "60",
+        "--num-envs",
+        "4",
+        "--trajectory-steps",
+        "12",
+        "--points-per-camera",
+        "1500",
+        "--output-dir",
+        "/media/ark/Data/devpy/projects/allinone/reproduction/data/vectorized_plan"
+      ],
+      "finished_at": "2026-08-27T14:11:06.795851+00:00"
+    },
+    {
+      "job": {
+        "terrain": "walls",
+        "base_seed": 60,
+        "output_dir": "reproduction/data/vectorized_plan",
+        "log": "reproduction/data/vectorized_plan_logs/vectorized_walls_s60_n4.log"
+      },
+      "outputs": [
+        "reproduction/data/vectorized_plan/isaac_anymal_walls_s60_e0.npz",
+        "reproduction/data/vectorized_plan/isaac_anymal_walls_s61_e1.npz",
+        "reproduction/data/vectorized_plan/isaac_anymal_walls_s62_e2.npz",
+        "reproduction/data/vectorized_plan/isaac_anymal_walls_s63_e3.npz"
+      ],
+      "status": "dry_run",
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "isaaclab",
+        "/home/ark/projects/IsaacLab/isaaclab.sh",
+        "-p",
+        "/media/ark/Data/devpy/projects/allinone/reproduction/collect_isaaclab_anymal_vectorized.py",
+        "--headless",
+        "--enable_cameras",
+        "--terrain",
+        "walls",
+        "--seed",
+        "60",
+        "--num-envs",
+        "4",
+        "--trajectory-steps",
+        "12",
+        "--points-per-camera",
+        "1500",
+        "--output-dir",
+        "/media/ark/Data/devpy/projects/allinone/reproduction/data/vectorized_plan"
+      ],
+      "finished_at": "2026-08-27T14:11:06.796492+00:00"
+    }
+  ]
+}

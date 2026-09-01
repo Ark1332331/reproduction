@@ -1,0 +1,66 @@
+[INFO] train: 5 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_corridors_s0', 'isaac_anymal_poles_s0', 'isaac_anymal_stairs_s0', 'isaac_anymal_walls_s0']
+[INFO] generative kernels: ((3, 3, 3, 2), (3, 3, 3, 2), (3, 3, 3, 2), (3, 3, 3, 2))
+[step 000] loss 1.5363 lr 0.003000 pre 123.5s
+[step 001] loss 1.5352 lr 0.003000 pre 118.7s
+[step 002] loss 1.5342 lr 0.003000 pre 118.0s
+[step 003] loss 1.5333 lr 0.003000 pre 117.7s
+[step 004] loss 1.5324 lr 0.003000 pre 117.4s
+[step 005] loss 1.5315 lr 0.003000 pre 117.4s
+[step 006] loss 1.5306 lr 0.003000 pre 117.4s
+[step 007] loss 1.5298 lr 0.003000 pre 117.4s
+[step 008] loss 1.5290 lr 0.003000 pre 117.5s
+[step 009] loss 1.5283 lr 0.003000 pre 118.0s
+[step 010] loss 1.5275 lr 0.003000 pre 117.8s
+[step 011] loss 1.5268 lr 0.003000 pre 117.5s
+[step 012] loss 1.5261 lr 0.003000 pre 117.5s
+[step 013] loss 1.5254 lr 0.003000 pre 121.1s
+[step 014] loss 1.5248 lr 0.003000 pre 117.5s
+[step 015] loss 1.5241 lr 0.003000 pre 117.2s
+[step 016] loss 1.5235 lr 0.003000 pre 117.4s
+[step 017] loss 1.5229 lr 0.003000 pre 117.6s
+[step 018] loss 1.5223 lr 0.003000 pre 117.3s
+[step 019] loss 1.5217 lr 0.003000 pre 117.4s
+[save] reproduction/data/probe_k3_LLoff.pt (step 19)
+[step 020] loss 1.5211 lr 0.003000 pre 117.4s
+[step 021] loss 1.5205 lr 0.003000 pre 117.7s
+[step 022] loss 1.5198 lr 0.003000 pre 117.5s
+[step 023] loss 1.5190 lr 0.003000 pre 117.9s
+[step 024] loss 1.5179 lr 0.003000 pre 117.6s
+[step 025] loss 1.5163 lr 0.003000 pre 117.7s
+[step 026] loss 1.5135 lr 0.003000 pre 117.9s
+[step 027] loss 1.5085 lr 0.003000 pre 121.8s
+[step 028] loss 1.4994 lr 0.003000 pre 117.4s
+[step 029] loss 1.4830 lr 0.003000 pre 117.6s
+[step 030] loss 1.4556 lr 0.003000 pre 117.7s
+[step 031] loss 1.4164 lr 0.003000 pre 118.3s
+[step 032] loss 1.3662 lr 0.003000 pre 118.5s
+[step 033] loss 1.3087 lr 0.003000 pre 117.8s
+[step 034] loss 1.2518 lr 0.003000 pre 118.0s
+[step 035] loss 1.2069 lr 0.003000 pre 118.0s
+[step 036] loss 1.1835 lr 0.003000 pre 117.9s
+[step 037] loss 1.1639 lr 0.003000 pre 117.9s
+[step 038] loss 1.1338 lr 0.003000 pre 117.7s
+[step 039] loss 1.0976 lr 0.003000 pre 117.7s
+[save] reproduction/data/probe_k3_LLoff.pt (step 39)
+[step 040] loss 1.0648 lr 0.003000 pre 117.7s
+[step 041] loss 1.0394 lr 0.003000 pre 117.6s
+[step 042] loss 1.0178 lr 0.003000 pre 117.5s
+[step 043] loss 0.9996 lr 0.003000 pre 118.4s
+[step 044] loss 0.9839 lr 0.003000 pre 117.6s
+[step 045] loss 0.9694 lr 0.003000 pre 117.2s
+[step 046] loss 0.9561 lr 0.003000 pre 117.4s
+[step 047] loss 0.9429 lr 0.003000 pre 117.5s
+[step 048] loss 0.9293 lr 0.003000 pre 118.1s
+[step 049] loss 0.9149 lr 0.003000 pre 117.7s
+[step 050] loss 0.9000 lr 0.003000 pre 117.9s
+[step 051] loss 0.8857 lr 0.003000 pre 117.9s
+[step 052] loss 0.8742 lr 0.003000 pre 118.6s
+[step 053] loss 0.8671 lr 0.003000 pre 118.3s
+[step 054] loss 0.8612 lr 0.003000 pre 117.7s
+[step 055] loss 0.8518 lr 0.003000 pre 117.5s
+[step 056] loss 0.8403 lr 0.003000 pre 117.9s
+[step 057] loss 0.8314 lr 0.003000 pre 118.0s
+[step 058] loss 0.8258 lr 0.003000 pre 118.3s
+[step 059] loss 0.8208 lr 0.003000 pre 118.0s
+[save] reproduction/data/probe_k3_LLoff.pt (step 59)
+[DONE] trained 60 steps; loss 1.5363 -> 0.8208

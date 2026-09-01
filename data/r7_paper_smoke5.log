@@ -1,0 +1,23 @@
+[INFO] train: 5 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_corridors_s0', 'isaac_anymal_poles_s0', 'isaac_anymal_stairs_s0', 'isaac_anymal_walls_s0']
+[INFO] trained 1 steps; final loss 2.1686
+[eval] isaac_anymal_boxes_s10: model F1=0.0194 (baseline 0.3594) MAE=0.6075 (baseline 0.0680)
+[eval] isaac_anymal_boxes_s12: model F1=0.0350 (baseline 0.3059) MAE=0.5789 (baseline 0.0779)
+[eval] isaac_anymal_boxes_s13: model F1=0.0337 (baseline 0.3142) MAE=0.5394 (baseline 0.0787)
+[eval] isaac_anymal_boxes_s14: model F1=0.0345 (baseline 0.3191) MAE=0.5484 (baseline 0.0648)
+[eval] isaac_anymal_corridors_s10: model F1=0.0283 (baseline 0.3298) MAE=0.5696 (baseline 0.0612)
+[eval] isaac_anymal_corridors_s11: model F1=0.0277 (baseline 0.1801) MAE=0.5769 (baseline 0.1585)
+[eval] isaac_anymal_corridors_s12: model F1=0.0189 (baseline 0.2286) MAE=0.6003 (baseline 0.1371)
+[eval] isaac_anymal_corridors_s13: model F1=0.0245 (baseline 0.3198) MAE=0.5924 (baseline 0.0552)
+[eval] isaac_anymal_poles_s10: model F1=0.0234 (baseline 0.3455) MAE=0.5749 (baseline 0.0567)
+[eval] isaac_anymal_poles_s11: model F1=0.0319 (baseline 0.3555) MAE=0.5657 (baseline 0.0662)
+[eval] isaac_anymal_poles_s12: model F1=0.0229 (baseline 0.3527) MAE=0.6235 (baseline 0.0681)
+[eval] isaac_anymal_poles_s13: model F1=0.0365 (baseline 0.3608) MAE=0.5735 (baseline 0.0602)
+[eval] isaac_anymal_stairs_s10: model F1=0.0362 (baseline 0.2418) MAE=0.6311 (baseline 0.0657)
+[eval] isaac_anymal_stairs_s11: model F1=0.0399 (baseline 0.2587) MAE=0.6513 (baseline 0.0646)
+[eval] isaac_anymal_stairs_s12: model F1=0.0402 (baseline 0.2766) MAE=0.6568 (baseline 0.0586)
+[eval] isaac_anymal_stairs_s13: model F1=0.0538 (baseline 0.2193) MAE=0.5387 (baseline 0.0819)
+[eval] isaac_anymal_walls_s10: model F1=0.0296 (baseline 0.3659) MAE=0.5841 (baseline 0.0623)
+[eval] isaac_anymal_walls_s11: model F1=0.0296 (baseline 0.3316) MAE=0.5754 (baseline 0.0666)
+[eval] isaac_anymal_walls_s12: model F1=0.0151 (baseline 0.3635) MAE=0.6512 (baseline 0.0658)
+[eval] isaac_anymal_walls_s13: model F1=0.0249 (baseline 0.3684) MAE=0.5903 (baseline 0.0625)
+[INFO] wrote reproduction/data/r7_paper_smoke5.json

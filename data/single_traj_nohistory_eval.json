@@ -1,0 +1,126 @@
+{
+  "checkpoint": "reproduction/data/single_traj_overfit.pt",
+  "trained_steps": 300,
+  "config": {
+    "channels": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "generative_kernels": null,
+    "pruning_alpha": 0.0,
+    "feedback_alpha": 0.0,
+    "occupancy_pos_weight": 1,
+    "likelihood_weight": 0,
+    "trajectory": "isaac_anymal_boxes_s10.npz"
+  },
+  "internal_pruning": false,
+  "feedback_alpha": 0.0,
+  "use_history": false,
+  "alpha_0.05": {
+    "mean": {
+      "model_f1": 0.5877396179541411,
+      "baseline_f1": 0.35937902049918513,
+      "model_precision": 0.5531262835297462,
+      "model_recall": 0.6269741789922286,
+      "model_height_mae": 0.0893839568426661,
+      "baseline_height_mae": 0.06795751930526764
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.5877396179541411,
+        "model_precision": 0.5531262835297462,
+        "model_recall": 0.6269741789922286,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": 0.0893839568426661,
+        "baseline_height_mae": 0.06795751930526764
+      }
+    ]
+  },
+  "alpha_0.1": {
+    "mean": {
+      "model_f1": 0.6372438394059622,
+      "baseline_f1": 0.35937902049918513,
+      "model_precision": 0.6478555304740407,
+      "model_recall": 0.6269741789922286,
+      "model_height_mae": 0.06263065140367988,
+      "baseline_height_mae": 0.06795751930526764
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.6372438394059622,
+        "model_precision": 0.6478555304740407,
+        "model_recall": 0.6269741789922286,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": 0.06263065140367988,
+        "baseline_height_mae": 0.06795751930526764
+      }
+    ]
+  },
+  "alpha_0.2": {
+    "mean": {
+      "model_f1": 0.7168714168714169,
+      "baseline_f1": 0.35937902049918513,
+      "model_precision": 0.8369269015633217,
+      "model_recall": 0.6269383662213945,
+      "model_height_mae": 0.022903418530519228,
+      "baseline_height_mae": 0.06795751930526764
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.7168714168714169,
+        "model_precision": 0.8369269015633217,
+        "model_recall": 0.6269383662213945,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": 0.022903418530519228,
+        "baseline_height_mae": 0.06795751930526764
+      }
+    ]
+  },
+  "alpha_0.3": {
+    "mean": {
+      "model_f1": 0.7525221020026243,
+      "baseline_f1": 0.35937902049918513,
+      "model_precision": 0.9421523214478078,
+      "model_recall": 0.6264369874297174,
+      "model_height_mae": 0.0036679281268223824,
+      "baseline_height_mae": 0.06795751930526764
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.7525221020026243,
+        "model_precision": 0.9421523214478078,
+        "model_recall": 0.6264369874297174,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": 0.0036679281268223824,
+        "baseline_height_mae": 0.06795751930526764
+      }
+    ]
+  },
+  "alpha_0.5": {
+    "mean": {
+      "model_f1": 0.0,
+      "baseline_f1": 0.35937902049918513,
+      "model_precision": 0.0,
+      "model_recall": 0.0,
+      "model_height_mae": Infinity,
+      "baseline_height_mae": 0.06795751930526764
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s10",
+        "model_f1": 0.0,
+        "model_precision": 0.0,
+        "model_recall": 0.0,
+        "baseline_f1": 0.35937902049918513,
+        "model_height_mae": Infinity,
+        "baseline_height_mae": 0.06795751930526764
+      }
+    ]
+  }
+}

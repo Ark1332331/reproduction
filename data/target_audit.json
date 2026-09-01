@@ -1,0 +1,6455 @@
+{
+  "summary": {
+    "coverage_mean": 0.6001,
+    "coverage_min": 0.2584,
+    "positive_rate_mean": 0.0099,
+    "candidate_k_distribution_total": {
+      "0": 12648448,
+      "1": 16977920,
+      "2": 16978311,
+      "3": 16977941,
+      "4": 16977920,
+      "5": 14688256
+    },
+    "target_all_k0_frames": 1.0,
+    "target_in_range_frames": 1.0,
+    "target_duplicate_free_frames": 1.0
+  },
+  "loss_decomposition_one_frame": {
+    "positive_count": 2528,
+    "negative_count": 202272,
+    "positive_bce": 0.68167,
+    "negative_bce": 0.69317,
+    "offset_loss": 0.71928,
+    "total": 1.4123
+  },
+  "label_verification": {
+    "positive_ok": 2,
+    "negative_ok": 4,
+    "samples": [
+      {
+        "candidate_coord": [
+          0,
+          54,
+          34,
+          0,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          55,
+          35,
+          1,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          52,
+          32,
+          3,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          50,
+          32,
+          6,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          52,
+          35,
+          7,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          56,
+          35,
+          2,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          60,
+          35,
+          3,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          57,
+          39,
+          0,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          63,
+          38,
+          0,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          57,
+          32,
+          6,
+          0
+        ],
+        "label": 1
+      },
+      {
+        "candidate_coord": [
+          0,
+          48,
+          32,
+          0,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          49,
+          32,
+          0,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          48,
+          33,
+          0,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          49,
+          33,
+          0,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          48,
+          32,
+          1,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          49,
+          32,
+          1,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          48,
+          33,
+          1,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          49,
+          33,
+          1,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          50,
+          32,
+          0,
+          0
+        ],
+        "label": 0
+      },
+      {
+        "candidate_coord": [
+          0,
+          51,
+          32,
+          0,
+          0
+        ],
+        "label": 0
+      }
+    ]
+  },
+  "per_frame": [
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 0,
+      "target_voxels": 4014,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6293,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 1,
+      "target_voxels": 3990,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6331,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 2,
+      "target_voxels": 3978,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.635,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 3,
+      "target_voxels": 4310,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6578,
+      "positive_rate": 0.0087,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 4,
+      "target_voxels": 4870,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6893,
+      "positive_rate": 0.0102,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 5,
+      "target_voxels": 5514,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5903,
+      "positive_rate": 0.0101,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 6,
+      "target_voxels": 6107,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.4772,
+      "positive_rate": 0.0086,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 7,
+      "target_voxels": 6085,
+      "candidate_voxels": 364544,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 61440
+      },
+      "coverage": 0.5157,
+      "positive_rate": 0.0086,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 8,
+      "target_voxels": 6089,
+      "candidate_voxels": 356352,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 53248
+      },
+      "coverage": 0.5539,
+      "positive_rate": 0.0095,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 0,
+      "frame": 9,
+      "target_voxels": 5781,
+      "candidate_voxels": 335872,
+      "candidate_k_distribution": {
+        "0": 53248,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 36864
+      },
+      "coverage": 0.7431,
+      "positive_rate": 0.0128,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 1,
+      "target_voxels": 4014,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57355,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6293,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 2,
+      "target_voxels": 3990,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6331,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 3,
+      "target_voxels": 4522,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6676,
+      "positive_rate": 0.0092,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 4,
+      "target_voxels": 5181,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.696,
+      "positive_rate": 0.011,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 5,
+      "target_voxels": 5905,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 45056,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 49152
+      },
+      "coverage": 0.6015,
+      "positive_rate": 0.011,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 6,
+      "target_voxels": 6464,
+      "candidate_voxels": 319488,
+      "candidate_k_distribution": {
+        "0": 32768,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.2584,
+      "positive_rate": 0.0052,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 7,
+      "target_voxels": 6475,
+      "candidate_voxels": 311296,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 40960
+      },
+      "coverage": 0.5231,
+      "positive_rate": 0.0109,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 8,
+      "target_voxels": 6447,
+      "candidate_voxels": 397312,
+      "candidate_k_distribution": {
+        "0": 49152,
+        "1": 73728,
+        "2": 73728,
+        "3": 73728,
+        "4": 73728,
+        "5": 53248
+      },
+      "coverage": 0.8485,
+      "positive_rate": 0.0138,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 1,
+      "frame": 9,
+      "target_voxels": 5985,
+      "candidate_voxels": 344064,
+      "candidate_k_distribution": {
+        "0": 53248,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 45056
+      },
+      "coverage": 0.854,
+      "positive_rate": 0.0149,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 1,
+      "target_voxels": 3998,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57348,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6318,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 2,
+      "target_voxels": 3978,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.635,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 3,
+      "target_voxels": 4555,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57350,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6406,
+      "positive_rate": 0.0089,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 4,
+      "target_voxels": 5312,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6487,
+      "positive_rate": 0.0105,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 5,
+      "target_voxels": 6223,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5607,
+      "positive_rate": 0.0108,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 6,
+      "target_voxels": 6509,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.5339,
+      "positive_rate": 0.0102,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 7,
+      "target_voxels": 6438,
+      "candidate_voxels": 360448,
+      "candidate_k_distribution": {
+        "0": 32768,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 65536
+      },
+      "coverage": 0.3762,
+      "positive_rate": 0.0067,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 8,
+      "target_voxels": 6268,
+      "candidate_voxels": 352256,
+      "candidate_k_distribution": {
+        "0": 49152,
+        "1": 65536,
+        "2": 65537,
+        "3": 65536,
+        "4": 65536,
+        "5": 40960
+      },
+      "coverage": 0.6962,
+      "positive_rate": 0.0124,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 2,
+      "frame": 9,
+      "target_voxels": 6576,
+      "candidate_voxels": 356352,
+      "candidate_k_distribution": {
+        "0": 53248,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 57344
+      },
+      "coverage": 0.7725,
+      "positive_rate": 0.0143,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 1,
+      "target_voxels": 4032,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57350,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 2,
+      "target_voxels": 4018,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6287,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 3,
+      "target_voxels": 4632,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6345,
+      "positive_rate": 0.009,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 4,
+      "target_voxels": 5446,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6383,
+      "positive_rate": 0.0106,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 5,
+      "target_voxels": 6460,
+      "candidate_voxels": 303104,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 53248,
+        "2": 53262,
+        "3": 53248,
+        "4": 53248,
+        "5": 53248
+      },
+      "coverage": 0.5605,
+      "positive_rate": 0.0119,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 6,
+      "target_voxels": 6457,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.5749,
+      "positive_rate": 0.0109,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 7,
+      "target_voxels": 6448,
+      "candidate_voxels": 360448,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 57344
+      },
+      "coverage": 0.5765,
+      "positive_rate": 0.0103,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 3,
+      "frame": 8,
+      "target_voxels": 6179,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 49152,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 45056
+      },
+      "coverage": 0.7676,
+      "positive_rate": 0.0147,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 1,
+      "target_voxels": 4032,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 2,
+      "target_voxels": 4014,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6293,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 3,
+      "target_voxels": 4487,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6329,
+      "positive_rate": 0.0087,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 4,
+      "target_voxels": 5156,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6453,
+      "positive_rate": 0.0102,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 5,
+      "target_voxels": 5931,
+      "candidate_voxels": 303104,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 53248,
+        "2": 53254,
+        "3": 53248,
+        "4": 53248,
+        "5": 53248
+      },
+      "coverage": 0.579,
+      "positive_rate": 0.0113,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 6,
+      "target_voxels": 6835,
+      "candidate_voxels": 344064,
+      "candidate_k_distribution": {
+        "0": 45056,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.5873,
+      "positive_rate": 0.0117,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 7,
+      "target_voxels": 7261,
+      "candidate_voxels": 389120,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 69632,
+        "2": 69632,
+        "3": 69632,
+        "4": 69632,
+        "5": 69632
+      },
+      "coverage": 0.5309,
+      "positive_rate": 0.0099,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 8,
+      "target_voxels": 7215,
+      "candidate_voxels": 364544,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 65536,
+        "2": 65547,
+        "3": 65536,
+        "4": 65536,
+        "5": 61440
+      },
+      "coverage": 0.5981,
+      "positive_rate": 0.0118,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 10,
+      "frame": 9,
+      "target_voxels": 7131,
+      "candidate_voxels": 356352,
+      "candidate_k_distribution": {
+        "0": 49152,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 61440
+      },
+      "coverage": 0.7543,
+      "positive_rate": 0.0151,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 1,
+      "target_voxels": 3998,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6318,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 2,
+      "target_voxels": 3974,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6356,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 3,
+      "target_voxels": 4578,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57348,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6479,
+      "positive_rate": 0.0091,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 4,
+      "target_voxels": 5294,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6602,
+      "positive_rate": 0.0107,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 5,
+      "target_voxels": 6352,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.571,
+      "positive_rate": 0.0112,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 6,
+      "target_voxels": 6433,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.559,
+      "positive_rate": 0.0106,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 7,
+      "target_voxels": 6361,
+      "candidate_voxels": 360448,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 57344
+      },
+      "coverage": 0.5919,
+      "positive_rate": 0.0104,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 8,
+      "target_voxels": 6394,
+      "candidate_voxels": 319488,
+      "candidate_k_distribution": {
+        "0": 45056,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 45056
+      },
+      "coverage": 0.6423,
+      "positive_rate": 0.0129,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 11,
+      "frame": 9,
+      "target_voxels": 6056,
+      "candidate_voxels": 352256,
+      "candidate_k_distribution": {
+        "0": 53248,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.8256,
+      "positive_rate": 0.0142,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 1,
+      "target_voxels": 4030,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6268,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 2,
+      "target_voxels": 4002,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6312,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 3,
+      "target_voxels": 4585,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6635,
+      "positive_rate": 0.0093,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 4,
+      "target_voxels": 5235,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6886,
+      "positive_rate": 0.011,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 5,
+      "target_voxels": 6079,
+      "candidate_voxels": 303104,
+      "candidate_k_distribution": {
+        "0": 45056,
+        "1": 53248,
+        "2": 53252,
+        "3": 53248,
+        "4": 53248,
+        "5": 45056
+      },
+      "coverage": 0.5873,
+      "positive_rate": 0.0118,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 6,
+      "target_voxels": 6372,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5121,
+      "positive_rate": 0.01,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 7,
+      "target_voxels": 6377,
+      "candidate_voxels": 385024,
+      "candidate_k_distribution": {
+        "0": 45056,
+        "1": 69632,
+        "2": 69632,
+        "3": 69632,
+        "4": 69632,
+        "5": 61440
+      },
+      "coverage": 0.605,
+      "positive_rate": 0.01,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 12,
+      "frame": 8,
+      "target_voxels": 6318,
+      "candidate_voxels": 360448,
+      "candidate_k_distribution": {
+        "0": 49152,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 49152
+      },
+      "coverage": 0.7686,
+      "positive_rate": 0.0135,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 1,
+      "target_voxels": 4002,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57350,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6312,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 2,
+      "target_voxels": 3982,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57350,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6344,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 3,
+      "target_voxels": 4515,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6346,
+      "positive_rate": 0.0087,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 4,
+      "target_voxels": 5330,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6392,
+      "positive_rate": 0.0104,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 5,
+      "target_voxels": 6165,
+      "candidate_voxels": 303104,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 53248,
+        "2": 53257,
+        "3": 53248,
+        "4": 53248,
+        "5": 53248
+      },
+      "coverage": 0.5783,
+      "positive_rate": 0.0118,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 6,
+      "target_voxels": 7149,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.4963,
+      "positive_rate": 0.0104,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 7,
+      "target_voxels": 7483,
+      "candidate_voxels": 348160,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 61440
+      },
+      "coverage": 0.5324,
+      "positive_rate": 0.0114,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 8,
+      "target_voxels": 7378,
+      "candidate_voxels": 409600,
+      "candidate_k_distribution": {
+        "0": 57344,
+        "1": 73728,
+        "2": 73728,
+        "3": 73728,
+        "4": 73728,
+        "5": 57344
+      },
+      "coverage": 0.8531,
+      "positive_rate": 0.0154,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 9,
+      "target_voxels": 7171,
+      "candidate_voxels": 364544,
+      "candidate_k_distribution": {
+        "0": 49152,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 53248
+      },
+      "coverage": 0.7523,
+      "positive_rate": 0.0148,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "stairs",
+      "seed": 13,
+      "frame": 10,
+      "target_voxels": 6596,
+      "candidate_voxels": 364544,
+      "candidate_k_distribution": {
+        "0": 53248,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 49152
+      },
+      "coverage": 0.8307,
+      "positive_rate": 0.015,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 0,
+      "frame": 0,
+      "target_voxels": 4018,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6287,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 0,
+      "frame": 1,
+      "target_voxels": 3994,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57362,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6324,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 0,
+      "frame": 2,
+      "target_voxels": 4116,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6419,
+      "positive_rate": 0.0081,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 0,
+      "frame": 3,
+      "target_voxels": 4398,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6521,
+      "positive_rate": 0.0088,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 0,
+      "frame": 4,
+      "target_voxels": 4562,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6697,
+      "positive_rate": 0.0093,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 0,
+      "frame": 5,
+      "target_voxels": 4769,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6582,
+      "positive_rate": 0.0096,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 0,
+      "frame": 6,
+      "target_voxels": 4934,
+      "candidate_voxels": 335872,
+      "candidate_k_distribution": {
+        "0": 45056,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 45056
+      },
+      "coverage": 0.5989,
+      "positive_rate": 0.0088,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 1,
+      "target_voxels": 4546,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6366,
+      "positive_rate": 0.0088,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 2,
+      "target_voxels": 4891,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57347,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6426,
+      "positive_rate": 0.0096,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 3,
+      "target_voxels": 5218,
+      "candidate_voxels": 286720,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 49152
+      },
+      "coverage": 0.6738,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 4,
+      "target_voxels": 5577,
+      "candidate_voxels": 258048,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 45056,
+        "2": 45056,
+        "3": 45056,
+        "4": 45056,
+        "5": 40960
+      },
+      "coverage": 0.5876,
+      "positive_rate": 0.0127,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 5,
+      "target_voxels": 5893,
+      "candidate_voxels": 319488,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 49152
+      },
+      "coverage": 0.4872,
+      "positive_rate": 0.009,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 6,
+      "target_voxels": 6027,
+      "candidate_voxels": 286720,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 49152
+      },
+      "coverage": 0.5039,
+      "positive_rate": 0.0106,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 7,
+      "target_voxels": 6162,
+      "candidate_voxels": 360448,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 65536,
+        "2": 65536,
+        "3": 65536,
+        "4": 65536,
+        "5": 61440
+      },
+      "coverage": 0.593,
+      "positive_rate": 0.0101,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 1,
+      "frame": 8,
+      "target_voxels": 6116,
+      "candidate_voxels": 335872,
+      "candidate_k_distribution": {
+        "0": 45056,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 45056
+      },
+      "coverage": 0.5765,
+      "positive_rate": 0.0105,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 2,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 2,
+      "frame": 1,
+      "target_voxels": 3998,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57368,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6318,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 2,
+      "frame": 2,
+      "target_voxels": 4377,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.605,
+      "positive_rate": 0.0081,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 2,
+      "frame": 3,
+      "target_voxels": 4969,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5822,
+      "positive_rate": 0.0088,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 2,
+      "frame": 4,
+      "target_voxels": 5261,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.633,
+      "positive_rate": 0.0102,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 2,
+      "frame": 5,
+      "target_voxels": 5523,
+      "candidate_voxels": 282624,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49165,
+        "3": 49152,
+        "4": 49152,
+        "5": 45056
+      },
+      "coverage": 0.6726,
+      "positive_rate": 0.0131,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 2,
+      "frame": 6,
+      "target_voxels": 5729,
+      "candidate_voxels": 299008,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 53248,
+        "2": 53248,
+        "3": 53248,
+        "4": 53248,
+        "5": 45056
+      },
+      "coverage": 0.6313,
+      "positive_rate": 0.0121,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 2,
+      "frame": 7,
+      "target_voxels": 6125,
+      "candidate_voxels": 319488,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 49152
+      },
+      "coverage": 0.6302,
+      "positive_rate": 0.0121,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 3,
+      "frame": 0,
+      "target_voxels": 4718,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6246,
+      "positive_rate": 0.0144,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 3,
+      "frame": 1,
+      "target_voxels": 5069,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6496,
+      "positive_rate": 0.01,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 3,
+      "frame": 2,
+      "target_voxels": 5739,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.6508,
+      "positive_rate": 0.0115,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 3,
+      "frame": 3,
+      "target_voxels": 6178,
+      "candidate_voxels": 262144,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 45056,
+        "2": 45056,
+        "3": 45056,
+        "4": 45056,
+        "5": 45056
+      },
+      "coverage": 0.5691,
+      "positive_rate": 0.0134,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 3,
+      "frame": 4,
+      "target_voxels": 6357,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.6687,
+      "positive_rate": 0.0131,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 3,
+      "frame": 5,
+      "target_voxels": 6419,
+      "candidate_voxels": 315392,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 49152
+      },
+      "coverage": 0.4599,
+      "positive_rate": 0.0094,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 3,
+      "frame": 6,
+      "target_voxels": 6045,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.529,
+      "positive_rate": 0.0099,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 3,
+      "frame": 7,
+      "target_voxels": 5155,
+      "candidate_voxels": 311296,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 45056
+      },
+      "coverage": 0.5919,
+      "positive_rate": 0.0098,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 10,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 10,
+      "frame": 1,
+      "target_voxels": 4032,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57354,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 10,
+      "frame": 2,
+      "target_voxels": 4014,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6293,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 10,
+      "frame": 3,
+      "target_voxels": 3994,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6324,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 10,
+      "frame": 4,
+      "target_voxels": 3978,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.635,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 10,
+      "frame": 5,
+      "target_voxels": 4156,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6078,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 10,
+      "frame": 6,
+      "target_voxels": 3717,
+      "candidate_voxels": 299008,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 53248,
+        "2": 53248,
+        "3": 53248,
+        "4": 53248,
+        "5": 45056
+      },
+      "coverage": 0.6379,
+      "positive_rate": 0.0079,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 12,
+      "frame": 0,
+      "target_voxels": 4434,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6256,
+      "positive_rate": 0.0135,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 12,
+      "frame": 1,
+      "target_voxels": 4560,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6066,
+      "positive_rate": 0.0084,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 12,
+      "frame": 2,
+      "target_voxels": 4612,
+      "candidate_voxels": 282624,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49153,
+        "3": 49152,
+        "4": 49152,
+        "5": 45056
+      },
+      "coverage": 0.6388,
+      "positive_rate": 0.0104,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 12,
+      "frame": 3,
+      "target_voxels": 4652,
+      "candidate_voxels": 282624,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49159,
+        "3": 49152,
+        "4": 49152,
+        "5": 45056
+      },
+      "coverage": 0.6178,
+      "positive_rate": 0.0102,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 12,
+      "frame": 4,
+      "target_voxels": 4938,
+      "candidate_voxels": 282624,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 45056
+      },
+      "coverage": 0.5826,
+      "positive_rate": 0.0102,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 12,
+      "frame": 5,
+      "target_voxels": 5210,
+      "candidate_voxels": 278528,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 40960
+      },
+      "coverage": 0.6378,
+      "positive_rate": 0.0119,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 12,
+      "frame": 6,
+      "target_voxels": 5070,
+      "candidate_voxels": 319488,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 49152
+      },
+      "coverage": 0.6724,
+      "positive_rate": 0.0107,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 13,
+      "frame": 0,
+      "target_voxels": 4195,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6415,
+      "positive_rate": 0.0131,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 13,
+      "frame": 1,
+      "target_voxels": 4306,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57354,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6535,
+      "positive_rate": 0.0086,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 13,
+      "frame": 2,
+      "target_voxels": 4520,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6376,
+      "positive_rate": 0.0088,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 13,
+      "frame": 3,
+      "target_voxels": 4655,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.6049,
+      "positive_rate": 0.0087,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 13,
+      "frame": 4,
+      "target_voxels": 4781,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.6022,
+      "positive_rate": 0.0089,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 13,
+      "frame": 5,
+      "target_voxels": 4811,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.6404,
+      "positive_rate": 0.0095,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "boxes",
+      "seed": 13,
+      "frame": 6,
+      "target_voxels": 3994,
+      "candidate_voxels": 319488,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.5886,
+      "positive_rate": 0.0074,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 0,
+      "frame": 0,
+      "target_voxels": 4018,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6287,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 0,
+      "frame": 1,
+      "target_voxels": 3994,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57354,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6324,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 0,
+      "frame": 2,
+      "target_voxels": 3978,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57351,
+        "3": 57346,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.635,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 0,
+      "frame": 3,
+      "target_voxels": 3958,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6367,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 0,
+      "frame": 4,
+      "target_voxels": 3969,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6334,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 0,
+      "frame": 5,
+      "target_voxels": 4206,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57352,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5958,
+      "positive_rate": 0.0076,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 0,
+      "frame": 6,
+      "target_voxels": 4629,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.6051,
+      "positive_rate": 0.0082,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 1,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 1,
+      "frame": 1,
+      "target_voxels": 4056,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6317,
+      "positive_rate": 0.0078,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 1,
+      "frame": 2,
+      "target_voxels": 4322,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6483,
+      "positive_rate": 0.0086,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 1,
+      "frame": 3,
+      "target_voxels": 4608,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6602,
+      "positive_rate": 0.0093,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 1,
+      "frame": 4,
+      "target_voxels": 4865,
+      "candidate_voxels": 286720,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 49152
+      },
+      "coverage": 0.6697,
+      "positive_rate": 0.0114,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 1,
+      "frame": 5,
+      "target_voxels": 4978,
+      "candidate_voxels": 282624,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 45056
+      },
+      "coverage": 0.6448,
+      "positive_rate": 0.0114,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 1,
+      "frame": 6,
+      "target_voxels": 4643,
+      "candidate_voxels": 299008,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 53248,
+        "2": 53248,
+        "3": 53248,
+        "4": 53248,
+        "5": 45056
+      },
+      "coverage": 0.6287,
+      "positive_rate": 0.0098,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 2,
+      "frame": 0,
+      "target_voxels": 4026,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6274,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 2,
+      "frame": 1,
+      "target_voxels": 3998,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6318,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 2,
+      "frame": 2,
+      "target_voxels": 4176,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6049,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 2,
+      "frame": 3,
+      "target_voxels": 4354,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5985,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 2,
+      "frame": 4,
+      "target_voxels": 4386,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6311,
+      "positive_rate": 0.0084,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 2,
+      "frame": 5,
+      "target_voxels": 4360,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6771,
+      "positive_rate": 0.009,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 2,
+      "frame": 6,
+      "target_voxels": 5035,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.6129,
+      "positive_rate": 0.0091,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 3,
+      "frame": 0,
+      "target_voxels": 4162,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6074,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 3,
+      "frame": 1,
+      "target_voxels": 4256,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57348,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6057,
+      "positive_rate": 0.0079,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 3,
+      "frame": 2,
+      "target_voxels": 4298,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6235,
+      "positive_rate": 0.0082,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 3,
+      "frame": 3,
+      "target_voxels": 4272,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6517,
+      "positive_rate": 0.0085,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 3,
+      "frame": 4,
+      "target_voxels": 4235,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6562,
+      "positive_rate": 0.0085,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 3,
+      "frame": 5,
+      "target_voxels": 4292,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6193,
+      "positive_rate": 0.0081,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 3,
+      "frame": 6,
+      "target_voxels": 3723,
+      "candidate_voxels": 299008,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 53248,
+        "2": 53248,
+        "3": 53248,
+        "4": 53248,
+        "5": 45056
+      },
+      "coverage": 0.6232,
+      "positive_rate": 0.0078,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 10,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 10,
+      "frame": 1,
+      "target_voxels": 4032,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57351,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 10,
+      "frame": 2,
+      "target_voxels": 4014,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6293,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 10,
+      "frame": 3,
+      "target_voxels": 3998,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6318,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 10,
+      "frame": 4,
+      "target_voxels": 3982,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6344,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 10,
+      "frame": 5,
+      "target_voxels": 4206,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57349,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.601,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 10,
+      "frame": 6,
+      "target_voxels": 3954,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.6462,
+      "positive_rate": 0.0075,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 11,
+      "frame": 0,
+      "target_voxels": 4302,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6348,
+      "positive_rate": 0.0133,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 11,
+      "frame": 1,
+      "target_voxels": 4680,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6331,
+      "positive_rate": 0.009,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 12,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 12,
+      "frame": 1,
+      "target_voxels": 4030,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57348,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6268,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 12,
+      "frame": 2,
+      "target_voxels": 4096,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57347,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6167,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 12,
+      "frame": 3,
+      "target_voxels": 4082,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6188,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 12,
+      "frame": 4,
+      "target_voxels": 4070,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6442,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 12,
+      "frame": 5,
+      "target_voxels": 4063,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6446,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 12,
+      "frame": 6,
+      "target_voxels": 3768,
+      "candidate_voxels": 335872,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.6038,
+      "positive_rate": 0.0068,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 13,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 13,
+      "frame": 1,
+      "target_voxels": 4002,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6312,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 13,
+      "frame": 2,
+      "target_voxels": 3982,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6344,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 13,
+      "frame": 3,
+      "target_voxels": 3970,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6363,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 13,
+      "frame": 4,
+      "target_voxels": 3946,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6386,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 13,
+      "frame": 5,
+      "target_voxels": 3922,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.64,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "walls",
+      "seed": 13,
+      "frame": 6,
+      "target_voxels": 4210,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.6,
+      "positive_rate": 0.0074,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 0,
+      "target_voxels": 4018,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6287,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 1,
+      "target_voxels": 3994,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6324,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 2,
+      "target_voxels": 3978,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.635,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 3,
+      "target_voxels": 4067,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6464,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 4,
+      "target_voxels": 4040,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6495,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 5,
+      "target_voxels": 4051,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57347,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6505,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 6,
+      "target_voxels": 4193,
+      "candidate_voxels": 335872,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 49152
+      },
+      "coverage": 0.5934,
+      "positive_rate": 0.0074,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 7,
+      "target_voxels": 2969,
+      "candidate_voxels": 315392,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5133,
+      "positive_rate": 0.0048,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 8,
+      "target_voxels": 3050,
+      "candidate_voxels": 274432,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 40960
+      },
+      "coverage": 0.6797,
+      "positive_rate": 0.0076,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 9,
+      "target_voxels": 2885,
+      "candidate_voxels": 237568,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960,
+        "5": 36864
+      },
+      "coverage": 0.6842,
+      "positive_rate": 0.0083,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 10,
+      "target_voxels": 2916,
+      "candidate_voxels": 221184,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 36864,
+        "2": 36864,
+        "3": 36864,
+        "4": 36864,
+        "5": 36864
+      },
+      "coverage": 0.6848,
+      "positive_rate": 0.009,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 0,
+      "frame": 11,
+      "target_voxels": 3097,
+      "candidate_voxels": 221184,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 36864,
+        "2": 36864,
+        "3": 36864,
+        "4": 36864,
+        "5": 36864
+      },
+      "coverage": 0.6874,
+      "positive_rate": 0.0096,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 1,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 1,
+      "frame": 1,
+      "target_voxels": 4111,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.638,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 1,
+      "frame": 2,
+      "target_voxels": 4191,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.623,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 1,
+      "frame": 3,
+      "target_voxels": 4302,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57358,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6483,
+      "positive_rate": 0.0085,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 1,
+      "frame": 4,
+      "target_voxels": 4318,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6464,
+      "positive_rate": 0.0085,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 1,
+      "frame": 5,
+      "target_voxels": 4371,
+      "candidate_voxels": 331776,
+      "candidate_k_distribution": {
+        "0": 45056,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.72,
+      "positive_rate": 0.0095,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 1,
+      "frame": 6,
+      "target_voxels": 4348,
+      "candidate_voxels": 319488,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 49152
+      },
+      "coverage": 0.6148,
+      "positive_rate": 0.0084,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 2,
+      "frame": 0,
+      "target_voxels": 4026,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6274,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 2,
+      "frame": 1,
+      "target_voxels": 3998,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6318,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 2,
+      "frame": 2,
+      "target_voxels": 4114,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57351,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.614,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 2,
+      "frame": 3,
+      "target_voxels": 4538,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57347,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5826,
+      "positive_rate": 0.0081,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 2,
+      "frame": 4,
+      "target_voxels": 4791,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57356,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6387,
+      "positive_rate": 0.0093,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 2,
+      "frame": 5,
+      "target_voxels": 4800,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 57344,
+        "2": 57348,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6038,
+      "positive_rate": 0.009,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 3,
+      "frame": 0,
+      "target_voxels": 4080,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6255,
+      "positive_rate": 0.0125,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 3,
+      "frame": 1,
+      "target_voxels": 4310,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57354,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6255,
+      "positive_rate": 0.0082,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 3,
+      "frame": 2,
+      "target_voxels": 4272,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57350,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.64,
+      "positive_rate": 0.0083,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 3,
+      "frame": 3,
+      "target_voxels": 4403,
+      "candidate_voxels": 282624,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49153,
+        "3": 49152,
+        "4": 49152,
+        "5": 45056
+      },
+      "coverage": 0.6271,
+      "positive_rate": 0.0098,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 3,
+      "frame": 4,
+      "target_voxels": 4638,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.6242,
+      "positive_rate": 0.0089,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 3,
+      "frame": 5,
+      "target_voxels": 4690,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6281,
+      "positive_rate": 0.009,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 1,
+      "target_voxels": 4304,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5874,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 2,
+      "target_voxels": 4283,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57353,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5982,
+      "positive_rate": 0.0078,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 3,
+      "target_voxels": 4268,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6425,
+      "positive_rate": 0.0084,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 4,
+      "target_voxels": 4271,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6455,
+      "positive_rate": 0.0084,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 5,
+      "target_voxels": 4431,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57362,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6254,
+      "positive_rate": 0.0085,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 6,
+      "target_voxels": 4198,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61441,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.6086,
+      "positive_rate": 0.0075,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 7,
+      "target_voxels": 3525,
+      "candidate_voxels": 311296,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.4749,
+      "positive_rate": 0.0054,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 8,
+      "target_voxels": 3870,
+      "candidate_voxels": 188416,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 32768,
+        "2": 32768,
+        "3": 32768,
+        "4": 32768,
+        "5": 28672
+      },
+      "coverage": 0.4494,
+      "positive_rate": 0.0092,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 9,
+      "target_voxels": 3762,
+      "candidate_voxels": 172032,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 28672,
+        "2": 28672,
+        "3": 28672,
+        "4": 28672,
+        "5": 28672
+      },
+      "coverage": 0.4492,
+      "positive_rate": 0.0098,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 10,
+      "target_voxels": 3771,
+      "candidate_voxels": 172032,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 28672,
+        "2": 28672,
+        "3": 28672,
+        "4": 28672,
+        "5": 28672
+      },
+      "coverage": 0.4474,
+      "positive_rate": 0.0098,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 10,
+      "frame": 11,
+      "target_voxels": 3753,
+      "candidate_voxels": 172032,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 28672,
+        "2": 28672,
+        "3": 28672,
+        "4": 28672,
+        "5": 28672
+      },
+      "coverage": 0.4498,
+      "positive_rate": 0.0098,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 11,
+      "frame": 0,
+      "target_voxels": 4022,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.628,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 11,
+      "frame": 1,
+      "target_voxels": 4170,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.647,
+      "positive_rate": 0.0082,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 11,
+      "frame": 2,
+      "target_voxels": 4166,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6515,
+      "positive_rate": 0.0083,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 11,
+      "frame": 3,
+      "target_voxels": 4133,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6545,
+      "positive_rate": 0.0083,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 11,
+      "frame": 4,
+      "target_voxels": 4184,
+      "candidate_voxels": 286720,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 49152
+      },
+      "coverage": 0.6489,
+      "positive_rate": 0.0095,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 11,
+      "frame": 5,
+      "target_voxels": 4082,
+      "candidate_voxels": 262144,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 45056,
+        "2": 45056,
+        "3": 45056,
+        "4": 45056,
+        "5": 40960
+      },
+      "coverage": 0.6342,
+      "positive_rate": 0.0099,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 12,
+      "frame": 0,
+      "target_voxels": 4161,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6306,
+      "positive_rate": 0.0128,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 12,
+      "frame": 1,
+      "target_voxels": 4161,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6306,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 12,
+      "frame": 2,
+      "target_voxels": 4159,
+      "candidate_voxels": 286720,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 49152,
+        "2": 49152,
+        "3": 49152,
+        "4": 49152,
+        "5": 49152
+      },
+      "coverage": 0.6309,
+      "positive_rate": 0.0092,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 13,
+      "frame": 0,
+      "target_voxels": 4066,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6276,
+      "positive_rate": 0.0125,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 13,
+      "frame": 1,
+      "target_voxels": 4170,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6345,
+      "positive_rate": 0.0081,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 13,
+      "frame": 2,
+      "target_voxels": 4126,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6355,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 13,
+      "frame": 3,
+      "target_voxels": 4118,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6367,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 13,
+      "frame": 4,
+      "target_voxels": 4090,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6176,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 13,
+      "frame": 5,
+      "target_voxels": 4119,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6278,
+      "positive_rate": 0.0079,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 13,
+      "frame": 6,
+      "target_voxels": 3986,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.6483,
+      "positive_rate": 0.0076,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "poles",
+      "seed": 13,
+      "frame": 7,
+      "target_voxels": 3984,
+      "candidate_voxels": 315392,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4704,
+      "positive_rate": 0.0059,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 0,
+      "frame": 0,
+      "target_voxels": 4018,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6287,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 0,
+      "frame": 1,
+      "target_voxels": 4011,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57347,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6298,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 0,
+      "frame": 2,
+      "target_voxels": 4248,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5946,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 0,
+      "frame": 3,
+      "target_voxels": 4420,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5706,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 0,
+      "frame": 4,
+      "target_voxels": 4575,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5696,
+      "positive_rate": 0.008,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 0,
+      "frame": 5,
+      "target_voxels": 4710,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5633,
+      "positive_rate": 0.0081,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 0,
+      "frame": 6,
+      "target_voxels": 4499,
+      "candidate_voxels": 344064,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 57344
+      },
+      "coverage": 0.5643,
+      "positive_rate": 0.0074,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 1,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 1,
+      "frame": 1,
+      "target_voxels": 4071,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6237,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 1,
+      "frame": 2,
+      "target_voxels": 4237,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57351,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5992,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 1,
+      "frame": 3,
+      "target_voxels": 4290,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5888,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 1,
+      "frame": 4,
+      "target_voxels": 4430,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5693,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 1,
+      "frame": 5,
+      "target_voxels": 4290,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5888,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 1,
+      "frame": 6,
+      "target_voxels": 4993,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 57344
+      },
+      "coverage": 0.4697,
+      "positive_rate": 0.0069,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 1,
+      "frame": 7,
+      "target_voxels": 5001,
+      "candidate_voxels": 311296,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.3841,
+      "positive_rate": 0.0062,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 2,
+      "frame": 0,
+      "target_voxels": 6877,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.5245,
+      "positive_rate": 0.0176,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 2,
+      "frame": 1,
+      "target_voxels": 7400,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57346,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5295,
+      "positive_rate": 0.012,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 2,
+      "frame": 2,
+      "target_voxels": 7821,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5045,
+      "positive_rate": 0.012,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 2,
+      "frame": 3,
+      "target_voxels": 7949,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4977,
+      "positive_rate": 0.0121,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 2,
+      "frame": 4,
+      "target_voxels": 7770,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5012,
+      "positive_rate": 0.0119,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 2,
+      "frame": 5,
+      "target_voxels": 7569,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5109,
+      "positive_rate": 0.0118,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 2,
+      "frame": 6,
+      "target_voxels": 7535,
+      "candidate_voxels": 344064,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 57344
+      },
+      "coverage": 0.5094,
+      "positive_rate": 0.0112,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 0,
+      "target_voxels": 6991,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.5264,
+      "positive_rate": 0.018,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 1,
+      "target_voxels": 7731,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.5257,
+      "positive_rate": 0.0126,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 2,
+      "target_voxels": 8416,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.4827,
+      "positive_rate": 0.0126,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 3,
+      "target_voxels": 8738,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.4651,
+      "positive_rate": 0.0126,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 4,
+      "target_voxels": 8720,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.4658,
+      "positive_rate": 0.0126,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 5,
+      "target_voxels": 8770,
+      "candidate_voxels": 323584,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 53248
+      },
+      "coverage": 0.4634,
+      "positive_rate": 0.0126,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 6,
+      "target_voxels": 8677,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61446,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.4679,
+      "positive_rate": 0.0119,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 7,
+      "target_voxels": 7414,
+      "candidate_voxels": 290816,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 53248,
+        "2": 53248,
+        "3": 53248,
+        "4": 53248,
+        "5": 49152
+      },
+      "coverage": 0.4497,
+      "positive_rate": 0.0115,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 8,
+      "target_voxels": 7647,
+      "candidate_voxels": 192512,
+      "candidate_k_distribution": {
+        "0": 32768,
+        "1": 32768,
+        "2": 32768,
+        "3": 32768,
+        "4": 32768,
+        "5": 28672
+      },
+      "coverage": 0.4794,
+      "positive_rate": 0.019,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 9,
+      "target_voxels": 7659,
+      "candidate_voxels": 196608,
+      "candidate_k_distribution": {
+        "0": 32768,
+        "1": 32768,
+        "2": 32768,
+        "3": 32768,
+        "4": 32768,
+        "5": 32768
+      },
+      "coverage": 0.4767,
+      "positive_rate": 0.0186,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 10,
+      "target_voxels": 7644,
+      "candidate_voxels": 196608,
+      "candidate_k_distribution": {
+        "0": 32768,
+        "1": 32768,
+        "2": 32768,
+        "3": 32768,
+        "4": 32768,
+        "5": 32768
+      },
+      "coverage": 0.4792,
+      "positive_rate": 0.0186,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 3,
+      "frame": 11,
+      "target_voxels": 7659,
+      "candidate_voxels": 196608,
+      "candidate_k_distribution": {
+        "0": 32768,
+        "1": 32768,
+        "2": 32768,
+        "3": 32768,
+        "4": 32768,
+        "5": 32768
+      },
+      "coverage": 0.4767,
+      "positive_rate": 0.0186,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 0,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.627,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 1,
+      "target_voxels": 4146,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6223,
+      "positive_rate": 0.0079,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 2,
+      "target_voxels": 4356,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5978,
+      "positive_rate": 0.0079,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 3,
+      "target_voxels": 4374,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5894,
+      "positive_rate": 0.0079,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 4,
+      "target_voxels": 4346,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57359,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5902,
+      "positive_rate": 0.0078,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 5,
+      "target_voxels": 4184,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6042,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 6,
+      "target_voxels": 4874,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.5425,
+      "positive_rate": 0.0078,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 7,
+      "target_voxels": 5100,
+      "candidate_voxels": 315392,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4055,
+      "positive_rate": 0.0066,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 8,
+      "target_voxels": 5148,
+      "candidate_voxels": 192512,
+      "candidate_k_distribution": {
+        "0": 32768,
+        "1": 32768,
+        "2": 32768,
+        "3": 32768,
+        "4": 32768,
+        "5": 28672
+      },
+      "coverage": 0.4763,
+      "positive_rate": 0.0127,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 10,
+      "frame": 9,
+      "target_voxels": 5295,
+      "candidate_voxels": 196608,
+      "candidate_k_distribution": {
+        "0": 32768,
+        "1": 32768,
+        "2": 32768,
+        "3": 32768,
+        "4": 32768,
+        "5": 32768
+      },
+      "coverage": 0.4789,
+      "positive_rate": 0.0129,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 11,
+      "frame": 0,
+      "target_voxels": 6948,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.5259,
+      "positive_rate": 0.0178,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 11,
+      "frame": 1,
+      "target_voxels": 7665,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5316,
+      "positive_rate": 0.0124,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 11,
+      "frame": 2,
+      "target_voxels": 8367,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4855,
+      "positive_rate": 0.0124,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 11,
+      "frame": 3,
+      "target_voxels": 8707,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4661,
+      "positive_rate": 0.0124,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 11,
+      "frame": 4,
+      "target_voxels": 8677,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4668,
+      "positive_rate": 0.0124,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 11,
+      "frame": 5,
+      "target_voxels": 8676,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4661,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 11,
+      "frame": 6,
+      "target_voxels": 8663,
+      "candidate_voxels": 344064,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 57344
+      },
+      "coverage": 0.4668,
+      "positive_rate": 0.0118,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 12,
+      "frame": 0,
+      "target_voxels": 6973,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.526,
+      "positive_rate": 0.0179,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 12,
+      "frame": 1,
+      "target_voxels": 7620,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57351,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5286,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 12,
+      "frame": 2,
+      "target_voxels": 8150,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57361,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4925,
+      "positive_rate": 0.0122,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 12,
+      "frame": 3,
+      "target_voxels": 8372,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4823,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 12,
+      "frame": 4,
+      "target_voxels": 8252,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57345,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4922,
+      "positive_rate": 0.0124,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 12,
+      "frame": 5,
+      "target_voxels": 8526,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.4764,
+      "positive_rate": 0.0124,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 12,
+      "frame": 6,
+      "target_voxels": 8426,
+      "candidate_voxels": 315392,
+      "candidate_k_distribution": {
+        "0": 36864,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 49152
+      },
+      "coverage": 0.4517,
+      "positive_rate": 0.0121,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 0,
+      "target_voxels": 4030,
+      "candidate_voxels": 204800,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 40960,
+        "2": 40960,
+        "3": 40960,
+        "4": 40960
+      },
+      "coverage": 0.6268,
+      "positive_rate": 0.0123,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 1,
+      "target_voxels": 4078,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.6258,
+      "positive_rate": 0.0078,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 2,
+      "target_voxels": 4233,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5998,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 3,
+      "target_voxels": 4357,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5798,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 4,
+      "target_voxels": 4431,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5683,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 5,
+      "target_voxels": 4532,
+      "candidate_voxels": 327680,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 57344,
+        "2": 57344,
+        "3": 57344,
+        "4": 57344,
+        "5": 57344
+      },
+      "coverage": 0.5666,
+      "positive_rate": 0.0078,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 6,
+      "target_voxels": 4906,
+      "candidate_voxels": 339968,
+      "candidate_k_distribution": {
+        "0": 40960,
+        "1": 61440,
+        "2": 61440,
+        "3": 61440,
+        "4": 61440,
+        "5": 53248
+      },
+      "coverage": 0.5328,
+      "positive_rate": 0.0077,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 7,
+      "target_voxels": 4925,
+      "candidate_voxels": 290816,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 53248,
+        "2": 53248,
+        "3": 53248,
+        "4": 53248,
+        "5": 49152
+      },
+      "coverage": 0.3982,
+      "positive_rate": 0.0067,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 8,
+      "target_voxels": 4632,
+      "candidate_voxels": 249856,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 45056,
+        "2": 45056,
+        "3": 45056,
+        "4": 45056,
+        "5": 40960
+      },
+      "coverage": 0.3916,
+      "positive_rate": 0.0073,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 9,
+      "target_voxels": 4622,
+      "candidate_voxels": 172032,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 28672,
+        "2": 28672,
+        "3": 28672,
+        "4": 28672,
+        "5": 28672
+      },
+      "coverage": 0.3832,
+      "positive_rate": 0.0103,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 10,
+      "target_voxels": 4646,
+      "candidate_voxels": 172032,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 28672,
+        "2": 28672,
+        "3": 28672,
+        "4": 28672,
+        "5": 28672
+      },
+      "coverage": 0.3885,
+      "positive_rate": 0.0105,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    },
+    {
+      "terrain": "corridors",
+      "seed": 13,
+      "frame": 11,
+      "target_voxels": 4654,
+      "candidate_voxels": 172032,
+      "candidate_k_distribution": {
+        "0": 28672,
+        "1": 28672,
+        "2": 28672,
+        "3": 28672,
+        "4": 28672,
+        "5": 28672
+      },
+      "coverage": 0.3865,
+      "positive_rate": 0.0105,
+      "target_in_range": true,
+      "target_all_k0": true,
+      "target_duplicate_free": true
+    }
+  ]
+}

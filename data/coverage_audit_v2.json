@@ -1,0 +1,1202 @@
+{
+  "summary": {
+    "k0_only_mean": 0.5961,
+    "k0_only_min": 0.3832,
+    "k1_real_mean": 0.5961,
+    "k1_real_min": 0.3832
+  },
+  "per_frame": [
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 1,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 2,
+      "coverage_k0_only": 0.6293,
+      "coverage_k1_real_history": 0.6293,
+      "target_voxels": 4014,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 3,
+      "coverage_k0_only": 0.6329,
+      "coverage_k1_real_history": 0.6329,
+      "target_voxels": 4487,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 4,
+      "coverage_k0_only": 0.6453,
+      "coverage_k1_real_history": 0.6453,
+      "target_voxels": 5156,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 5,
+      "coverage_k0_only": 0.579,
+      "coverage_k1_real_history": 0.579,
+      "target_voxels": 5931,
+      "candidate_voxels": 184320
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 6,
+      "coverage_k0_only": 0.5873,
+      "coverage_k1_real_history": 0.5873,
+      "target_voxels": 6835,
+      "candidate_voxels": 225280
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 7,
+      "coverage_k0_only": 0.5309,
+      "coverage_k1_real_history": 0.5309,
+      "target_voxels": 7261,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 8,
+      "coverage_k0_only": 0.5981,
+      "coverage_k1_real_history": 0.5981,
+      "target_voxels": 7215,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s10",
+      "frame": 9,
+      "coverage_k0_only": 0.7543,
+      "coverage_k1_real_history": 0.7543,
+      "target_voxels": 7131,
+      "candidate_voxels": 245760
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 1,
+      "coverage_k0_only": 0.6318,
+      "coverage_k1_real_history": 0.6318,
+      "target_voxels": 3998,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 2,
+      "coverage_k0_only": 0.6356,
+      "coverage_k1_real_history": 0.6356,
+      "target_voxels": 3974,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 3,
+      "coverage_k0_only": 0.6479,
+      "coverage_k1_real_history": 0.6479,
+      "target_voxels": 4578,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 4,
+      "coverage_k0_only": 0.6602,
+      "coverage_k1_real_history": 0.6602,
+      "target_voxels": 5294,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 5,
+      "coverage_k0_only": 0.571,
+      "coverage_k1_real_history": 0.571,
+      "target_voxels": 6352,
+      "candidate_voxels": 184320
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 6,
+      "coverage_k0_only": 0.559,
+      "coverage_k1_real_history": 0.559,
+      "target_voxels": 6433,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 7,
+      "coverage_k0_only": 0.5919,
+      "coverage_k1_real_history": 0.5919,
+      "target_voxels": 6361,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 8,
+      "coverage_k0_only": 0.6423,
+      "coverage_k1_real_history": 0.6423,
+      "target_voxels": 6394,
+      "candidate_voxels": 225280
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s11",
+      "frame": 9,
+      "coverage_k0_only": 0.8256,
+      "coverage_k1_real_history": 0.8256,
+      "target_voxels": 6056,
+      "candidate_voxels": 266240
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 1,
+      "coverage_k0_only": 0.6268,
+      "coverage_k1_real_history": 0.6268,
+      "target_voxels": 4030,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 2,
+      "coverage_k0_only": 0.6312,
+      "coverage_k1_real_history": 0.6312,
+      "target_voxels": 4002,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 3,
+      "coverage_k0_only": 0.6635,
+      "coverage_k1_real_history": 0.6635,
+      "target_voxels": 4585,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 4,
+      "coverage_k0_only": 0.6886,
+      "coverage_k1_real_history": 0.6886,
+      "target_voxels": 5235,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 5,
+      "coverage_k0_only": 0.5873,
+      "coverage_k1_real_history": 0.5873,
+      "target_voxels": 6079,
+      "candidate_voxels": 225280
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 6,
+      "coverage_k0_only": 0.5121,
+      "coverage_k1_real_history": 0.5121,
+      "target_voxels": 6372,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 7,
+      "coverage_k0_only": 0.605,
+      "coverage_k1_real_history": 0.605,
+      "target_voxels": 6377,
+      "candidate_voxels": 225280
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s12",
+      "frame": 8,
+      "coverage_k0_only": 0.7686,
+      "coverage_k1_real_history": 0.7686,
+      "target_voxels": 6318,
+      "candidate_voxels": 245760
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 1,
+      "coverage_k0_only": 0.6312,
+      "coverage_k1_real_history": 0.6312,
+      "target_voxels": 4002,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 2,
+      "coverage_k0_only": 0.6344,
+      "coverage_k1_real_history": 0.6344,
+      "target_voxels": 3982,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 3,
+      "coverage_k0_only": 0.6346,
+      "coverage_k1_real_history": 0.6346,
+      "target_voxels": 4515,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 4,
+      "coverage_k0_only": 0.6392,
+      "coverage_k1_real_history": 0.6392,
+      "target_voxels": 5330,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 5,
+      "coverage_k0_only": 0.5783,
+      "coverage_k1_real_history": 0.5783,
+      "target_voxels": 6165,
+      "candidate_voxels": 184320
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 6,
+      "coverage_k0_only": 0.4963,
+      "coverage_k1_real_history": 0.4963,
+      "target_voxels": 7149,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 7,
+      "coverage_k0_only": 0.5324,
+      "coverage_k1_real_history": 0.5324,
+      "target_voxels": 7483,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 8,
+      "coverage_k0_only": 0.8531,
+      "coverage_k1_real_history": 0.8531,
+      "target_voxels": 7378,
+      "candidate_voxels": 286720
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 9,
+      "coverage_k0_only": 0.7523,
+      "coverage_k1_real_history": 0.7523,
+      "target_voxels": 7171,
+      "candidate_voxels": 245760
+    },
+    {
+      "trajectory": "isaac_anymal_stairs_s13",
+      "frame": 10,
+      "coverage_k0_only": 0.8307,
+      "coverage_k1_real_history": 0.8307,
+      "target_voxels": 6596,
+      "candidate_voxels": 266240
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s10",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s10",
+      "frame": 1,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s10",
+      "frame": 2,
+      "coverage_k0_only": 0.6293,
+      "coverage_k1_real_history": 0.6293,
+      "target_voxels": 4014,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s10",
+      "frame": 3,
+      "coverage_k0_only": 0.6324,
+      "coverage_k1_real_history": 0.6324,
+      "target_voxels": 3994,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s10",
+      "frame": 4,
+      "coverage_k0_only": 0.635,
+      "coverage_k1_real_history": 0.635,
+      "target_voxels": 3978,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s10",
+      "frame": 5,
+      "coverage_k0_only": 0.6078,
+      "coverage_k1_real_history": 0.6078,
+      "target_voxels": 4156,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s10",
+      "frame": 6,
+      "coverage_k0_only": 0.6379,
+      "coverage_k1_real_history": 0.6379,
+      "target_voxels": 3717,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s12",
+      "frame": 0,
+      "coverage_k0_only": 0.6256,
+      "coverage_k1_real_history": 0.6256,
+      "target_voxels": 4434,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s12",
+      "frame": 1,
+      "coverage_k0_only": 0.6066,
+      "coverage_k1_real_history": 0.6066,
+      "target_voxels": 4560,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s12",
+      "frame": 2,
+      "coverage_k0_only": 0.6388,
+      "coverage_k1_real_history": 0.6388,
+      "target_voxels": 4612,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s12",
+      "frame": 3,
+      "coverage_k0_only": 0.6178,
+      "coverage_k1_real_history": 0.6178,
+      "target_voxels": 4652,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s12",
+      "frame": 4,
+      "coverage_k0_only": 0.5826,
+      "coverage_k1_real_history": 0.5826,
+      "target_voxels": 4938,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s12",
+      "frame": 5,
+      "coverage_k0_only": 0.6378,
+      "coverage_k1_real_history": 0.6378,
+      "target_voxels": 5210,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s12",
+      "frame": 6,
+      "coverage_k0_only": 0.6724,
+      "coverage_k1_real_history": 0.6724,
+      "target_voxels": 5070,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s13",
+      "frame": 0,
+      "coverage_k0_only": 0.6415,
+      "coverage_k1_real_history": 0.6415,
+      "target_voxels": 4195,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s13",
+      "frame": 1,
+      "coverage_k0_only": 0.6535,
+      "coverage_k1_real_history": 0.6535,
+      "target_voxels": 4306,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s13",
+      "frame": 2,
+      "coverage_k0_only": 0.6376,
+      "coverage_k1_real_history": 0.6376,
+      "target_voxels": 4520,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s13",
+      "frame": 3,
+      "coverage_k0_only": 0.6049,
+      "coverage_k1_real_history": 0.6049,
+      "target_voxels": 4655,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s13",
+      "frame": 4,
+      "coverage_k0_only": 0.6022,
+      "coverage_k1_real_history": 0.6022,
+      "target_voxels": 4781,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s13",
+      "frame": 5,
+      "coverage_k0_only": 0.6404,
+      "coverage_k1_real_history": 0.6404,
+      "target_voxels": 4811,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_boxes_s13",
+      "frame": 6,
+      "coverage_k0_only": 0.5886,
+      "coverage_k1_real_history": 0.5886,
+      "target_voxels": 3994,
+      "candidate_voxels": 184320
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s10",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s10",
+      "frame": 1,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s10",
+      "frame": 2,
+      "coverage_k0_only": 0.6293,
+      "coverage_k1_real_history": 0.6293,
+      "target_voxels": 4014,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s10",
+      "frame": 3,
+      "coverage_k0_only": 0.6318,
+      "coverage_k1_real_history": 0.6318,
+      "target_voxels": 3998,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s10",
+      "frame": 4,
+      "coverage_k0_only": 0.6344,
+      "coverage_k1_real_history": 0.6344,
+      "target_voxels": 3982,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s10",
+      "frame": 5,
+      "coverage_k0_only": 0.601,
+      "coverage_k1_real_history": 0.601,
+      "target_voxels": 4206,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s10",
+      "frame": 6,
+      "coverage_k0_only": 0.6462,
+      "coverage_k1_real_history": 0.6462,
+      "target_voxels": 3954,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s11",
+      "frame": 0,
+      "coverage_k0_only": 0.6348,
+      "coverage_k1_real_history": 0.6348,
+      "target_voxels": 4302,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s11",
+      "frame": 1,
+      "coverage_k0_only": 0.6331,
+      "coverage_k1_real_history": 0.6331,
+      "target_voxels": 4680,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s12",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s12",
+      "frame": 1,
+      "coverage_k0_only": 0.6268,
+      "coverage_k1_real_history": 0.6268,
+      "target_voxels": 4030,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s12",
+      "frame": 2,
+      "coverage_k0_only": 0.6167,
+      "coverage_k1_real_history": 0.6167,
+      "target_voxels": 4096,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s12",
+      "frame": 3,
+      "coverage_k0_only": 0.6188,
+      "coverage_k1_real_history": 0.6188,
+      "target_voxels": 4082,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s12",
+      "frame": 4,
+      "coverage_k0_only": 0.6442,
+      "coverage_k1_real_history": 0.6442,
+      "target_voxels": 4070,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s12",
+      "frame": 5,
+      "coverage_k0_only": 0.6446,
+      "coverage_k1_real_history": 0.6446,
+      "target_voxels": 4063,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s12",
+      "frame": 6,
+      "coverage_k0_only": 0.6038,
+      "coverage_k1_real_history": 0.6038,
+      "target_voxels": 3768,
+      "candidate_voxels": 184320
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s13",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s13",
+      "frame": 1,
+      "coverage_k0_only": 0.6312,
+      "coverage_k1_real_history": 0.6312,
+      "target_voxels": 4002,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s13",
+      "frame": 2,
+      "coverage_k0_only": 0.6344,
+      "coverage_k1_real_history": 0.6344,
+      "target_voxels": 3982,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s13",
+      "frame": 3,
+      "coverage_k0_only": 0.6363,
+      "coverage_k1_real_history": 0.6363,
+      "target_voxels": 3970,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s13",
+      "frame": 4,
+      "coverage_k0_only": 0.6386,
+      "coverage_k1_real_history": 0.6386,
+      "target_voxels": 3946,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s13",
+      "frame": 5,
+      "coverage_k0_only": 0.64,
+      "coverage_k1_real_history": 0.64,
+      "target_voxels": 3922,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_walls_s13",
+      "frame": 6,
+      "coverage_k0_only": 0.6,
+      "coverage_k1_real_history": 0.6,
+      "target_voxels": 4210,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 1,
+      "coverage_k0_only": 0.5874,
+      "coverage_k1_real_history": 0.5874,
+      "target_voxels": 4304,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 2,
+      "coverage_k0_only": 0.5982,
+      "coverage_k1_real_history": 0.5982,
+      "target_voxels": 4283,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 3,
+      "coverage_k0_only": 0.6425,
+      "coverage_k1_real_history": 0.6425,
+      "target_voxels": 4268,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 4,
+      "coverage_k0_only": 0.6455,
+      "coverage_k1_real_history": 0.6455,
+      "target_voxels": 4271,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 5,
+      "coverage_k0_only": 0.6254,
+      "coverage_k1_real_history": 0.6254,
+      "target_voxels": 4431,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 6,
+      "coverage_k0_only": 0.6086,
+      "coverage_k1_real_history": 0.6086,
+      "target_voxels": 4198,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 7,
+      "coverage_k0_only": 0.4749,
+      "coverage_k1_real_history": 0.4749,
+      "target_voxels": 3525,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 8,
+      "coverage_k0_only": 0.4494,
+      "coverage_k1_real_history": 0.4494,
+      "target_voxels": 3870,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 9,
+      "coverage_k0_only": 0.4492,
+      "coverage_k1_real_history": 0.4492,
+      "target_voxels": 3762,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 10,
+      "coverage_k0_only": 0.4474,
+      "coverage_k1_real_history": 0.4474,
+      "target_voxels": 3771,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s10",
+      "frame": 11,
+      "coverage_k0_only": 0.4498,
+      "coverage_k1_real_history": 0.4498,
+      "target_voxels": 3753,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s11",
+      "frame": 0,
+      "coverage_k0_only": 0.628,
+      "coverage_k1_real_history": 0.628,
+      "target_voxels": 4022,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s11",
+      "frame": 1,
+      "coverage_k0_only": 0.647,
+      "coverage_k1_real_history": 0.647,
+      "target_voxels": 4170,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s11",
+      "frame": 2,
+      "coverage_k0_only": 0.6515,
+      "coverage_k1_real_history": 0.6515,
+      "target_voxels": 4166,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s11",
+      "frame": 3,
+      "coverage_k0_only": 0.6545,
+      "coverage_k1_real_history": 0.6545,
+      "target_voxels": 4133,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s11",
+      "frame": 4,
+      "coverage_k0_only": 0.6489,
+      "coverage_k1_real_history": 0.6489,
+      "target_voxels": 4184,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s11",
+      "frame": 5,
+      "coverage_k0_only": 0.6342,
+      "coverage_k1_real_history": 0.6342,
+      "target_voxels": 4082,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s12",
+      "frame": 0,
+      "coverage_k0_only": 0.6306,
+      "coverage_k1_real_history": 0.6306,
+      "target_voxels": 4161,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s12",
+      "frame": 1,
+      "coverage_k0_only": 0.6306,
+      "coverage_k1_real_history": 0.6306,
+      "target_voxels": 4161,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s12",
+      "frame": 2,
+      "coverage_k0_only": 0.6309,
+      "coverage_k1_real_history": 0.6309,
+      "target_voxels": 4159,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s13",
+      "frame": 0,
+      "coverage_k0_only": 0.6276,
+      "coverage_k1_real_history": 0.6276,
+      "target_voxels": 4066,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s13",
+      "frame": 1,
+      "coverage_k0_only": 0.6345,
+      "coverage_k1_real_history": 0.6345,
+      "target_voxels": 4170,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s13",
+      "frame": 2,
+      "coverage_k0_only": 0.6355,
+      "coverage_k1_real_history": 0.6355,
+      "target_voxels": 4126,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s13",
+      "frame": 3,
+      "coverage_k0_only": 0.6367,
+      "coverage_k1_real_history": 0.6367,
+      "target_voxels": 4118,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s13",
+      "frame": 4,
+      "coverage_k0_only": 0.6176,
+      "coverage_k1_real_history": 0.6176,
+      "target_voxels": 4090,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s13",
+      "frame": 5,
+      "coverage_k0_only": 0.6278,
+      "coverage_k1_real_history": 0.6278,
+      "target_voxels": 4119,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s13",
+      "frame": 6,
+      "coverage_k0_only": 0.6483,
+      "coverage_k1_real_history": 0.6483,
+      "target_voxels": 3986,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_poles_s13",
+      "frame": 7,
+      "coverage_k0_only": 0.4704,
+      "coverage_k1_real_history": 0.4704,
+      "target_voxels": 3984,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 0,
+      "coverage_k0_only": 0.627,
+      "coverage_k1_real_history": 0.627,
+      "target_voxels": 4032,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 1,
+      "coverage_k0_only": 0.6223,
+      "coverage_k1_real_history": 0.6223,
+      "target_voxels": 4146,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 2,
+      "coverage_k0_only": 0.5978,
+      "coverage_k1_real_history": 0.5978,
+      "target_voxels": 4356,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 3,
+      "coverage_k0_only": 0.5894,
+      "coverage_k1_real_history": 0.5894,
+      "target_voxels": 4374,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 4,
+      "coverage_k0_only": 0.5902,
+      "coverage_k1_real_history": 0.5902,
+      "target_voxels": 4346,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 5,
+      "coverage_k0_only": 0.6042,
+      "coverage_k1_real_history": 0.6042,
+      "target_voxels": 4184,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 6,
+      "coverage_k0_only": 0.5425,
+      "coverage_k1_real_history": 0.5425,
+      "target_voxels": 4874,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 7,
+      "coverage_k0_only": 0.4055,
+      "coverage_k1_real_history": 0.4055,
+      "target_voxels": 5100,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 8,
+      "coverage_k0_only": 0.4763,
+      "coverage_k1_real_history": 0.4763,
+      "target_voxels": 5148,
+      "candidate_voxels": 163840
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s10",
+      "frame": 9,
+      "coverage_k0_only": 0.4789,
+      "coverage_k1_real_history": 0.4789,
+      "target_voxels": 5295,
+      "candidate_voxels": 163840
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s11",
+      "frame": 0,
+      "coverage_k0_only": 0.5259,
+      "coverage_k1_real_history": 0.5259,
+      "target_voxels": 6948,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s11",
+      "frame": 1,
+      "coverage_k0_only": 0.5316,
+      "coverage_k1_real_history": 0.5316,
+      "target_voxels": 7665,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s11",
+      "frame": 2,
+      "coverage_k0_only": 0.4855,
+      "coverage_k1_real_history": 0.4855,
+      "target_voxels": 8367,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s11",
+      "frame": 3,
+      "coverage_k0_only": 0.4661,
+      "coverage_k1_real_history": 0.4661,
+      "target_voxels": 8707,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s11",
+      "frame": 4,
+      "coverage_k0_only": 0.4668,
+      "coverage_k1_real_history": 0.4668,
+      "target_voxels": 8677,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s11",
+      "frame": 5,
+      "coverage_k0_only": 0.4661,
+      "coverage_k1_real_history": 0.4661,
+      "target_voxels": 8676,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s11",
+      "frame": 6,
+      "coverage_k0_only": 0.4668,
+      "coverage_k1_real_history": 0.4668,
+      "target_voxels": 8663,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s12",
+      "frame": 0,
+      "coverage_k0_only": 0.526,
+      "coverage_k1_real_history": 0.526,
+      "target_voxels": 6973,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s12",
+      "frame": 1,
+      "coverage_k0_only": 0.5286,
+      "coverage_k1_real_history": 0.5286,
+      "target_voxels": 7620,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s12",
+      "frame": 2,
+      "coverage_k0_only": 0.4925,
+      "coverage_k1_real_history": 0.4925,
+      "target_voxels": 8150,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s12",
+      "frame": 3,
+      "coverage_k0_only": 0.4823,
+      "coverage_k1_real_history": 0.4823,
+      "target_voxels": 8372,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s12",
+      "frame": 4,
+      "coverage_k0_only": 0.4922,
+      "coverage_k1_real_history": 0.4922,
+      "target_voxels": 8252,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s12",
+      "frame": 5,
+      "coverage_k0_only": 0.4764,
+      "coverage_k1_real_history": 0.4764,
+      "target_voxels": 8526,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s12",
+      "frame": 6,
+      "coverage_k0_only": 0.4517,
+      "coverage_k1_real_history": 0.4517,
+      "target_voxels": 8426,
+      "candidate_voxels": 184320
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 0,
+      "coverage_k0_only": 0.6268,
+      "coverage_k1_real_history": 0.6268,
+      "target_voxels": 4030,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 1,
+      "coverage_k0_only": 0.6258,
+      "coverage_k1_real_history": 0.6258,
+      "target_voxels": 4078,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 2,
+      "coverage_k0_only": 0.5998,
+      "coverage_k1_real_history": 0.5998,
+      "target_voxels": 4233,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 3,
+      "coverage_k0_only": 0.5798,
+      "coverage_k1_real_history": 0.5798,
+      "target_voxels": 4357,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 4,
+      "coverage_k0_only": 0.5683,
+      "coverage_k1_real_history": 0.5683,
+      "target_voxels": 4431,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 5,
+      "coverage_k0_only": 0.5666,
+      "coverage_k1_real_history": 0.5666,
+      "target_voxels": 4532,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 6,
+      "coverage_k0_only": 0.5328,
+      "coverage_k1_real_history": 0.5328,
+      "target_voxels": 4906,
+      "candidate_voxels": 204800
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 7,
+      "coverage_k0_only": 0.3982,
+      "coverage_k1_real_history": 0.3982,
+      "target_voxels": 4925,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 8,
+      "coverage_k0_only": 0.3916,
+      "coverage_k1_real_history": 0.3916,
+      "target_voxels": 4632,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 9,
+      "coverage_k0_only": 0.3832,
+      "coverage_k1_real_history": 0.3832,
+      "target_voxels": 4622,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 10,
+      "coverage_k0_only": 0.3885,
+      "coverage_k1_real_history": 0.3885,
+      "target_voxels": 4646,
+      "candidate_voxels": 143360
+    },
+    {
+      "trajectory": "isaac_anymal_corridors_s13",
+      "frame": 11,
+      "coverage_k0_only": 0.3865,
+      "coverage_k1_real_history": 0.3865,
+      "target_voxels": 4654,
+      "candidate_voxels": 143360
+    }
+  ]
+}

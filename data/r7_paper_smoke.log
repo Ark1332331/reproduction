@@ -1,0 +1,48 @@
+[INFO] train: 20 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_boxes_s1', 'isaac_anymal_boxes_s2', 'isaac_anymal_boxes_s3', 'isaac_anymal_corridors_s0', 'isaac_anymal_corridors_s1', 'isaac_anymal_corridors_s2', 'isaac_anymal_corridors_s3', 'isaac_anymal_poles_s0', 'isaac_anymal_poles_s1', 'isaac_anymal_poles_s2', 'isaac_anymal_poles_s3', 'isaac_anymal_stairs_s0', 'isaac_anymal_stairs_s1', 'isaac_anymal_stairs_s2', 'isaac_anymal_stairs_s3', 'isaac_anymal_walls_s0', 'isaac_anymal_walls_s1', 'isaac_anymal_walls_s2', 'isaac_anymal_walls_s3']
+Traceback (most recent call last):
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/run_r7_paper_experiment.py", line 148, in <module>
+    main()
+    ~~~~^^
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/run_r7_paper_experiment.py", line 71, in main
+    run = train_detached_rollout(
+        model,
+    ...<5 lines>...
+        feedback_alpha=args.feedback_alpha,
+    )
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/r7_autoregressive_rollout.py", line 285, in train_detached_rollout
+    feedback = model(input_tensor, alpha=feedback_alpha)
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/ark/Data/devpy/projects/allinone/reproduction/r5_sparse_model.py", line 170, in forward
+    u0 = self.up0(d1_next)
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/MinkowskiEngine/MinkowskiConvolution.py", line 314, in forward
+    outfeat = self.conv.apply(
+        input.F,
+    ...<5 lines>...
+        input._manager,
+    )
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/torch/autograd/function.py", line 581, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ark/miniconda3/envs/nsr-me-cu130-t291/lib/python3.13/site-packages/MinkowskiEngine/MinkowskiConvolution.py", line 152, in forward
+    return fw_fn(
+        ctx.input_features,
+    ...<10 lines>...
+        coordinate_manager._manager,
+    )
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.53 GiB of which 24.31 MiB is free. Including non-PyTorch memory, this process has 7.48 GiB memory in use. Of the allocated memory 7.31 GiB is allocated by PyTorch, and 11.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

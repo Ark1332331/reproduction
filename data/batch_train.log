@@ -1,0 +1,208 @@
+SKIP /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_stairs_s0.npz (exists)
+SKIP /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_stairs_s1.npz (exists)
+SKIP /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_stairs_s2.npz (exists)
+SKIP /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_stairs_s3.npz (exists)
+=== CAPTURE boxes seed=0 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s0.npz (03:57:48)
+[33m03:57:57 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4023 base=(-3.17,-3.96,0.640) yaw=-0.035
+[trajectory] frame=01 measurement=6000 target=3999 base=(-2.68,-3.97,0.640) yaw=-0.044
+[trajectory] frame=02 measurement=6000 target=4190 base=(-2.19,-3.98,0.642) yaw=-0.053
+[trajectory] frame=03 measurement=6000 target=4511 base=(-1.70,-3.99,0.644) yaw=-0.063
+[trajectory] frame=04 measurement=6000 target=4749 base=(-1.22,-4.01,0.649) yaw=-0.069
+[trajectory] frame=05 measurement=6000 target=4987 base=(-0.75,-4.07,0.662) yaw=-0.034
+[trajectory] frame=06 measurement=6000 target=5192 base=(-0.24,-4.00,0.546) yaw=0.083
+[WARN] robot terminated at frame 7 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s0.npz (7 frames)
+--- exit=0 file=OK (04:04:49)
+=== CAPTURE boxes seed=1 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s1.npz (04:04:54)
+[33m04:05:02 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4033 base=(-3.17,-3.95,0.643) yaw=-0.025
+[trajectory] frame=01 measurement=6000 target=4774 base=(-2.68,-3.95,0.642) yaw=-0.035
+[trajectory] frame=02 measurement=6000 target=5194 base=(-2.18,-3.96,0.643) yaw=-0.044
+[trajectory] frame=03 measurement=6000 target=5567 base=(-1.81,-3.94,0.619) yaw=-0.045
+[trajectory] frame=04 measurement=6000 target=5985 base=(-1.43,-3.96,0.658) yaw=-0.026
+[trajectory] frame=05 measurement=6000 target=6335 base=(-0.96,-4.00,0.708) yaw=-0.024
+[trajectory] frame=06 measurement=6000 target=6537 base=(-0.59,-3.99,0.739) yaw=-0.025
+[trajectory] frame=07 measurement=6000 target=6755 base=(-0.15,-4.05,0.687) yaw=-0.057
+[trajectory] frame=08 measurement=6000 target=6832 base=(0.33,-4.14,0.717) yaw=-0.193
+[WARN] robot terminated at frame 9 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s1.npz (9 frames)
+--- exit=0 file=OK (04:11:54)
+=== CAPTURE boxes seed=2 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s2.npz (04:11:59)
+[33m04:12:08 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4033 base=(-3.17,-3.96,0.641) yaw=-0.031
+[trajectory] frame=01 measurement=6000 target=4003 base=(-2.68,-3.96,0.642) yaw=-0.041
+[trajectory] frame=02 measurement=6000 target=4517 base=(-2.19,-3.97,0.643) yaw=-0.052
+[trajectory] frame=03 measurement=6000 target=5336 base=(-1.70,-3.99,0.644) yaw=-0.062
+[trajectory] frame=04 measurement=6000 target=5703 base=(-1.22,-4.01,0.645) yaw=-0.080
+[trajectory] frame=05 measurement=6000 target=5989 base=(-0.81,-4.07,0.638) yaw=-0.084
+[trajectory] frame=06 measurement=6000 target=6401 base=(-0.34,-4.20,0.619) yaw=-0.146
+[trajectory] frame=07 measurement=6000 target=6877 base=(0.22,-4.17,0.381) yaw=0.130
+[WARN] robot terminated at frame 8 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s2.npz (8 frames)
+--- exit=0 file=OK (04:18:59)
+=== CAPTURE boxes seed=3 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s3.npz (04:19:04)
+[33m04:19:13 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4883 base=(-3.17,-3.95,0.643) yaw=-0.020
+[trajectory] frame=01 measurement=6000 target=5290 base=(-2.70,-3.94,0.663) yaw=-0.010
+[trajectory] frame=02 measurement=6000 target=6240 base=(-2.18,-3.97,0.666) yaw=0.007
+[trajectory] frame=03 measurement=6000 target=6843 base=(-1.75,-4.01,0.696) yaw=0.032
+[trajectory] frame=04 measurement=6000 target=7191 base=(-1.29,-4.02,0.699) yaw=0.103
+[trajectory] frame=05 measurement=6000 target=7271 base=(-0.82,-3.96,0.732) yaw=0.123
+[trajectory] frame=06 measurement=6000 target=6910 base=(-0.33,-3.87,0.747) yaw=0.165
+[trajectory] frame=07 measurement=6000 target=6275 base=(0.08,-3.38,0.150) yaw=1.083
+[WARN] robot terminated at frame 8 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_boxes_s3.npz (8 frames)
+--- exit=0 file=OK (04:26:05)
+=== CAPTURE walls seed=0 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s0.npz (04:26:10)
+[33m04:26:19 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4023 base=(-3.17,-3.97,0.640) yaw=-0.034
+[trajectory] frame=01 measurement=6000 target=3999 base=(-2.68,-3.97,0.641) yaw=-0.043
+[trajectory] frame=02 measurement=6000 target=3983 base=(-2.19,-3.99,0.641) yaw=-0.053
+[trajectory] frame=03 measurement=6000 target=3973 base=(-1.70,-4.00,0.643) yaw=-0.064
+[trajectory] frame=04 measurement=6000 target=4030 base=(-1.21,-4.03,0.643) yaw=-0.075
+[trajectory] frame=05 measurement=6000 target=4347 base=(-0.71,-4.05,0.648) yaw=-0.086
+[trajectory] frame=06 measurement=6000 target=4926 base=(-0.11,-4.01,0.355) yaw=0.097
+[WARN] robot terminated at frame 7 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s0.npz (7 frames)
+--- exit=0 file=OK (04:33:10)
+=== CAPTURE walls seed=1 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s1.npz (04:33:15)
+[33m04:33:24 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4033 base=(-3.16,-3.96,0.643) yaw=-0.026
+[trajectory] frame=01 measurement=6000 target=4112 base=(-2.67,-3.97,0.642) yaw=-0.036
+[trajectory] frame=02 measurement=6000 target=4478 base=(-2.17,-3.97,0.643) yaw=-0.045
+[trajectory] frame=03 measurement=6000 target=4868 base=(-1.68,-3.98,0.643) yaw=-0.047
+[trajectory] frame=04 measurement=6000 target=5215 base=(-1.21,-3.95,0.625) yaw=-0.049
+[trajectory] frame=05 measurement=6000 target=5409 base=(-0.82,-3.87,0.624) yaw=-0.059
+[trajectory] frame=06 measurement=6000 target=5203 base=(-0.44,-3.92,0.588) yaw=-0.197
+[WARN] robot terminated at frame 7 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s1.npz (7 frames)
+--- exit=0 file=OK (04:40:16)
+=== CAPTURE walls seed=2 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s2.npz (04:40:21)
+[33m04:40:29 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4031 base=(-3.17,-3.97,0.640) yaw=-0.032
+[trajectory] frame=01 measurement=6000 target=4007 base=(-2.67,-3.97,0.641) yaw=-0.041
+[trajectory] frame=02 measurement=6000 target=4293 base=(-2.18,-3.98,0.642) yaw=-0.051
+[trajectory] frame=03 measurement=6000 target=4551 base=(-1.69,-4.00,0.644) yaw=-0.061
+[trajectory] frame=04 measurement=6000 target=4644 base=(-1.20,-4.02,0.645) yaw=-0.073
+[trajectory] frame=05 measurement=6000 target=4628 base=(-0.71,-4.04,0.648) yaw=-0.081
+[trajectory] frame=06 measurement=6000 target=5586 base=(-0.11,-3.99,0.341) yaw=0.095
+[WARN] robot terminated at frame 7 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s2.npz (7 frames)
+--- exit=0 file=OK (04:47:21)
+=== CAPTURE walls seed=3 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s3.npz (04:47:26)
+[33m04:47:35 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4237 base=(-3.16,-3.96,0.644) yaw=-0.021
+[trajectory] frame=01 measurement=6000 target=4376 base=(-2.66,-3.95,0.644) yaw=-0.028
+[trajectory] frame=02 measurement=6000 target=4466 base=(-2.16,-3.96,0.644) yaw=-0.036
+[trajectory] frame=03 measurement=6000 target=4440 base=(-1.67,-3.96,0.643) yaw=-0.043
+[trajectory] frame=04 measurement=6000 target=4383 base=(-1.17,-3.97,0.644) yaw=-0.049
+[trajectory] frame=05 measurement=6000 target=4451 base=(-0.67,-3.97,0.631) yaw=-0.027
+[trajectory] frame=06 measurement=6000 target=4094 base=(-0.16,-4.09,0.541) yaw=-0.311
+[WARN] robot terminated at frame 7 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s3.npz (7 frames)
+--- exit=0 file=OK (04:54:26)
+=== CAPTURE poles seed=0 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_poles_s0.npz (04:54:31)
+[33m04:54:40 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4023 base=(-3.17,-3.97,0.640) yaw=-0.034
+[trajectory] frame=01 measurement=6000 target=3999 base=(-2.68,-3.97,0.641) yaw=-0.043
+[trajectory] frame=02 measurement=6000 target=3983 base=(-2.19,-3.99,0.641) yaw=-0.053
+[trajectory] frame=03 measurement=6000 target=4549 base=(-1.70,-4.00,0.643) yaw=-0.064
+[trajectory] frame=04 measurement=6000 target=4523 base=(-1.21,-4.03,0.643) yaw=-0.075
+[trajectory] frame=05 measurement=6000 target=4523 base=(-0.71,-4.04,0.645) yaw=-0.076
+[trajectory] frame=06 measurement=6000 target=5295 base=(-0.08,-3.99,0.357) yaw=0.113
+[trajectory] frame=07 measurement=6000 target=4024 base=(0.07,-3.80,0.140) yaw=-0.832
+[trajectory] frame=08 measurement=5242 target=4061 base=(0.05,-3.82,0.162) yaw=-0.634
+[trajectory] frame=09 measurement=5270 target=4056 base=(0.06,-3.82,0.161) yaw=-0.645
+[trajectory] frame=10 measurement=5424 target=4042 base=(0.06,-3.82,0.164) yaw=-0.650
+[trajectory] frame=11 measurement=5197 target=4056 base=(0.06,-3.82,0.162) yaw=-0.655
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_poles_s0.npz (12 frames)
+--- exit=0 file=OK (05:01:32)
+=== CAPTURE poles seed=1 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_poles_s1.npz (05:01:37)
+[33m05:01:45 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4033 base=(-3.16,-3.96,0.643) yaw=-0.026
+[trajectory] frame=01 measurement=6000 target=4563 base=(-2.67,-3.97,0.642) yaw=-0.036
+[trajectory] frame=02 measurement=6000 target=4955 base=(-2.17,-3.97,0.643) yaw=-0.045
+[trajectory] frame=03 measurement=6000 target=5423 base=(-1.68,-3.99,0.642) yaw=-0.054
+[trajectory] frame=04 measurement=6000 target=5415 base=(-1.18,-4.00,0.643) yaw=-0.061
+[trajectory] frame=05 measurement=6000 target=5451 base=(-0.68,-4.00,0.624) yaw=-0.039
+[trajectory] frame=06 measurement=6000 target=5427 base=(-0.12,-4.00,0.370) yaw=0.050
+[WARN] robot terminated at frame 7 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_poles_s1.npz (7 frames)
+--- exit=0 file=OK (05:08:37)
+=== CAPTURE poles seed=2 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_poles_s2.npz (05:08:42)
+[33m05:08:51 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4031 base=(-3.17,-3.97,0.640) yaw=-0.032
+[trajectory] frame=01 measurement=6000 target=4007 base=(-2.67,-3.97,0.641) yaw=-0.041
+[trajectory] frame=02 measurement=6000 target=4390 base=(-2.18,-3.98,0.642) yaw=-0.051
+[trajectory] frame=03 measurement=6000 target=5741 base=(-1.69,-4.00,0.644) yaw=-0.061
+[trajectory] frame=04 measurement=6000 target=6473 base=(-1.20,-4.02,0.645) yaw=-0.073
+[trajectory] frame=05 measurement=6000 target=6519 base=(-0.73,-4.05,0.656) yaw=-0.090
+[WARN] robot terminated at frame 6 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_poles_s2.npz (6 frames)
+--- exit=0 file=OK (05:15:43)
+=== CAPTURE poles seed=3 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_poles_s3.npz (05:15:48)
+[33m05:15:56 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4186 base=(-3.16,-3.96,0.644) yaw=-0.021
+[trajectory] frame=01 measurement=6000 target=4992 base=(-2.66,-3.95,0.644) yaw=-0.028
+[trajectory] frame=02 measurement=6000 target=4929 base=(-2.16,-3.95,0.641) yaw=-0.029
+[trajectory] frame=03 measurement=6000 target=5469 base=(-1.70,-3.92,0.637) yaw=-0.039
+[trajectory] frame=04 measurement=6000 target=6096 base=(-1.18,-3.92,0.642) yaw=-0.055
+[trajectory] frame=05 measurement=6000 target=6239 base=(-0.68,-3.93,0.633) yaw=-0.003
+[WARN] robot terminated at frame 6 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_poles_s3.npz (6 frames)
+--- exit=0 file=OK (05:22:48)
+=== CAPTURE corridors seed=0 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_corridors_s0.npz (05:22:53)
+[33m05:23:02 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4023 base=(-3.17,-3.97,0.641) yaw=-0.034
+[trajectory] frame=01 measurement=6000 target=4052 base=(-2.68,-3.98,0.642) yaw=-0.044
+[trajectory] frame=02 measurement=6000 target=4406 base=(-2.19,-3.99,0.644) yaw=-0.055
+[trajectory] frame=03 measurement=6000 target=4605 base=(-1.70,-4.00,0.644) yaw=-0.066
+[trajectory] frame=04 measurement=6000 target=4825 base=(-1.21,-4.03,0.645) yaw=-0.077
+[trajectory] frame=05 measurement=6000 target=5077 base=(-0.72,-4.05,0.649) yaw=-0.084
+[trajectory] frame=06 measurement=6000 target=4725 base=(-0.13,-4.01,0.374) yaw=0.072
+[WARN] robot terminated at frame 7 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_corridors_s0.npz (7 frames)
+--- exit=0 file=OK (05:29:53)
+=== CAPTURE corridors seed=1 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_corridors_s1.npz (05:29:58)
+[33m05:30:07 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=4033 base=(-3.17,-3.97,0.642) yaw=-0.026
+[trajectory] frame=01 measurement=6000 target=4122 base=(-2.67,-3.97,0.642) yaw=-0.036
+[trajectory] frame=02 measurement=6000 target=4362 base=(-2.18,-3.97,0.643) yaw=-0.044
+[trajectory] frame=03 measurement=6000 target=4407 base=(-1.68,-3.98,0.643) yaw=-0.053
+[trajectory] frame=04 measurement=6000 target=4607 base=(-1.19,-4.00,0.643) yaw=-0.062
+[trajectory] frame=05 measurement=6000 target=4411 base=(-0.69,-4.01,0.629) yaw=-0.051
+[trajectory] frame=06 measurement=6000 target=5489 base=(-0.13,-3.98,0.332) yaw=0.140
+[trajectory] frame=07 measurement=6000 target=5863 base=(-0.01,-3.89,0.245) yaw=-0.329
+[WARN] robot terminated at frame 8 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_corridors_s1.npz (8 frames)
+--- exit=0 file=OK (05:36:59)
+=== CAPTURE corridors seed=2 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_corridors_s2.npz (05:37:04)
+[33m05:37:12 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=8184 base=(-3.17,-3.97,0.641) yaw=-0.032
+[trajectory] frame=01 measurement=6000 target=8949 base=(-2.68,-3.97,0.640) yaw=-0.042
+[trajectory] frame=02 measurement=6000 target=9551 base=(-2.18,-3.98,0.642) yaw=-0.050
+[trajectory] frame=03 measurement=6000 target=9698 base=(-1.69,-3.99,0.643) yaw=-0.060
+[trajectory] frame=04 measurement=6000 target=9441 base=(-1.20,-4.01,0.645) yaw=-0.070
+[trajectory] frame=05 measurement=6000 target=9125 base=(-0.71,-4.03,0.648) yaw=-0.081
+[trajectory] frame=06 measurement=6000 target=9125 base=(-0.15,-3.99,0.357) yaw=0.085
+[WARN] robot terminated at frame 7 (died=True) base=(-4.000,-4.000,0.600)
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_corridors_s2.npz (7 frames)
+--- exit=0 file=OK (05:44:04)
+=== CAPTURE corridors seed=3 -> /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_corridors_s3.npz (05:44:09)
+[33m05:44:18 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[trajectory] frame=00 measurement=6000 target=8370 base=(-3.16,-3.96,0.643) yaw=-0.021
+[trajectory] frame=01 measurement=6000 target=9430 base=(-2.66,-3.95,0.644) yaw=-0.029
+[trajectory] frame=02 measurement=6000 target=10423 base=(-2.16,-3.95,0.643) yaw=-0.035
+[trajectory] frame=03 measurement=6000 target=10787 base=(-1.66,-3.96,0.643) yaw=-0.043
+[trajectory] frame=04 measurement=6000 target=10771 base=(-1.17,-3.97,0.644) yaw=-0.051
+[trajectory] frame=05 measurement=6000 target=10817 base=(-0.67,-3.98,0.630) yaw=-0.026
+[trajectory] frame=06 measurement=6000 target=10760 base=(-0.10,-3.95,0.338) yaw=0.091
+[trajectory] frame=07 measurement=6000 target=9511 base=(-0.13,-3.77,0.167) yaw=-0.286
+[trajectory] frame=08 measurement=6000 target=9628 base=(-0.19,-3.74,0.146) yaw=-0.213
+[trajectory] frame=09 measurement=6000 target=9632 base=(-0.19,-3.74,0.144) yaw=-0.211
+[trajectory] frame=10 measurement=6000 target=9632 base=(-0.19,-3.74,0.144) yaw=-0.211
+[trajectory] frame=11 measurement=6000 target=9632 base=(-0.19,-3.74,0.144) yaw=-0.211
+saved /media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_corridors_s3.npz (12 frames)
+--- exit=0 file=OK (05:45:42)
+BATCH DONE train

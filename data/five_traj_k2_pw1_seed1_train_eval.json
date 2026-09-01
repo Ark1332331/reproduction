@@ -1,0 +1,103 @@
+{
+  "checkpoint": "reproduction/data/five_traj_k2_pw1_seed1.pt",
+  "trained_steps": 299,
+  "config": {
+    "schema_version": 2,
+    "channels": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "generative_kernels": null,
+    "voxel_size": 0.05,
+    "grid_size": 64,
+    "pruning_alpha": 0.0,
+    "feedback_alpha": 0.0,
+    "occupancy_pos_weight": "1",
+    "likelihood_weight": 0.0,
+    "likelihood_pos_weight": null,
+    "learning_rate": 0.01,
+    "final_learning_rate": 0.0001,
+    "requested_steps": 300,
+    "seed": 1,
+    "clear_me_cache": false,
+    "requested_seeds": [
+      0
+    ],
+    "requested_terrains": [
+      "stairs",
+      "boxes",
+      "walls",
+      "poles",
+      "corridors"
+    ],
+    "train_trajectories": [
+      "isaac_anymal_boxes_s0",
+      "isaac_anymal_corridors_s0",
+      "isaac_anymal_poles_s0",
+      "isaac_anymal_stairs_s0",
+      "isaac_anymal_walls_s0"
+    ]
+  },
+  "internal_pruning": false,
+  "feedback_alpha": 0.0,
+  "use_history": true,
+  "alpha_0.1": {
+    "mean": {
+      "model_f1": 0.4746904403198126,
+      "baseline_f1": 0.3379786685787294,
+      "model_precision": 0.3983939244809093,
+      "model_recall": 0.5913778771543491,
+      "model_height_mae": 0.12056230873118333,
+      "baseline_height_mae": 0.060686023323272366
+    },
+    "per_trajectory": [
+      {
+        "trajectory": "isaac_anymal_boxes_s0",
+        "model_f1": 0.4891584653439293,
+        "model_precision": 0.41114281290779203,
+        "model_recall": 0.6037153713747524,
+        "baseline_f1": 0.3374861426384416,
+        "model_height_mae": 0.11460307258674886,
+        "baseline_height_mae": 0.06413637388378465
+      },
+      {
+        "trajectory": "isaac_anymal_corridors_s0",
+        "model_f1": 0.5017749785284855,
+        "model_precision": 0.44508494375174584,
+        "model_recall": 0.5750139431121026,
+        "baseline_f1": 0.3442831408286532,
+        "model_height_mae": 0.09592528193426345,
+        "baseline_height_mae": 0.06810997165641845
+      },
+      {
+        "trajectory": "isaac_anymal_poles_s0",
+        "model_f1": 0.48015282237089907,
+        "model_precision": 0.3922542641111306,
+        "model_recall": 0.618821952008877,
+        "baseline_f1": 0.3701791071915629,
+        "model_height_mae": 0.10464569101139112,
+        "baseline_height_mae": 0.049323112204758414
+      },
+      {
+        "trajectory": "isaac_anymal_stairs_s0",
+        "model_f1": 0.3916533130921256,
+        "model_precision": 0.30436064929106676,
+        "model_recall": 0.5491544798770153,
+        "baseline_f1": 0.2772171534368589,
+        "model_height_mae": 0.1921398062507473,
+        "baseline_height_mae": 0.057196418546505874
+      },
+      {
+        "trajectory": "isaac_anymal_walls_s0",
+        "model_f1": 0.5107126222636236,
+        "model_precision": 0.43912695234281135,
+        "model_recall": 0.6101836393989983,
+        "baseline_f1": 0.3607277987981304,
+        "model_height_mae": 0.09549769187276588,
+        "baseline_height_mae": 0.06466424032489443
+      }
+    ]
+  }
+}

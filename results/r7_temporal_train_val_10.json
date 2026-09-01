@@ -1,0 +1,101 @@
+{
+  "trajectory": "reproduction/data/isaac_trajectory_000.npz",
+  "trajectory_frames": 12,
+  "config": {
+    "trajectory": "reproduction/data/isaac_trajectory_000.npz",
+    "validation_trajectory": "reproduction/data/isaac_trajectory_001.npz",
+    "steps": 10,
+    "device": "cuda",
+    "voxel_size": 0.2,
+    "grid_size": 16,
+    "pruning_alpha": 0.5,
+    "feedback_alpha": 0.0,
+    "results": "reproduction/results/r7_temporal_train_val_10.json",
+    "checkpoint": "reproduction/results/r7_temporal_train_val_10.pt"
+  },
+  "training": {
+    "initial_loss": 2.0182676315307617,
+    "final_loss": 1.9404258728027344,
+    "loss_history": [
+      2.0182676315307617,
+      2.0077414512634277,
+      1.9937715530395508,
+      1.9993003606796265,
+      1.9720580577850342,
+      1.96243417263031,
+      1.9607791900634766,
+      1.9547996520996094,
+      1.949637770652771,
+      1.9404258728027344
+    ]
+  },
+  "evaluation": {
+    "train": {
+      "frame_count": 12,
+      "current_measurement_baseline": {
+        "occupancy": {
+          "true_positive": 1259,
+          "false_positive": 0,
+          "false_negative": 2173,
+          "precision": 1.0,
+          "recall": 0.36684149184149184,
+          "f1": 0.536772543167768
+        },
+        "height": {
+          "matched_cell_count": 1236,
+          "target_cell_count": 3072,
+          "mean_absolute_error": 0.010293809088206216
+        }
+      },
+      "autoregressive_model": {
+        "occupancy": {
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 3432,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "height": {
+          "matched_cell_count": 0,
+          "target_cell_count": 3072,
+          "mean_absolute_error": Infinity
+        }
+      }
+    },
+    "validation": {
+      "frame_count": 12,
+      "current_measurement_baseline": {
+        "occupancy": {
+          "true_positive": 1261,
+          "false_positive": 0,
+          "false_negative": 2117,
+          "precision": 1.0,
+          "recall": 0.37329780935464774,
+          "f1": 0.5436516490622979
+        },
+        "height": {
+          "matched_cell_count": 1230,
+          "target_cell_count": 3072,
+          "mean_absolute_error": 0.013226747621093098
+        }
+      },
+      "autoregressive_model": {
+        "occupancy": {
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 3378,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "height": {
+          "matched_cell_count": 0,
+          "target_cell_count": 3072,
+          "mean_absolute_error": Infinity
+        }
+      }
+    }
+  },
+  "scope": "temporal rollout diagnostic; no paper-performance claim without many held-out trajectories"
+}

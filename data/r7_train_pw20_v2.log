@@ -1,0 +1,69 @@
+[INFO] train: 20 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_boxes_s1', 'isaac_anymal_boxes_s2', 'isaac_anymal_boxes_s3', 'isaac_anymal_corridors_s0', 'isaac_anymal_corridors_s1', 'isaac_anymal_corridors_s2', 'isaac_anymal_corridors_s3', 'isaac_anymal_poles_s0', 'isaac_anymal_poles_s1', 'isaac_anymal_poles_s2', 'isaac_anymal_poles_s3', 'isaac_anymal_stairs_s0', 'isaac_anymal_stairs_s1', 'isaac_anymal_stairs_s2', 'isaac_anymal_stairs_s3', 'isaac_anymal_walls_s0', 'isaac_anymal_walls_s1', 'isaac_anymal_walls_s2', 'isaac_anymal_walls_s3']
+[step 000] loss 2.6154 lr 0.009696 pre 51.9s
+[step 001] loss 2.6122 lr 0.009401 pre 51.8s
+[step 002] loss 2.6092 lr 0.009114 pre 51.5s
+[step 003] loss 2.6058 lr 0.008837 pre 51.5s
+[step 004] loss 2.6018 lr 0.008568 pre 51.4s
+[step 005] loss 2.5963 lr 0.008307 pre 51.4s
+[step 006] loss 2.5878 lr 0.008055 pre 52.2s
+[step 007] loss 2.5753 lr 0.007809 pre 51.8s
+[step 008] loss 2.5579 lr 0.007572 pre 52.7s
+[step 009] loss 2.5330 lr 0.007341 pre 52.9s
+[save] reproduction/data/r7_train_pw20_v2.pt (step 9)
+[step 010] loss 2.5048 lr 0.007118 pre 52.9s
+[step 011] loss 2.4767 lr 0.006901 pre 52.7s
+[step 012] loss 2.4462 lr 0.006691 pre 53.1s
+[step 013] loss 2.4125 lr 0.006488 pre 53.0s
+[step 014] loss 2.3751 lr 0.006290 pre 53.7s
+[step 015] loss 2.3352 lr 0.006099 pre 54.0s
+[step 016] loss 2.2944 lr 0.005913 pre 54.2s
+[step 017] loss 2.2531 lr 0.005733 pre 54.0s
+[step 018] loss 2.2094 lr 0.005559 pre 54.4s
+[step 019] loss 2.1622 lr 0.005389 pre 54.3s
+[save] reproduction/data/r7_train_pw20_v2.pt (step 19)
+[step 020] loss 2.1101 lr 0.005225 pre 54.5s
+[step 021] loss 2.0506 lr 0.005066 pre 54.6s
+[step 022] loss 1.9841 lr 0.004912 pre 54.5s
+[step 023] loss 1.9148 lr 0.004763 pre 54.3s
+[step 024] loss 1.8532 lr 0.004618 pre 54.7s
+[step 025] loss 1.8531 lr 0.004477 pre 62.8s
+[step 026] loss 1.8149 lr 0.004341 pre 63.8s
+[step 027] loss 1.8074 lr 0.004209 pre 64.2s
+[step 028] loss 1.8011 lr 0.004081 pre 63.3s
+[step 029] loss 1.7786 lr 0.003957 pre 63.5s
+[save] reproduction/data/r7_train_pw20_v2.pt (step 29)
+[step 030] loss 1.7493 lr 0.003836 pre 64.2s
+[step 031] loss 1.7218 lr 0.003719 pre 65.2s
+[step 032] loss 1.6990 lr 0.003606 pre 65.3s
+[step 033] loss 1.6845 lr 0.003496 pre 65.8s
+[step 034] loss 1.6773 lr 0.003390 pre 65.6s
+[step 035] loss 1.6759 lr 0.003287 pre 65.9s
+[step 036] loss 1.6763 lr 0.003187 pre 66.4s
+[step 037] loss 1.6759 lr 0.003090 pre 66.4s
+[step 038] loss 1.6741 lr 0.002996 pre 66.6s
+[step 039] loss 1.6701 lr 0.002905 pre 66.8s
+[save] reproduction/data/r7_train_pw20_v2.pt (step 39)
+[step 040] loss 1.6643 lr 0.002816 pre 67.1s
+[step 041] loss 1.6571 lr 0.002730 pre 66.7s
+[step 042] loss 1.6488 lr 0.002647 pre 67.0s
+[step 043] loss 1.6396 lr 0.002567 pre 66.8s
+[step 044] loss 1.6305 lr 0.002489 pre 67.1s
+[step 045] loss 1.6213 lr 0.002413 pre 67.0s
+[step 046] loss 1.6125 lr 0.002340 pre 67.1s
+[step 047] loss 1.6045 lr 0.002268 pre 66.8s
+[step 048] loss 1.5980 lr 0.002199 pre 66.0s
+[step 049] loss 1.5928 lr 0.002132 pre 65.8s
+[save] reproduction/data/r7_train_pw20_v2.pt (step 49)
+[step 050] loss 1.5885 lr 0.002067 pre 66.1s
+[step 051] loss 1.5855 lr 0.002005 pre 65.9s
+[step 052] loss 1.5830 lr 0.001944 pre 66.1s
+[step 053] loss 1.5813 lr 0.001884 pre 66.4s
+[step 054] loss 1.5800 lr 0.001827 pre 67.1s
+[step 055] loss 1.5792 lr 0.001771 pre 66.9s
+[step 056] loss 1.5787 lr 0.001718 pre 67.0s
+[step 057] loss 1.5790 lr 0.001665 pre 67.1s
+[step 058] loss 1.5792 lr 0.001615 pre 67.1s
+[step 059] loss 1.5799 lr 0.001565 pre 66.1s
+[save] reproduction/data/r7_train_pw20_v2.pt (step 59)
+[step 060] loss 1.5823 lr 0.001518 pre 65.1s
+[step 061] loss 1.5851 lr 0.001472 pre 66.0s

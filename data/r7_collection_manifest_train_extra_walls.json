@@ -1,0 +1,47 @@
+{
+  "purpose": "serial, recoverable IsaacLab R7 data collection; not a claim of paper-scale data",
+  "created_at": "2026-08-27T05:41:28.023253+00:00",
+  "split": "train-extra",
+  "trajectory_steps_requested": 12,
+  "points_per_camera": 1500,
+  "jobs": [
+    {
+      "job": {
+        "terrain": "walls",
+        "seed": 4,
+        "output": "reproduction/data/isaac_anymal_walls_s4.npz",
+        "log": "reproduction/data/collection_logs/isaac_anymal_walls_s4.log"
+      },
+      "status": "completed",
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "isaaclab",
+        "/home/ark/projects/IsaacLab/isaaclab.sh",
+        "-p",
+        "/media/ark/Data/devpy/projects/allinone/reproduction/collect_isaaclab_anymal_trajectory.py",
+        "--headless",
+        "--enable_cameras",
+        "--terrain",
+        "walls",
+        "--seed",
+        "4",
+        "--trajectory-steps",
+        "12",
+        "--points-per-camera",
+        "1500",
+        "--output",
+        "/media/ark/Data/devpy/projects/allinone/reproduction/data/isaac_anymal_walls_s4.npz"
+      ],
+      "started_at": "2026-08-27T05:41:28.023559+00:00",
+      "returncode": 0,
+      "duration_seconds": 47.8,
+      "finished_at": "2026-08-27T05:42:15.807320+00:00",
+      "captured_frames": 8,
+      "terrain": "walls",
+      "scene_seed": 4
+    }
+  ]
+}

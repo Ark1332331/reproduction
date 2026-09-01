@@ -1,0 +1,167 @@
+[INFO] train: 20 trajectories ['isaac_anymal_boxes_s0', 'isaac_anymal_boxes_s1', 'isaac_anymal_boxes_s2', 'isaac_anymal_boxes_s3', 'isaac_anymal_corridors_s0', 'isaac_anymal_corridors_s1', 'isaac_anymal_corridors_s2', 'isaac_anymal_corridors_s3', 'isaac_anymal_poles_s0', 'isaac_anymal_poles_s1', 'isaac_anymal_poles_s2', 'isaac_anymal_poles_s3', 'isaac_anymal_stairs_s0', 'isaac_anymal_stairs_s1', 'isaac_anymal_stairs_s2', 'isaac_anymal_stairs_s3', 'isaac_anymal_walls_s0', 'isaac_anymal_walls_s1', 'isaac_anymal_walls_s2', 'isaac_anymal_walls_s3']
+[step 000] loss 2.1667 lr 0.009696
+[step 001] loss 2.1631 lr 0.009401
+[step 002] loss 2.1598 lr 0.009114
+[step 003] loss 2.1563 lr 0.008837
+[step 004] loss 2.1521 lr 0.008568
+[step 005] loss 2.1468 lr 0.008307
+[step 006] loss 2.1387 lr 0.008055
+[step 007] loss 2.1274 lr 0.007809
+[step 008] loss 2.1070 lr 0.007572
+[step 009] loss 2.0825 lr 0.007341
+[save] reproduction/data/r7_train_a0.pt (step 9)
+[step 010] loss 2.0540 lr 0.007118
+[step 011] loss 2.0257 lr 0.006901
+[step 012] loss 1.9956 lr 0.006691
+[step 013] loss 1.9625 lr 0.006488
+[step 014] loss 1.9256 lr 0.006290
+[step 015] loss 1.8857 lr 0.006099
+[step 016] loss 1.8446 lr 0.005913
+[step 017] loss 1.8025 lr 0.005733
+[step 018] loss 1.7580 lr 0.005559
+[step 019] loss 1.7087 lr 0.005389
+[save] reproduction/data/r7_train_a0.pt (step 19)
+[step 020] loss 1.6531 lr 0.005225
+[step 021] loss 1.5882 lr 0.005066
+[step 022] loss 1.5139 lr 0.004912
+[step 023] loss 1.4328 lr 0.004763
+[step 024] loss 1.3610 lr 0.004618
+[step 025] loss 1.4208 lr 0.004477
+[step 026] loss 1.3823 lr 0.004341
+[step 027] loss 1.3680 lr 0.004209
+[step 028] loss 1.3663 lr 0.004081
+[step 029] loss 1.3462 lr 0.003957
+[save] reproduction/data/r7_train_a0.pt (step 29)
+[step 030] loss 1.3142 lr 0.003836
+[step 031] loss 1.2751 lr 0.003719
+[step 032] loss 1.2429 lr 0.003606
+[step 033] loss 1.2189 lr 0.003496
+[step 034] loss 1.2021 lr 0.003390
+[step 035] loss 1.1907 lr 0.003287
+[step 036] loss 1.1831 lr 0.003187
+[step 037] loss 1.1744 lr 0.003090
+[step 038] loss 1.1650 lr 0.002996
+[step 039] loss 1.1529 lr 0.002905
+[save] reproduction/data/r7_train_a0.pt (step 39)
+[step 040] loss 1.1398 lr 0.002816
+[step 041] loss 1.1253 lr 0.002730
+[step 042] loss 1.1095 lr 0.002647
+[step 043] loss 1.0934 lr 0.002567
+[step 044] loss 1.0776 lr 0.002489
+[step 045] loss 1.0642 lr 0.002413
+[step 046] loss 1.0533 lr 0.002340
+[step 047] loss 1.0440 lr 0.002268
+[step 048] loss 1.0375 lr 0.002199
+[step 049] loss 1.0306 lr 0.002132
+[save] reproduction/data/r7_train_a0.pt (step 49)
+[step 050] loss 1.0238 lr 0.002067
+[step 051] loss 1.0174 lr 0.002005
+[step 052] loss 1.0104 lr 0.001944
+[step 053] loss 1.0023 lr 0.001884
+[step 054] loss 0.9960 lr 0.001827
+[step 055] loss 0.9912 lr 0.001771
+[step 056] loss 0.9868 lr 0.001718
+[step 057] loss 0.9834 lr 0.001665
+[step 058] loss 0.9816 lr 0.001615
+[step 059] loss 0.9802 lr 0.001565
+[save] reproduction/data/r7_train_a0.pt (step 59)
+[step 060] loss 0.9784 lr 0.001518
+[step 061] loss 0.9763 lr 0.001472
+[step 062] loss 0.9744 lr 0.001427
+[step 063] loss 0.9719 lr 0.001383
+[step 064] loss 0.9693 lr 0.001341
+[step 065] loss 0.9660 lr 0.001300
+[step 066] loss 0.9626 lr 0.001261
+[step 067] loss 0.9596 lr 0.001222
+[step 068] loss 0.9565 lr 0.001185
+[step 069] loss 0.9534 lr 0.001149
+[save] reproduction/data/r7_train_a0.pt (step 69)
+[step 070] loss 0.9509 lr 0.001114
+[step 071] loss 0.9482 lr 0.001080
+[step 072] loss 0.9458 lr 0.001047
+[step 073] loss 0.9436 lr 0.001016
+[step 074] loss 0.9418 lr 0.000985
+[step 075] loss 0.9400 lr 0.000955
+[step 076] loss 0.9387 lr 0.000926
+[step 077] loss 0.9370 lr 0.000897
+[step 078] loss 0.9357 lr 0.000870
+[step 079] loss 0.9352 lr 0.000844
+[save] reproduction/data/r7_train_a0.pt (step 79)
+[step 080] loss 0.9348 lr 0.000818
+[step 081] loss 0.9343 lr 0.000793
+[step 082] loss 0.9343 lr 0.000769
+[step 083] loss 0.9343 lr 0.000746
+[step 084] loss 0.9341 lr 0.000723
+[step 085] loss 0.9348 lr 0.000701
+[step 086] loss 0.9353 lr 0.000680
+[step 087] loss 0.9358 lr 0.000659
+[step 088] loss 0.9358 lr 0.000639
+[step 089] loss 0.9361 lr 0.000619
+[save] reproduction/data/r7_train_a0.pt (step 89)
+[step 090] loss 0.9356 lr 0.000601
+[step 091] loss 0.9360 lr 0.000582
+[step 092] loss 0.9360 lr 0.000565
+[step 093] loss 0.9362 lr 0.000547
+[step 094] loss 0.9354 lr 0.000531
+[step 095] loss 0.9352 lr 0.000515
+[step 096] loss 0.9354 lr 0.000499
+[step 097] loss 0.9358 lr 0.000484
+[step 098] loss 0.9360 lr 0.000469
+[step 099] loss 0.9364 lr 0.000455
+[save] reproduction/data/r7_train_a0.pt (step 99)
+[step 100] loss 0.9360 lr 0.000441
+[step 101] loss 0.9363 lr 0.000427
+[step 102] loss 0.9359 lr 0.000414
+[step 103] loss 0.9356 lr 0.000402
+[step 104] loss 0.9364 lr 0.000390
+[step 105] loss 0.9367 lr 0.000378
+[step 106] loss 0.9366 lr 0.000366
+[step 107] loss 0.9374 lr 0.000355
+[step 108] loss 0.9381 lr 0.000344
+[step 109] loss 0.9387 lr 0.000334
+[save] reproduction/data/r7_train_a0.pt (step 109)
+[step 110] loss 0.9393 lr 0.000324
+[step 111] loss 0.9395 lr 0.000314
+[step 112] loss 0.9396 lr 0.000304
+[step 113] loss 0.9398 lr 0.000295
+[step 114] loss 0.9400 lr 0.000286
+[step 115] loss 0.9404 lr 0.000277
+[step 116] loss 0.9406 lr 0.000269
+[step 117] loss 0.9407 lr 0.000261
+[step 118] loss 0.9398 lr 0.000253
+[step 119] loss 0.9409 lr 0.000245
+[save] reproduction/data/r7_train_a0.pt (step 119)
+[step 120] loss 0.9411 lr 0.000238
+[step 121] loss 0.9411 lr 0.000230
+[step 122] loss 0.9413 lr 0.000223
+[step 123] loss 0.9410 lr 0.000217
+[step 124] loss 0.9401 lr 0.000210
+[step 125] loss 0.9406 lr 0.000204
+[step 126] loss 0.9370 lr 0.000197
+[step 127] loss 0.9331 lr 0.000191
+[step 128] loss 0.9312 lr 0.000186
+[step 129] loss 0.9184 lr 0.000180
+[save] reproduction/data/r7_train_a0.pt (step 129)
+[step 130] loss 0.9149 lr 0.000174
+[step 131] loss 0.9134 lr 0.000169
+[step 132] loss 0.9132 lr 0.000164
+[step 133] loss 0.9133 lr 0.000159
+[step 134] loss 0.9128 lr 0.000154
+[step 135] loss 0.9134 lr 0.000149
+[step 136] loss 0.9135 lr 0.000145
+[step 137] loss 0.9129 lr 0.000140
+[step 138] loss 0.9116 lr 0.000136
+[step 139] loss 0.9118 lr 0.000132
+[save] reproduction/data/r7_train_a0.pt (step 139)
+[step 140] loss 0.9116 lr 0.000128
+[step 141] loss 0.9110 lr 0.000124
+[step 142] loss 0.9113 lr 0.000120
+[step 143] loss 0.9120 lr 0.000117
+[step 144] loss 0.9121 lr 0.000113
+[step 145] loss 0.9126 lr 0.000110
+[step 146] loss 0.9130 lr 0.000106
+[step 147] loss 0.9130 lr 0.000103
+[step 148] loss 0.9146 lr 0.000100
+[step 149] loss 0.9148 lr 0.000097
+[save] reproduction/data/r7_train_a0.pt (step 149)
+[DONE] trained 150 steps; loss 2.1667 -> 0.9148

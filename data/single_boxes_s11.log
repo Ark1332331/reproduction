@@ -1,0 +1,123 @@
+[3gH    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H   [INFO] Using python from: /home/ark/miniconda3/envs/isaaclab/bin/python
+Loading user config located at: '/home/ark/miniconda3/envs/isaaclab/lib/python3.11/site-packages/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /home/ark/miniconda3/envs/isaaclab/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20260822_142839.log
+2026-08-22T06:28:39Z [171ms] [Warning] [carb.cudainterop.plugin] CUDA_VISIBLE_DEVICES environment variable is set.
+2026-08-22T06:28:39Z [171ms] [Warning] [carb.cudainterop.plugin] Note CUDA device enumeration and Omniverse device enumeration are different.
+2026-08-22T06:28:39Z [173ms] [Warning] [carb.cudainterop.plugin] Setting CUDA_VISIBLE_DEVICES can lead to undesired behavior or crashes.
+2026-08-22T06:28:42Z [3,035ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Graphics (ARL)
+2026-08-22T06:28:42Z [3,036ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Graphics (ARL)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.173.02    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5070 Laptop.. | Yes: 0 |     | 8151    MB | 10de      | 0          |
+|     |                                  |        |     |            | 2d58      | 8f3fc4c9.. |
+|     |                                  |        |     |            | 2         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Graphics (ARL)          |        |     | 23633   MB | 8086      | 0          |
+|     |                                  |        |     |            | 7d67      | 8680677d.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 24.04.4 LTS (Noble Numbat) ubuntu, Version: 24.04.4, Kernel: 7.0.0-30-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101011 (1.21.1.11)
+| Processor: Intel(R) Core(TM) Ultra 9 275HX
+| Cores: 24 | Logical Cores: 24
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31511 | Free Memory: 15731
+| Total Page/Swap (MB): 9536 | Free Page/Swap: 9536
+|---------------------------------------------------------------------------------------------|
+2026-08-22T06:28:42Z [3,336ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-08-22T06:28:42Z [3,344ms] [Warning] [gpu.foundation.plugin] PCIe link width current (8) and maximum (16) for device 0 don't match.
+2026-08-22T06:28:42Z [3,344ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-08-22T06:28:42Z [3,344ms] [Warning] [gpu.foundation.plugin] Detected IOMMU is enabled. Running CUDA peer-to-peer bandwidth and latency validation.
+Unidirectional P2P=Enabled Bandwidth (P2P Writes) Matrix (GB/s)
+   D\D     0 
+     0 262.42 
+P2P=Enabled Latency (P2P Writes) Matrix (us)
+   GPU     0 
+     0   2.09 
+
+   CPU     0 
+     0   1.56 
+2026-08-22T06:28:43Z [4,042ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-08-22T06:28:43Z [4,149ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-08-22T06:28:43Z [4,288ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ark/projects/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+[INFO]: Parsing configuration from: isaaclab_tasks.direct.anymal_c.agents.rsl_rl_ppo_cfg:AnymalCRoughPPORunnerCfg
+[INFO]: Parsing configuration from: isaaclab_tasks.direct.anymal_c.anymal_c_env_cfg:AnymalCRoughEnvCfg
+
+[36m===========================================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /run/user/1000/mihomo-tmp/isaaclab/logs/isaaclab_2026-08-22_14-28-49.log[0m
+[36m===========================================================================================================[0m
+
+[33m14:28:49 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+/home/ark/miniconda3/envs/isaaclab/lib/python3.11/site-packages/torch/nn/modules/module.py:1762: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at /pytorch/aten/src/ATen/native/cudnn/RNN.cpp:1481.)
+  return forward_call(*args, **kwargs)
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO] Generating terrains randomly took : 0.002766 seconds
+[INFO]: Time taken for scene creation : 4.233160 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 4.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 3.767131 seconds
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++----------+---------------------------+
+|  Index   | Name                      |
++----------+---------------------------+
+|    0     | physics_material          |
+|    1     | add_base_mass             |
++----------+---------------------------+
+
+[INFO]: Completed setting up the environment...
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 policy :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor MLP: MLP(
+  (0): Linear(in_features=235, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=12, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=235, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+[INFO] checkpoint loaded (iter 1499); terrain=boxes seed=11
+[INFO] env origin [-4. -4.  0.]  terrain origin [-4. -4.  0.]
+[DBG] settle done; base pos=[-3.6669805 -3.9509122  0.6302375]
+[trajectory] frame=00 measurement=6000 target=4445 base=(-3.17,-3.96,0.641) yaw=-0.031
+[trajectory] frame=01 measurement=6000 target=4986 base=(-2.68,-3.96,0.644) yaw=-0.037
+[trajectory] frame=02 measurement=6000 target=5397 base=(-2.25,-3.92,0.664) yaw=-0.031
+[trajectory] frame=03 measurement=6000 target=5690 base=(-1.76,-3.95,0.740) yaw=-0.029
+[trajectory] frame=04 measurement=6000 target=5810 base=(-1.38,-3.99,0.675) yaw=-0.033
+[trajectory] frame=05 measurement=6000 target=5912 base=(-1.02,-3.95,0.740) yaw=-0.057
+[trajectory] frame=06 measurement=6000 target=5958 base=(-0.61,-3.93,0.742) yaw=-0.038
+[trajectory] frame=07 measurement=6000 target=5577 base=(-0.28,-4.06,0.659) yaw=-0.185
+[trajectory] frame=08 measurement=6000 target=5199 base=(0.05,-4.26,0.602) yaw=-0.319
+[trajectory] frame=09 measurement=5319 target=5053 base=(0.41,-4.42,0.622) yaw=-0.351
