@@ -22,6 +22,13 @@ from r1_data_representation import (
     align_previous_points_to_current,
     points_to_voxel_representation,
 )
+from paper_config import (
+    PAPER_FINAL_LEARNING_RATE,
+    PAPER_GRID_SIZE,
+    PAPER_INITIAL_LEARNING_RATE,
+    PAPER_PRUNING_ALPHA,
+    PAPER_VOXEL_SIZE_M,
+)
 from r5_sparse_input import batch_voxel_representations, make_sparse_tensor
 from r5_sparse_loss import completion_loss, downsample_occupancy_target, multiscale_likelihood_loss
 from r5_sparse_evaluation import (
@@ -101,8 +108,8 @@ def make_autoregressive_voxels(
     previous_estimate: np.ndarray,
     previous_to_current_translation: tuple[float, float, float],
     previous_to_current_yaw: float,
-    voxel_size: float = 0.05,
-    grid_size: int = 64,
+    voxel_size: float = PAPER_VOXEL_SIZE_M,
+    grid_size: int = PAPER_GRID_SIZE,
     rotation_center: tuple[float, float, float] | None = None,
 ) -> VoxelRepresentation:
     """Build the paper's one-step `[x, y, z, k]` input representation.
@@ -133,11 +140,45 @@ def make_autoregressive_voxels(
     )
 
 
+def make_autoregressive_voxels_cached_current(
+    current_representation: VoxelRepresentation,
+    previous_estimate: np.ndarray,
+    previous_to_current_translation: tuple[float, float, float],
+    previous_to_current_yaw: float,
+    voxel_size: float = PAPER_VOXEL_SIZE_M,
+    grid_size: int = PAPER_GRID_SIZE,
+    rotation_center: tuple[float, float, float] | None = None,
+) -> VoxelRepresentation:
+    """Build an input while reusing a pre-voxelized current measurement."""
+    previous = _points(previous_estimate, "previous_estimate")
+    aligned_estimate = align_previous_points_to_current(
+        previous,
+        translation=previous_to_current_translation,
+        yaw=previous_to_current_yaw,
+        rotation_center=(
+            rotation_center
+            if rotation_center is not None
+            else (voxel_size * grid_size / 2, voxel_size * grid_size / 2, voxel_size * grid_size / 2)
+        ),
+    )
+    previous_representation = points_to_voxel_representation(
+        current_points=np.empty((0, 3), dtype=float),
+        previous_points=aligned_estimate,
+        voxel_size=voxel_size,
+        grid_size=grid_size,
+    )
+    return VoxelRepresentation(
+        coords=np.vstack([current_representation.coords, previous_representation.coords]),
+        features=np.vstack([current_representation.features, previous_representation.features]),
+        dropped_count=current_representation.dropped_count + previous_representation.dropped_count,
+    )
+
+
 def rollout_without_temporal_gradients(
     steps: Sequence[TemporalTerrainStep],
     predict_points: Callable[[VoxelRepresentation], np.ndarray],
-    voxel_size: float = 0.05,
-    grid_size: int = 64,
+    voxel_size: float = PAPER_VOXEL_SIZE_M,
+    grid_size: int = PAPER_GRID_SIZE,
 ) -> AutoregressiveRollout:
     """Apply a predictor sequentially and feed each detached estimate forward.
 
@@ -173,6 +214,7 @@ def sparse_prediction_to_current_points(
     offsets: torch.Tensor,
     alpha: float,
     voxel_size: float,
+    logit_offset: float = 0.0,
 ) -> np.ndarray:
     """Decode kept current-frame sparse predictions into ordinary 3D points."""
 
@@ -183,7 +225,7 @@ def sparse_prediction_to_current_points(
     if likelihood_logits.shape != (len(coordinates), 1) or offsets.shape != (len(coordinates), 3):
         raise ValueError("likelihood_logits and offsets must have one row per coordinate")
     current_mask = coordinates[:, 4] == 0
-    keep_mask = current_mask & (torch.sigmoid(likelihood_logits[:, 0]) >= alpha)
+    keep_mask = current_mask & (torch.sigmoid(likelihood_logits[:, 0] + logit_offset) >= alpha)
     current_coordinates = coordinates[keep_mask, 1:4].detach().cpu().numpy().astype(float)
     current_offsets = offsets[keep_mask].detach().cpu().numpy()
     return (current_coordinates + current_offsets) * voxel_size
@@ -216,10 +258,10 @@ def train_detached_rollout(
     steps: int,
     voxel_size: float = 0.05,
     grid_size: int = 64,
-    learning_rate: float = 0.01,
-    final_learning_rate: float = 0.0001,
-    pruning_alpha: float = 0.5,
-    feedback_alpha: float = 0.0,
+    learning_rate: float = PAPER_INITIAL_LEARNING_RATE,
+    final_learning_rate: float = PAPER_FINAL_LEARNING_RATE,
+    pruning_alpha: float = PAPER_PRUNING_ALPHA,
+    feedback_alpha: float = PAPER_PRUNING_ALPHA,
 ) -> TemporalTrainingRun:
     """Train with per-step losses but detached model-feedback between time steps.
 
@@ -294,14 +336,21 @@ def train_detached_rollout(
                 step_loss_sum += float(loss_total.detach())
                 frame_count += 1
                 with torch.no_grad():
-                    feedback = model(input_tensor, alpha=feedback_alpha)
-                    previous_estimate = sparse_prediction_to_current_points(
-                        feedback.candidates.C,
-                        feedback.occupancy_logits.F,
-                        feedback.position_offsets.F,
-                        alpha=feedback_alpha,
-                        voxel_size=voxel_size,
-                    )
+                    try:
+                        feedback = model(input_tensor, alpha=feedback_alpha)
+                        previous_estimate = sparse_prediction_to_current_points(
+                            feedback.candidates.C,
+                            feedback.occupancy_logits.F,
+                            feedback.position_offsets.F,
+                            alpha=feedback_alpha,
+                            voxel_size=voxel_size,
+                        )
+                    except EmptyPruningError:
+                        # Early in training, alpha pruning may produce a valid
+                        # empty reconstruction.  Preserve detached temporal
+                        # semantics by feeding an empty history rather than
+                        # leaking targets or aborting the rollout.
+                        previous_estimate = np.empty((0, 3), dtype=float)
         optimizer.step()
         scheduler.step()
         loss_history.append(step_loss_sum / max(frame_count, 1))
@@ -317,6 +366,7 @@ def evaluate_detached_rollout(
     prune_internal: bool = True,
     feedback_alpha: float | None = None,
     use_history: bool = True,
+    likelihood_logit_offset: float = 0.0,
 ) -> dict:
     """Evaluate recurrent predictions and a current-measurement-only baseline.
 
@@ -371,13 +421,15 @@ def evaluate_detached_rollout(
             with torch.no_grad():
                 prediction = model(input_tensor, alpha=alpha if prune_internal else None)
             coordinates = current_frame_prediction_coordinates(
-                prediction.candidates.C, prediction.occupancy_logits.F, alpha
+                prediction.candidates.C, prediction.occupancy_logits.F, alpha,
+                logit_offset=likelihood_logit_offset,
             )
             coordinates_with_offsets, offsets = current_frame_prediction_with_offsets(
                 prediction.candidates.C,
                 prediction.occupancy_logits.F,
                 prediction.position_offsets.F,
                 alpha,
+                logit_offset=likelihood_logit_offset,
             )
             previous_estimate = sparse_prediction_to_current_points(
                 prediction.candidates.C,
@@ -385,6 +437,7 @@ def evaluate_detached_rollout(
                 prediction.position_offsets.F,
                 alpha=feedback_alpha,
                 voxel_size=voxel_size,
+                logit_offset=likelihood_logit_offset,
             )
         except EmptyPruningError:
             coordinates = np.empty((0, 5), dtype=np.int32)
@@ -402,6 +455,13 @@ def evaluate_detached_rollout(
 
 
 def _summarize_metrics(occupancy_values, height_values) -> dict:
+    """Return paper-style per-frame means plus micro aggregates.
+
+    The paper reports mean precision/recall/F1, while the old implementation
+    only exposed a global count-based (micro) aggregate.  Keep the old keys as
+    aliases for compatibility, but make both aggregation modes explicit. Height
+    error is reported over matched XY cells and now includes its coverage.
+    """
     true_positive = sum(value.true_positive for value in occupancy_values)
     false_positive = sum(value.false_positive for value in occupancy_values)
     false_negative = sum(value.false_negative for value in occupancy_values)
@@ -414,16 +474,49 @@ def _summarize_metrics(occupancy_values, height_values) -> dict:
     height_mae = (
         sum(value.mean_absolute_error * value.matched_cell_count for value in finite) / matched if matched else float("inf")
     )
+    micro_occupancy = {
+        "true_positive": true_positive,
+        "false_positive": false_positive,
+        "false_negative": false_negative,
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+    }
+    micro_height = {
+        "matched_cell_count": matched,
+        "target_cell_count": target,
+        "coverage": matched / target if target else 0.0,
+        "mean_absolute_error": height_mae,
+    }
+
+    def _finite_mean(values: list[float]) -> float:
+        finite_values = [value for value in values if np.isfinite(value)]
+        return float(np.mean(finite_values)) if finite_values else float("inf")
+
+    macro_occupancy = {
+        "precision": _finite_mean([value.precision for value in occupancy_values]),
+        "recall": _finite_mean([value.recall for value in occupancy_values]),
+        "f1": _finite_mean([value.f1 for value in occupancy_values]),
+    }
+    macro_height = {
+        "evaluated_frame_count": len(finite),
+        "frame_count": len(height_values),
+        "matched_cell_count": matched,
+        "target_cell_count": target,
+        "coverage": matched / target if target else 0.0,
+        "mean_absolute_error": _finite_mean([value.mean_absolute_error for value in height_values]),
+    }
     return {
-        "occupancy": {
-            "true_positive": true_positive,
-            "false_positive": false_positive,
-            "false_negative": false_negative,
-            "precision": precision,
-            "recall": recall,
-            "f1": f1,
+        "aggregation": {
+            "paper_primary": "macro_per_frame",
+            "micro": "global_count_aggregate",
+            "height": "matched_xy_cell_weighted_for_micro; per_frame_mean_for_macro",
         },
-        "height": {"matched_cell_count": matched, "target_cell_count": target, "mean_absolute_error": height_mae},
+        "macro": {"occupancy": macro_occupancy, "height": macro_height},
+        "micro": {"occupancy": micro_occupancy, "height": micro_height},
+        # Backward-compatible aliases. New reports should read macro explicitly.
+        "occupancy": micro_occupancy,
+        "height": micro_height,
     }
 
 

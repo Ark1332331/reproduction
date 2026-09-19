@@ -26,15 +26,36 @@ import json
 from pathlib import Path
 
 from isaaclab.app import AppLauncher
+from paper_config import (
+    PAPER_CAMERA_COUNT,
+    PAPER_CAMERA_TILT_DEGREES,
+    PAPER_GRID_SIZE,
+    PAPER_MAP_SIZE_M,
+    PAPER_ROLLOUT_STEPS,
+    PAPER_VOXEL_SIZE_M,
+    REPRODUCTION_CAPTURE_SCHEMA_VERSION,
+    REPRODUCTION_TERRAIN_PROFILE,
+)
 
 parser = argparse.ArgumentParser(description="Capture paper-distribution ANYmal depth trajectories.")
 parser.add_argument("--terrain", choices=("stairs", "boxes", "walls", "poles", "corridors", "default"), required=True)
 parser.add_argument("--seed", type=int, default=0)
 parser.add_argument("--output", required=True)
-parser.add_argument("--trajectory-steps", type=int, default=12)
+parser.add_argument("--trajectory-steps", type=int, default=PAPER_ROLLOUT_STEPS)
 parser.add_argument("--frames-per-step", type=int, default=25, help="Physics env steps between captured frames.")
 parser.add_argument("--settle-env-steps", type=int, default=50, help="Steps to let the robot stand before capture.")
 parser.add_argument("--points-per-camera", type=int, default=1500)
+parser.add_argument(
+    "--random-motion", action=argparse.BooleanOptionalAction, default=True,
+    help="Sample velocity/yaw command and initial yaw per trajectory (paper-aligned default).",
+)
+parser.add_argument("--motion-seed", type=int, default=None)
+parser.add_argument("--yaw-rate-min", type=float, default=-0.35)
+parser.add_argument("--yaw-rate-max", type=float, default=0.35)
+parser.add_argument("--forward-velocity-min", type=float, default=0.5)
+parser.add_argument("--forward-velocity-max", type=float, default=1.0)
+parser.add_argument("--lateral-velocity-min", type=float, default=-0.2)
+parser.add_argument("--lateral-velocity-max", type=float, default=0.2)
 AppLauncher.add_app_launcher_args(parser)
 args_cli = parser.parse_args()
 
@@ -60,14 +81,21 @@ from isaaclab_tasks.direct.anymal_c.anymal_c_env_cfg import AnymalCRoughEnvCfg  
 import sys  # noqa: E402
 sys.path.insert(0, "/media/ark/Data/devpy/projects/allinone/reproduction")
 import paper_terrains  # noqa: E402
+from r7_capture_provenance import capture_provenance  # noqa: E402
 
 CHECKPOINT = (
     "/home/ark/projects/IsaacLab/.pretrained_checkpoints/rsl_rl/"
     "Isaac-Velocity-Rough-Anymal-C-Direct-v0/checkpoint.pt"
 )
 TASK = "Isaac-Velocity-Rough-Anymal-C-Direct-v0"
-MAP_SIZE = 3.2
+MAP_SIZE = PAPER_MAP_SIZE_M
 MAP_CENTER = MAP_SIZE / 2
+
+
+def _yaw_quaternion(yaw: float, device: str) -> torch.Tensor:
+    """Build Isaac's (w, x, y, z) quaternion for one planar yaw."""
+    half = torch.tensor(float(yaw) * 0.5, dtype=torch.float32, device=device)
+    return torch.stack((torch.cos(half), torch.tensor(0.0, device=device), torch.tensor(0.0, device=device), torch.sin(half)))
 
 # Camera offsets w.r.t. the base frame (world convention: +X forward, +Z up).
 # The ANYmal trunk reaches ~0.5 m ahead of the base, so a camera mounted on the
@@ -282,8 +310,33 @@ def main() -> None:
     terrain_origin = terrain.terrain_origins[0, 0].detach().cpu().numpy()
     print(f"[INFO] env origin {env_origin}  terrain origin {terrain_origin}")
 
-    # fixed forward command so the robot deterministically walks into the structures
-    env.unwrapped._commands[:] = torch.tensor([[0.8, 0.0, 0.0]], device=env.unwrapped.device)
+    motion_rng = np.random.default_rng(
+        args_cli.motion_seed if args_cli.motion_seed is not None else args_cli.seed + 1_000_003
+    )
+    if args_cli.random_motion:
+        motion_command = np.array(
+            (
+                motion_rng.uniform(args_cli.forward_velocity_min, args_cli.forward_velocity_max),
+                motion_rng.uniform(args_cli.lateral_velocity_min, args_cli.lateral_velocity_max),
+                motion_rng.uniform(args_cli.yaw_rate_min, args_cli.yaw_rate_max),
+            ),
+            dtype=np.float32,
+        )
+        initial_yaw = float(motion_rng.uniform(-np.pi / 6.0, np.pi / 6.0))
+        default_root_state = robot.data.default_root_state.clone()
+        default_root_state[:, :3] += env_origin
+        default_root_state[:, 3:7] = _yaw_quaternion(initial_yaw, env.unwrapped.device)
+        robot.write_root_pose_to_sim(default_root_state[:, :7])
+    else:
+        motion_command = np.array((0.8, 0.0, 0.0), dtype=np.float32)
+        current_quat = robot.data.root_quat_w[0].detach().cpu().numpy()
+        initial_yaw = float(
+            np.arctan2(
+                2.0 * (current_quat[0] * current_quat[3] + current_quat[1] * current_quat[2]),
+                1.0 - 2.0 * (current_quat[2] ** 2 + current_quat[3] ** 2),
+            )
+        )
+    env.unwrapped._commands[:] = torch.as_tensor(motion_command[None], dtype=torch.float32, device=env.unwrapped.device)
 
     # Let the robot settle and take its first command
     obs_td = env.get_observations()
@@ -375,16 +428,39 @@ def main() -> None:
         raise RuntimeError(f"captured only {captured} frames; robot could not walk the terrain")
 
     payload["metadata_json"] = json.dumps({
+        "capture_schema_version": REPRODUCTION_CAPTURE_SCHEMA_VERSION,
         "coordinate_frame": "robot_centric_local_map",
         "map_size_m": MAP_SIZE,
+        "voxel_size_m": PAPER_VOXEL_SIZE_M,
+        "grid_size": PAPER_GRID_SIZE,
         "trajectory_steps": captured,
         "scene_seed": args_cli.seed,
         "camera_count": 4,
+        "camera_tilt_degrees": PAPER_CAMERA_TILT_DEGREES,
+        "motion_randomized": bool(args_cli.random_motion),
+        "motion_seed": int(args_cli.motion_seed if args_cli.motion_seed is not None else args_cli.seed + 1_000_003),
+        "command_xyz": motion_command.tolist(),
+        "initial_yaw": initial_yaw,
+        "yaw_rate_range": [args_cli.yaw_rate_min, args_cli.yaw_rate_max],
+        "forward_velocity_range": [args_cli.forward_velocity_min, args_cli.forward_velocity_max],
+        "lateral_velocity_range": [args_cli.lateral_velocity_min, args_cli.lateral_velocity_max],
         "points_per_camera": args_cli.points_per_camera,
         "terrain": args_cli.terrain,
         "ground_truth": "dense samples from the known terrain generator geometry",
         "drive": "official Isaac-Velocity-Rough-Anymal-C-Direct-v0 checkpoint",
         "base_yaw": "yaw_XX is current minus previous yaw",
+        "provenance": capture_provenance(
+            collector_path=__file__,
+            checkpoint_path=CHECKPOINT,
+            task=TASK,
+            terrain_profile=REPRODUCTION_TERRAIN_PROFILE,
+            map_size_m=MAP_SIZE,
+            voxel_size_m=PAPER_VOXEL_SIZE_M,
+            grid_size=PAPER_GRID_SIZE,
+            rollout_steps=PAPER_ROLLOUT_STEPS,
+            camera_count=PAPER_CAMERA_COUNT,
+            camera_tilt_degrees=PAPER_CAMERA_TILT_DEGREES,
+        ),
     })
     output = Path(args_cli.output)
     output.parent.mkdir(parents=True, exist_ok=True)

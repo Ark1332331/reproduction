@@ -1,6 +1,7 @@
 """P3-c test: output_alpha sweep must not change the history fed to later frames."""
 
 import unittest
+from pathlib import Path
 
 import numpy as np
 import torch
@@ -10,9 +11,13 @@ from r7_autoregressive_rollout import evaluate_detached_rollout, load_isaaclab_t
 
 
 class FeedbackAlphaDecouplingTests(unittest.TestCase):
+    @staticmethod
+    def _trajectory_path() -> str:
+        return str(Path(__file__).resolve().parent / "data" / "isaac_anymal_boxes_s10.npz")
+
     def test_output_alpha_sweep_keeps_second_frame_history_fixed(self):
         trajectory = load_isaaclab_temporal_trajectory(
-            "reproduction/data/isaac_anymal_boxes_s10.npz"
+            self._trajectory_path()
         )[:2]
         model = FourLevel4DCompletionModel()
 
@@ -39,7 +44,7 @@ class FeedbackAlphaDecouplingTests(unittest.TestCase):
 
     def test_history_ablation_feeds_no_k1_points_to_later_frames(self):
         trajectory = load_isaaclab_temporal_trajectory(
-            "reproduction/data/isaac_anymal_boxes_s10.npz"
+            self._trajectory_path()
         )[:2]
         model = FourLevel4DCompletionModel()
         history_counts = []

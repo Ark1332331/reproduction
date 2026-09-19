@@ -8,7 +8,7 @@ import MinkowskiEngine as ME
 
 from r5_sparse_model import FourLevel4DCompletionModel
 from r5_sparse_loss import completion_loss
-from r5_terrain_dataset import make_structured_terrain_sample, prepare_sparse_sample
+from r5_test_fixtures import make_structured_terrain_sample, prepare_sparse_sample
 from r5_sparse_input import batch_voxel_representations
 
 

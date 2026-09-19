@@ -6,7 +6,7 @@ BCE would pull the same head toward two conflicting objectives.
 """
 import unittest
 import torch
-from r5_terrain_dataset import make_structured_terrain_sample, prepare_sparse_sample
+from r5_test_fixtures import make_structured_terrain_sample, prepare_sparse_sample
 from r5_sparse_model import FourLevel4DCompletionModel
 from r5_sparse_loss import multiscale_likelihood_loss
 

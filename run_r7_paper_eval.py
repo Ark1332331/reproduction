@@ -20,19 +20,37 @@ import torch
 
 from r5_sparse_model import FourLevel4DCompletionModel
 from r7_autoregressive_rollout import evaluate_detached_rollout, load_isaaclab_temporal_trajectory
+from paper_config import PAPER_GRID_SIZE, PAPER_PRUNING_ALPHA, PAPER_TERRAINS, PAPER_VOXEL_SIZE_M
 
 
-def _load_dir(directory: Path, prefix: str, seeds: tuple[int, ...] | None, terrains: tuple[str, ...] | None):
+def _load_dir(
+    directory: Path,
+    prefix: str,
+    seeds: tuple[int, ...] | None,
+    terrains: tuple[str, ...] | None,
+    min_trajectory_frames: int = 10,
+    max_trajectories_per_terrain: int | None = None,
+):
     trajectories = []
     names = []
+    terrain_counts = {terrain: 0 for terrain in (terrains or ())}
     for path in sorted(directory.glob(f"{prefix}_*.npz")):
         name = path.stem
         if seeds is not None and not any(f"_s{s}_" in f"{name}_" or name.endswith(f"_s{s}") for s in seeds):
             continue
         if terrains is not None and not any(t in name for t in terrains):
             continue
-        trajectories.append(load_isaaclab_temporal_trajectory(str(path)))
+        terrain = next((t for t in (terrains or ()) if f"_{t}_" in name), None)
+        if terrain is not None and max_trajectories_per_terrain is not None:
+            if terrain_counts[terrain] >= max_trajectories_per_terrain:
+                continue
+        trajectory = load_isaaclab_temporal_trajectory(str(path))
+        if len(trajectory) < min_trajectory_frames:
+            continue
+        trajectories.append(trajectory)
         names.append(name)
+        if terrain is not None:
+            terrain_counts[terrain] += 1
     return trajectories, names
 
 
@@ -40,9 +58,14 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--validation-dir", type=Path, required=True)
     parser.add_argument("--seeds", type=int, nargs="*", default=None)
-    parser.add_argument("--terrains", nargs="*", default=("stairs", "boxes", "walls", "poles", "corridors"))
+    parser.add_argument("--terrains", nargs="*", default=PAPER_TERRAINS)
+    parser.add_argument("--min-trajectory-frames", type=int, default=10)
+    parser.add_argument(
+        "--max-trajectories-per-terrain", type=int, default=None,
+        help="Optional deterministic per-terrain cap for fast smoke evaluation.",
+    )
     parser.add_argument("--checkpoint", type=Path, required=True)
-    parser.add_argument("--alphas", type=float, nargs="*", default=(0.1,))
+    parser.add_argument("--alphas", type=float, nargs="*", default=(PAPER_PRUNING_ALPHA,))
     parser.add_argument(
         "--disable-internal-pruning",
         action="store_true",
@@ -54,13 +77,17 @@ def main() -> None:
         "defaults to the sweep alpha for backward compatibility",
     )
     parser.add_argument(
+        "--likelihood-logit-offset", type=float, default=0.0,
+        help="Optional post-hoc logit calibration added before alpha thresholding; default is raw logits",
+    )
+    parser.add_argument(
         "--disable-history",
         action="store_true",
         help="ablation: evaluate every frame with an empty k=1 history",
     )
     parser.add_argument("--device", default="cuda")
-    parser.add_argument("--voxel-size", type=float, default=.05)
-    parser.add_argument("--grid-size", type=int, default=64)
+    parser.add_argument("--voxel-size", type=float, default=PAPER_VOXEL_SIZE_M)
+    parser.add_argument("--grid-size", type=int, default=PAPER_GRID_SIZE)
     parser.add_argument("--results", type=Path, required=True)
     args = parser.parse_args()
 
@@ -80,18 +107,30 @@ def main() -> None:
           f"channels {config.get('channels')}, generative_kernels {kernels}, loss history tail "
           f"{[round(v, 3) for v in state.get('loss_history', [])[-5:]]})", flush=True)
 
-    trajectories, names = _load_dir(args.validation_dir, "isaac_anymal", tuple(args.seeds or ()), args.terrains)
+    trajectories, names = _load_dir(
+        args.validation_dir, "isaac_anymal", None if args.seeds is None else tuple(args.seeds), args.terrains,
+        args.min_trajectory_frames, args.max_trajectories_per_terrain,
+    )
     if not trajectories:
         raise RuntimeError(f"no validation trajectories in {args.validation_dir}")
     print(f"[INFO] validation: {len(trajectories)} trajectories {names}", flush=True)
 
     report = {
         "checkpoint": str(args.checkpoint),
+        "metric_protocol": {
+            "paper_primary_aggregation": "macro_per_frame",
+            "micro_aggregation": "global_count_aggregate",
+            "height_error": "highest_z_per_xy_cell_on_shared_xy_cells",
+            "height_reports_coverage": True,
+            "height_unit": "meters",
+        },
         "trained_steps": state.get("step"),
         "config": config,
         "internal_pruning": not args.disable_internal_pruning,
         "feedback_alpha": args.feedback_alpha,
+        "likelihood_logit_offset": args.likelihood_logit_offset,
         "use_history": not args.disable_history,
+        "max_trajectories_per_terrain": args.max_trajectories_per_terrain,
     }
     for alpha in args.alphas:
         rows = []
@@ -105,22 +144,36 @@ def main() -> None:
                 prune_internal=not args.disable_internal_pruning,
                 feedback_alpha=args.feedback_alpha,
                 use_history=not args.disable_history,
+                likelihood_logit_offset=args.likelihood_logit_offset,
             )
-            model_occ = evaluation["autoregressive_model"]["occupancy"]
-            base_occ = evaluation["current_measurement_baseline"]["occupancy"]
-            model_mae = evaluation["autoregressive_model"]["height"]["mean_absolute_error"]
-            base_mae = evaluation["current_measurement_baseline"]["height"]["mean_absolute_error"]
+            model_summary = evaluation["autoregressive_model"]
+            base_summary = evaluation["current_measurement_baseline"]
+            model_occ = model_summary["macro"]["occupancy"]
+            base_occ = base_summary["macro"]["occupancy"]
+            model_micro_occ = model_summary["micro"]["occupancy"]
+            base_micro_occ = base_summary["micro"]["occupancy"]
+            model_height = model_summary["macro"]["height"]
+            base_height = base_summary["macro"]["height"]
             rows.append({
                 "trajectory": name,
                 "model_f1": model_occ["f1"],
                 "model_precision": model_occ["precision"],
                 "model_recall": model_occ["recall"],
                 "baseline_f1": base_occ["f1"],
-                "model_height_mae": model_mae,
-                "baseline_height_mae": base_mae,
+                "baseline_precision": base_occ["precision"],
+                "baseline_recall": base_occ["recall"],
+                "model_micro_f1": model_micro_occ["f1"],
+                "baseline_micro_f1": base_micro_occ["f1"],
+                "model_height_mae": model_height["mean_absolute_error"],
+                "baseline_height_mae": base_height["mean_absolute_error"],
+                "model_height_coverage": model_height["coverage"],
+                "baseline_height_coverage": base_height["coverage"],
+                "model_height_matched_cell_count": model_height["matched_cell_count"],
+                "baseline_height_matched_cell_count": base_height["matched_cell_count"],
             })
-            print(f"[alpha={alpha}] {name}: model F1={model_occ['f1']:.4f} "
-                  f"(baseline {base_occ['f1']:.4f}) MAE={model_mae:.4f} (baseline {base_mae:.4f})", flush=True)
+            print(f"[alpha={alpha}] {name}: macro model F1={model_occ['f1']:.4f} "
+                  f"(baseline {base_occ['f1']:.4f}) MAE={model_height['mean_absolute_error']:.4f} "
+                  f"coverage={model_height['coverage']:.3f}", flush=True)
 
         def _mean(key):
             return statistics.mean(row[key] for row in rows)
@@ -133,6 +186,10 @@ def main() -> None:
                 "model_recall": _mean("model_recall"),
                 "model_height_mae": _mean("model_height_mae"),
                 "baseline_height_mae": _mean("baseline_height_mae"),
+                "model_height_coverage": _mean("model_height_coverage"),
+                "baseline_height_coverage": _mean("baseline_height_coverage"),
+                "baseline_precision": _mean("baseline_precision"),
+                "baseline_recall": _mean("baseline_recall"),
             },
             "per_trajectory": rows,
         }

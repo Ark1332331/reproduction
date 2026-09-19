@@ -17,6 +17,8 @@ import torch
 from torch import nn
 import MinkowskiEngine as ME
 
+from paper_config import IMPLEMENTATION_CHANNELS, IMPLEMENTATION_GENERATIVE_KERNEL, IMPLEMENTATION_SPATIAL_STRIDE
+
 
 class EmptyPruningError(RuntimeError):
     """Raised instead of asking MinkowskiEngine to construct an unsafe empty tensor."""
@@ -112,14 +114,15 @@ class Minimal4DCompletionModel(ME.MinkowskiNetwork):
 class FourLevel4DCompletionModel(ME.MinkowskiNetwork):
     """Paper-shaped 4D U-Net: four spatial scales and aligned skip connections.
 
-    Pruning heads are deliberately the next step: training-time pruning needs a
-    target at every decoder scale, which must be implemented and tested first.
+    The paper does not publish the channel widths or exact kernel sizes.  Those
+    values are therefore named implementation defaults in ``paper_config.py``
+    and must not be presented as recovered author settings.
     """
 
     def __init__(
         self,
-        channels: tuple[int, int, int, int] = (4, 8, 12, 16),
-        generative_kernels: tuple[tuple[int, int, int, int], ...] = ((2, 2, 2, 1),) * 4,
+        channels: tuple[int, int, int, int] = IMPLEMENTATION_CHANNELS,
+        generative_kernels: tuple[tuple[int, int, int, int], ...] = (IMPLEMENTATION_GENERATIVE_KERNEL,) * 4,
     ) -> None:
         super().__init__(D=4)
         if len(channels) != 4 or any(value <= 0 for value in channels):
@@ -127,7 +130,7 @@ class FourLevel4DCompletionModel(ME.MinkowskiNetwork):
         if len(generative_kernels) != 4:
             raise ValueError("generative_kernels must contain four 4D kernels")
         c1, c2, c3, c4 = channels
-        stride = (2, 2, 2, 1)
+        stride = IMPLEMENTATION_SPATIAL_STRIDE
         self.enc1 = _down_block(3, c1, stride)
         self.enc2 = _down_block(c1, c2, stride)
         self.enc3 = _down_block(c2, c3, stride)
@@ -137,12 +140,16 @@ class FourLevel4DCompletionModel(ME.MinkowskiNetwork):
         self.up1, self.dec1 = _up_and_fuse_blocks(c2, c1, c1, stride, generative_kernels[2])
         self.up0, self.dec0 = _up_and_fuse_blocks(c1, 3, c1, stride, generative_kernels[3])
         self.decoder_likelihood_heads = nn.ModuleList([
-            ME.MinkowskiConvolution(c3, 1, kernel_size=1, dimension=4),
-            ME.MinkowskiConvolution(c2, 1, kernel_size=1, dimension=4),
-            ME.MinkowskiConvolution(c1, 1, kernel_size=1, dimension=4),
-            ME.MinkowskiConvolution(c1, 1, kernel_size=1, dimension=4),
+            # Bias lets each occupancy head first represent the highly sparse
+            # occupied prior before feature-dependent separation is learned.
+            # Without it, BCE gradients averaged over hundreds of thousands of
+            # generated candidates leave logits pinned near zero.
+            ME.MinkowskiConvolution(c3, 1, kernel_size=1, dimension=4, bias=True),
+            ME.MinkowskiConvolution(c2, 1, kernel_size=1, dimension=4, bias=True),
+            ME.MinkowskiConvolution(c1, 1, kernel_size=1, dimension=4, bias=True),
+            ME.MinkowskiConvolution(c1, 1, kernel_size=1, dimension=4, bias=True),
         ])
-        self.position_head = ME.MinkowskiConvolution(c1, 3, kernel_size=1, dimension=4)
+        self.position_head = ME.MinkowskiConvolution(c1, 3, kernel_size=1, dimension=4, bias=True)
 
     def forward(
         self,

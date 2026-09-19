@@ -69,6 +69,7 @@ def current_frame_prediction_coordinates(
     candidate_coordinates: torch.Tensor,
     occupancy_logits: torch.Tensor,
     alpha: float,
+    logit_offset: float = 0.0,
 ) -> np.ndarray:
     """Threshold model likelihoods and discard history-time candidates from output."""
     if not 0.0 <= alpha <= 1.0:
@@ -79,7 +80,7 @@ def current_frame_prediction_coordinates(
         raise ValueError("occupancy_logits must have shape K x 1")
 
     coordinates = candidate_coordinates.detach().cpu().numpy().astype(np.int32)
-    likelihoods = torch.sigmoid(occupancy_logits[:, 0]).detach().cpu().numpy()
+    likelihoods = torch.sigmoid(occupancy_logits[:, 0] + logit_offset).detach().cpu().numpy()
     keep = (coordinates[:, 4] == 0) & (likelihoods >= alpha)
     return np.unique(coordinates[keep], axis=0).astype(np.int32)
 
@@ -89,12 +90,13 @@ def current_frame_prediction_with_offsets(
     occupancy_logits: torch.Tensor,
     position_offsets: torch.Tensor,
     alpha: float,
+    logit_offset: float = 0.0,
 ) -> tuple[np.ndarray, np.ndarray]:
     """Select current occupied predictions and retain their 3D offset estimates."""
     if position_offsets.shape != (len(candidate_coordinates), 3):
         raise ValueError("position_offsets must have shape K x 3")
     coordinates = candidate_coordinates.detach().cpu().numpy().astype(np.int32)
-    likelihoods = torch.sigmoid(occupancy_logits[:, 0]).detach().cpu().numpy()
+    likelihoods = torch.sigmoid(occupancy_logits[:, 0] + logit_offset).detach().cpu().numpy()
     offsets = position_offsets.detach().cpu().numpy()
     keep = (coordinates[:, 4] == 0) & (likelihoods >= alpha)
     return coordinates[keep], offsets[keep]

@@ -89,6 +89,7 @@ def completion_loss(
     target: SparseVoxelBatch,
     position_weight: float = 1.0,
     occupancy_pos_weight: float | None = None,
+    occupancy_loss_weight: float = 1.0,
 ) -> CompletionLoss:
     """Match sparse candidates to current ground truth and compute both losses.
 
@@ -102,6 +103,8 @@ def completion_loss(
     _validate_current_target(target)
     if position_weight < 0:
         raise ValueError("position_weight must be non-negative")
+    if occupancy_loss_weight < 0:
+        raise ValueError("occupancy_loss_weight must be non-negative")
 
     target_lookup = {
         tuple(int(value) for value in coordinate): feature
@@ -145,7 +148,9 @@ def completion_loss(
         occupancy_bce_kwargs["pos_weight"] = torch.tensor(
             [effective_weight], dtype=occupancy_logits.dtype, device=occupancy_logits.device
         )
-    occupancy = F.binary_cross_entropy_with_logits(supervised_logits, supervised_targets, **occupancy_bce_kwargs)
+    occupancy = occupancy_loss_weight * F.binary_cross_entropy_with_logits(
+        supervised_logits, supervised_targets, **occupancy_bce_kwargs
+    )
 
     positive_mask = supervised_targets[:, 0].bool()
     positive_count = int(positive_mask.sum().item())

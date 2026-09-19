@@ -17,6 +17,8 @@ from typing import Iterable
 # NumPy: array math, shapes, masks, and voxel calculations.
 import numpy as np
 
+from paper_config import PAPER_GRID_SIZE, PAPER_VOXEL_SIZE_M
+
 
 @dataclass(frozen=True)
 class VoxelRepresentation:
@@ -75,8 +77,8 @@ def points_to_voxel_representation_with_aligned_previous(
     previous_points: np.ndarray,
     translation: Iterable[float],
     yaw: float,
-    voxel_size: float = 0.05,
-    grid_size: int = 64,
+    voxel_size: float = PAPER_VOXEL_SIZE_M,
+    grid_size: int = PAPER_GRID_SIZE,
     origin: Iterable[float] = (0.0, 0.0, 0.0),
     rotation_center: Iterable[float] = (0.0, 0.0, 0.0),
 ) -> VoxelRepresentation:
@@ -99,8 +101,8 @@ def points_to_voxel_representation_with_aligned_previous(
 def points_to_voxel_representation(
     current_points: np.ndarray,
     previous_points: np.ndarray,
-    voxel_size: float = 0.05,
-    grid_size: int = 64,
+    voxel_size: float = PAPER_VOXEL_SIZE_M,
+    grid_size: int = PAPER_GRID_SIZE,
     origin: Iterable[float] = (0.0, 0.0, 0.0),
 ) -> VoxelRepresentation:
     """Convert current/previous N x 3 clouds into c_i, f_i, and k.
@@ -173,23 +175,22 @@ def _convert_one_cloud(
 
 
 def _centroids_by_cell(cells: np.ndarray, scaled_points: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
-    """Group points by voxel and return each voxel plus its centroid."""
-    sums: dict[tuple[int, int, int], np.ndarray] = {}
-    counts: dict[tuple[int, int, int], int] = {}
-    order: list[tuple[int, int, int]] = []
+    """Group points by voxel and return each voxel plus its centroid.
 
-    for cell, scaled_point in zip(cells, scaled_points):
-        key = tuple(int(value) for value in cell)
-        if key not in sums:
-            sums[key] = np.zeros(3, dtype=float)
-            counts[key] = 0
-            order.append(key)
-        sums[key] += scaled_point
-        counts[key] += 1
-
-    unique_cells = np.array(order, dtype=int)
-    centroids = np.array([sums[key] / counts[key] for key in order], dtype=float)
-    return unique_cells, centroids
+    ``np.unique`` keeps this hot path in compiled NumPy code instead of
+    constructing one Python dictionary entry per point.  The explicit reorder
+    preserves the previous first-occurrence ordering, so downstream sparse
+    coordinate ordering remains deterministic and backwards compatible.
+    """
+    unique_cells, first_indices, inverse = np.unique(
+        cells, axis=0, return_index=True, return_inverse=True
+    )
+    order = np.argsort(first_indices)
+    sums = np.zeros((len(unique_cells), 3), dtype=float)
+    np.add.at(sums, inverse, scaled_points)
+    counts = np.bincount(inverse, minlength=len(unique_cells)).astype(float)
+    centroids = (sums / counts[:, None])[order]
+    return unique_cells[order], centroids
 
 
 def demo() -> VoxelRepresentation:

@@ -29,18 +29,42 @@ import sys
 from pathlib import Path
 
 from isaaclab.app import AppLauncher
+from paper_config import (
+    PAPER_CAMERA_COUNT,
+    PAPER_CAMERA_TILT_DEGREES,
+    PAPER_GRID_SIZE,
+    PAPER_MAP_SIZE_M,
+    PAPER_ROLLOUT_STEPS,
+    PAPER_VOXEL_SIZE_M,
+    REPRODUCTION_CAPTURE_SCHEMA_VERSION,
+    REPRODUCTION_TERRAIN_PROFILE,
+)
 
 PARSER = argparse.ArgumentParser(description="Collect vectorized R7 ANYmal depth trajectories.")
 PARSER.add_argument("--terrain", choices=("stairs", "boxes", "walls", "poles", "corridors"), required=True)
 PARSER.add_argument("--seed", type=int, default=0, help="Seed of environment zero; later environments add their index.")
 PARSER.add_argument("--num-envs", type=int, default=2, help="Parallel ANYmal/terrain tiles in one Isaac Sim process.")
 PARSER.add_argument("--output-dir", required=True)
-PARSER.add_argument("--trajectory-steps", type=int, default=12)
+PARSER.add_argument("--trajectory-steps", type=int, default=PAPER_ROLLOUT_STEPS)
 PARSER.add_argument("--frames-per-step", type=int, default=25)
 PARSER.add_argument("--settle-env-steps", type=int, default=50)
 PARSER.add_argument("--points-per-camera", type=int, default=1500)
+PARSER.add_argument(
+    "--random-motion", action=argparse.BooleanOptionalAction, default=True,
+    help="Sample one motion command and initial yaw per trajectory (paper-aligned default).",
+)
+PARSER.add_argument("--motion-seed", type=int, default=None, help="Optional independent seed for --random-motion.")
+PARSER.add_argument("--yaw-rate-min", type=float, default=-0.35, help="Lower yaw-rate bound for randomized motion (rad/s).")
+PARSER.add_argument("--yaw-rate-max", type=float, default=0.35, help="Upper yaw-rate bound for randomized motion (rad/s).")
+PARSER.add_argument("--forward-velocity-min", type=float, default=0.5)
+PARSER.add_argument("--forward-velocity-max", type=float, default=1.0)
+PARSER.add_argument("--lateral-velocity-min", type=float, default=-0.2)
+PARSER.add_argument("--lateral-velocity-max", type=float, default=0.2)
 AppLauncher.add_app_launcher_args(PARSER)
 ARGS = PARSER.parse_args()
+
+if ARGS.yaw_rate_min >= ARGS.yaw_rate_max or ARGS.forward_velocity_min >= ARGS.forward_velocity_max or ARGS.lateral_velocity_min >= ARGS.lateral_velocity_max:
+    raise ValueError("motion lower bounds must be smaller than upper bounds")
 
 APP_LAUNCHER = AppLauncher(ARGS)
 SIMULATION_APP = APP_LAUNCHER.app
@@ -63,6 +87,7 @@ from isaaclab_rl.rsl_rl import RslRlVecEnvWrapper  # noqa: E402
 
 sys.path.insert(0, "/media/ark/Data/devpy/projects/allinone/reproduction")
 import paper_terrains  # noqa: E402
+from r7_capture_provenance import capture_provenance  # noqa: E402
 from r7_vectorized_capture_contract import (  # noqa: E402
     CAMERA_DIRECTIONS,
     layout_seed_for_environment,
@@ -75,7 +100,7 @@ CHECKPOINT = (
     "Isaac-Velocity-Rough-Anymal-C-Direct-v0/checkpoint.pt"
 )
 TASK = "Isaac-Velocity-Rough-Anymal-C-Direct-v0"
-MAP_SIZE = 3.2
+MAP_SIZE = PAPER_MAP_SIZE_M
 MAP_CENTER = MAP_SIZE / 2
 
 
@@ -87,6 +112,15 @@ def _yaw_from_quaternion(quaternion: np.ndarray) -> float:
             1.0 - 2.0 * (quaternion[2] ** 2 + quaternion[3] ** 2),
         )
     )
+
+
+def _yaw_quaternions(yaws: np.ndarray, device: str) -> torch.Tensor:
+    """Build Isaac's (w, x, y, z) quaternions for planar yaw offsets."""
+    half = torch.as_tensor(yaws, dtype=torch.float32, device=device) * 0.5
+    quaternions = torch.zeros((len(yaws), 4), dtype=torch.float32, device=device)
+    quaternions[:, 0] = torch.cos(half)
+    quaternions[:, 3] = torch.sin(half)
+    return quaternions
 
 
 def _localize(points_world: np.ndarray, center_xy: np.ndarray, yaw: float) -> np.ndarray:
@@ -267,8 +301,16 @@ def _set_all_camera_poses(env: VectorizedAnymalCaptureEnv) -> None:
         )
 
 
-def _depth_measurement(cameras: dict[str, Camera], environment_index: int, center_xy: np.ndarray, yaw: float, device: str, cap: int) -> np.ndarray:
-    """Convert the four raw depth tensors for one environment into its local observation point cloud."""
+def _depth_measurement(
+    cameras: dict[str, Camera], environment_index: int, center_xy: np.ndarray, yaw: float, device: str, cap: int
+) -> tuple[np.ndarray, int]:
+    """Convert available camera observations for one environment into a local point cloud.
+
+    A directional camera can validly contribute no points after the robot-centric
+    3.2 m crop (for example when the robot is near a terrain boundary).  Treat
+    that stream as a missing observation, rather than aborting every parallel
+    environment.  A frame with no usable camera stream remains invalid.
+    """
     clouds = []
     for direction in CAMERA_DIRECTIONS:
         camera = cameras[direction]
@@ -285,15 +327,19 @@ def _depth_measurement(cameras: dict[str, Camera], environment_index: int, cente
         local = _localize(world_points[np.isfinite(world_points).all(axis=1)], center_xy, yaw)
         if len(local) == 0:
             finite_depth = int(torch.isfinite(depth).sum().item())
-            raise RuntimeError(
-                f"environment {environment_index}, camera {direction} has no local map points; "
+            print(
+                f"[MISSING_CAMERA] environment={environment_index} camera={direction} has no local map points; "
                 f"finite_depth={finite_depth}/{depth.numel()} camera_pos="
-                f"{camera.data.pos_w[environment_index].detach().cpu().tolist()} robot_xy={center_xy.tolist()}"
+                f"{camera.data.pos_w[environment_index].detach().cpu().tolist()} robot_xy={center_xy.tolist()}",
+                flush=True,
             )
+            continue
         if len(local) > cap:
             local = local[np.linspace(0, len(local) - 1, cap, dtype=int)]
         clouds.append(local)
-    return np.ascontiguousarray(np.concatenate(clouds, axis=0), dtype=np.float32)
+    if not clouds:
+        raise RuntimeError(f"environment {environment_index} has no local map points from any camera")
+    return np.ascontiguousarray(np.concatenate(clouds, axis=0), dtype=np.float32), len(clouds)
 
 
 def main() -> None:
@@ -329,16 +375,57 @@ def main() -> None:
     raw_env._terrain.terrain_types = torch.zeros_like(env_ids)
     raw_env._terrain.env_origins = raw_env._terrain.terrain_origins[env_ids, 0].clone()
     raw_env._reset_idx(env_ids)
-    raw_env._commands[:] = torch.tensor([0.8, 0.0, 0.0], device=raw_env.device)
+    # The training environment randomizes episode_length_buf on a full reset to
+    # decorrelate resets.  That is useful for RL, but invalid for capture: it
+    # can make a trajectory time out during the settle phase.  Capture always
+    # starts a fresh episode clock.
+    raw_env.episode_length_buf[:] = 0
+
+    motion_rng = np.random.default_rng(ARGS.motion_seed if ARGS.motion_seed is not None else ARGS.seed + 1_000_003)
+    if ARGS.random_motion:
+        motion_commands = np.column_stack(
+            (
+                motion_rng.uniform(ARGS.forward_velocity_min, ARGS.forward_velocity_max, size=ARGS.num_envs),
+                motion_rng.uniform(ARGS.lateral_velocity_min, ARGS.lateral_velocity_max, size=ARGS.num_envs),
+                motion_rng.uniform(ARGS.yaw_rate_min, ARGS.yaw_rate_max, size=ARGS.num_envs),
+            )
+        ).astype(np.float32)
+        initial_yaws = motion_rng.uniform(-np.pi / 6.0, np.pi / 6.0, size=ARGS.num_envs).astype(np.float32)
+        default_root_state = raw_env._robot.data.default_root_state.clone()
+        default_root_state[:, :3] += raw_env._terrain.env_origins
+        default_root_state[:, 3:7] = _yaw_quaternions(initial_yaws, raw_env.device)
+        raw_env._robot.write_root_pose_to_sim(default_root_state[:, :7], env_ids)
+    else:
+        motion_commands = np.tile(np.array((0.8, 0.0, 0.0), dtype=np.float32), (ARGS.num_envs, 1))
+        initial_yaws = np.array(
+            [_yaw_from_quaternion(q) for q in raw_env._robot.data.root_quat_w.detach().cpu().numpy()], dtype=np.float32
+        )
+    raw_env._commands[:] = torch.as_tensor(motion_commands, dtype=torch.float32, device=raw_env.device)
     obs = env.get_observations()
     _set_all_camera_poses(raw_env)
 
     alive = np.ones(ARGS.num_envs, dtype=bool)
+    termination_causes: list[list[str]] = [[] for _ in range(ARGS.num_envs)]
+
+    def _update_alive(dones: torch.Tensor) -> None:
+        """Record the first termination cause for each live environment."""
+        done_values = dones.detach().cpu().numpy().astype(bool)
+        terminated = raw_env.reset_terminated.detach().cpu().numpy().astype(bool)
+        timeouts = raw_env.reset_time_outs.detach().cpu().numpy().astype(bool)
+        for index in np.flatnonzero(done_values & alive):
+            causes = []
+            if terminated[index]:
+                causes.append("base_contact")
+            if timeouts[index]:
+                causes.append("time_out")
+            termination_causes[index].append("+".join(causes) if causes else "done_unspecified")
+        alive[:] &= ~done_values
+
     for _ in range(ARGS.settle_env_steps):
         with torch.inference_mode():
             actions = policy(obs)
             obs, _, dones, _ = env.step(actions)
-        alive &= ~dones.detach().cpu().numpy().astype(bool)
+        _update_alive(dones)
         _set_all_camera_poses(raw_env)
 
     terrain_origins = raw_env._terrain.terrain_origins.detach().cpu().numpy()
@@ -350,18 +437,21 @@ def main() -> None:
     previous_yaw = np.array([_yaw_from_quaternion(q) for q in raw_env._robot.data.root_quat_w.detach().cpu().numpy()])
     payloads: list[dict[str, np.ndarray | str]] = [dict() for _ in range(ARGS.num_envs)]
     captured = np.zeros(ARGS.num_envs, dtype=int)
+    visible_camera_counts: list[list[int]] = [[] for _ in range(ARGS.num_envs)]
 
     for frame in range(ARGS.trajectory_steps):
         for _ in range(ARGS.frames_per_step):
             with torch.inference_mode():
                 actions = policy(obs)
                 obs, _, dones, _ = env.step(actions)
-            alive &= ~dones.detach().cpu().numpy().astype(bool)
+            _update_alive(dones)
             _set_all_camera_poses(raw_env)
         bases = raw_env._robot.data.root_pos_w.detach().cpu().numpy()
         yaws = np.array([_yaw_from_quaternion(q) for q in raw_env._robot.data.root_quat_w.detach().cpu().numpy()])
         for index in np.flatnonzero(alive):
-            measurement = _depth_measurement(raw_env._capture_cameras, index, bases[index, :2], yaws[index], raw_env.device, ARGS.points_per_camera)
+            measurement, visible_camera_count = _depth_measurement(
+                raw_env._capture_cameras, index, bases[index, :2], yaws[index], raw_env.device, ARGS.points_per_camera
+            )
             target = _dense_target(structures_by_environment[index], float(ground_z[index]), bases[index, :2], yaws[index])
             world_translation = bases[index, :2] - previous_base[index, :2]
             inverse_previous_yaw = np.array(
@@ -374,6 +464,7 @@ def main() -> None:
             payloads[index][f"translation_{suffix}"] = np.array((translation[0], translation[1], 0.0), dtype=np.float32)
             payloads[index][f"yaw_{suffix}"] = np.array(float(yaws[index] - previous_yaw[index]), dtype=np.float32)
             captured[index] += 1
+            visible_camera_counts[index].append(visible_camera_count)
             previous_base[index] = bases[index]
             previous_yaw[index] = yaws[index]
         print(f"[vectorized] frame={frame:02d} alive={alive.tolist()} captured={captured.tolist()}", flush=True)
@@ -387,18 +478,43 @@ def main() -> None:
             continue
         payloads[index]["metadata_json"] = json.dumps(
             {
+                "capture_schema_version": REPRODUCTION_CAPTURE_SCHEMA_VERSION,
                 "coordinate_frame": "robot_centric_local_map",
                 "map_size_m": MAP_SIZE,
+                "voxel_size_m": PAPER_VOXEL_SIZE_M,
+                "grid_size": PAPER_GRID_SIZE,
                 "trajectory_steps": int(captured[index]),
                 "scene_seed": layout_seed_for_environment(ARGS.seed, index),
                 "base_seed": ARGS.seed,
                 "environment_index": index,
+                "motion_randomized": bool(ARGS.random_motion),
+                "motion_seed": int(ARGS.motion_seed if ARGS.motion_seed is not None else ARGS.seed + 1_000_003),
+                "command_xyz": motion_commands[index].tolist(),
+                "yaw_rate_range": [float(ARGS.yaw_rate_min), float(ARGS.yaw_rate_max)],
+                "forward_velocity_range": [float(ARGS.forward_velocity_min), float(ARGS.forward_velocity_max)],
+                "lateral_velocity_range": [float(ARGS.lateral_velocity_min), float(ARGS.lateral_velocity_max)],
+                "initial_yaw": float(initial_yaws[index]),
+                "termination_causes": termination_causes[index],
                 "camera_count": len(CAMERA_DIRECTIONS),
+                "camera_tilt_degrees": PAPER_CAMERA_TILT_DEGREES,
+                "visible_camera_count_per_frame": visible_camera_counts[index],
                 "points_per_camera": ARGS.points_per_camera,
                 "terrain": ARGS.terrain,
-                "ground_truth": "dense samples from the matching known terrain-generator tile",
+                "ground_truth": "dense samples from known primitive geometry; see terrain_profile in provenance",
                 "drive": "official Isaac-Velocity-Rough-Anymal-C-Direct-v0 checkpoint",
                 "collector": "vectorized_camera_prototype",
+                "provenance": capture_provenance(
+                    collector_path=__file__,
+                    checkpoint_path=CHECKPOINT,
+                    task=TASK,
+                    terrain_profile=REPRODUCTION_TERRAIN_PROFILE,
+                    map_size_m=MAP_SIZE,
+                    voxel_size_m=PAPER_VOXEL_SIZE_M,
+                    grid_size=PAPER_GRID_SIZE,
+                    rollout_steps=PAPER_ROLLOUT_STEPS,
+                    camera_count=PAPER_CAMERA_COUNT,
+                    camera_tilt_degrees=PAPER_CAMERA_TILT_DEGREES,
+                ),
             }
         )
         output = output_path_for_environment(output_dir, ARGS.terrain, ARGS.seed, index)

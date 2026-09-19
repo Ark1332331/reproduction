@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Runtime evidence stays local; source/config/docs are versioned.
+data/
+results/
+*.npz
+*.pt
+*.log

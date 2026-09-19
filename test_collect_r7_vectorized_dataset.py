@@ -6,7 +6,7 @@ from pathlib import Path
 
 import numpy as np
 
-from collect_r7_vectorized_dataset import build_jobs, completed_job, job_outputs
+from collect_r7_vectorized_dataset import build_jobs, classify_log_failure, completed_job, job_outputs
 
 
 class VectorizedCollectionLauncherTests(unittest.TestCase):
@@ -32,6 +32,19 @@ class VectorizedCollectionLauncherTests(unittest.TestCase):
                 if index == 0:
                     self.assertFalse(completed_job(job, 2))
             self.assertTrue(completed_job(job, 2))
+            self.assertFalse(completed_job(job, 2, min_trajectory_frames=3))
+
+    def test_simulator_failures_are_classified_as_non_resampleable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            log = Path(directory) / "oom.log"
+            log.write_text("PhysX Internal CUDA error\nCUDA error: out of memory\n")
+            self.assertEqual(classify_log_failure(log), "cuda_oom")
+            log.write_text("GPU crash occurred. Exiting application!\n")
+            self.assertEqual(classify_log_failure(log), "device_lost")
+            log.write_text("Segmentation fault (core dumped)\n")
+            self.assertEqual(classify_log_failure(log), "segmentation_fault")
+            log.write_text("[base_contact] environment=2\n")
+            self.assertIsNone(classify_log_failure(log))
 
 
 if __name__ == "__main__":

@@ -16,7 +16,9 @@ from r7_autoregressive_rollout import (
     train_detached_rollout,
     rollout_without_temporal_gradients,
     sparse_prediction_to_current_points,
+    _summarize_metrics,
 )
+from r5_sparse_evaluation import SparseHeightMetrics, SparseOccupancyMetrics
 
 
 class R7AutoregressiveRolloutTests(unittest.TestCase):
@@ -158,6 +160,24 @@ class R7AutoregressiveRolloutTests(unittest.TestCase):
         self.assertEqual(report["frame_count"], 1)
         self.assertIn("f1", report["current_measurement_baseline"]["occupancy"])
         self.assertIn("mean_absolute_error", report["autoregressive_model"]["height"])
+
+    def test_evaluation_exposes_paper_macro_and_legacy_micro_aggregates(self):
+        occupancy = (
+            SparseOccupancyMetrics(1, 1, 0, 0.5, 1.0, 2.0 / 3.0),
+            SparseOccupancyMetrics(1, 0, 1, 1.0, 0.5, 2.0 / 3.0),
+        )
+        heights = (
+            SparseHeightMetrics(1, 2, 0.1),
+            SparseHeightMetrics(2, 2, 0.3),
+        )
+
+        summary = _summarize_metrics(occupancy, heights)
+
+        self.assertEqual(summary["aggregation"]["paper_primary"], "macro_per_frame")
+        self.assertAlmostEqual(summary["macro"]["occupancy"]["precision"], 0.75)
+        self.assertAlmostEqual(summary["macro"]["height"]["mean_absolute_error"], 0.2)
+        self.assertAlmostEqual(summary["micro"]["occupancy"]["precision"], 2.0 / 3.0)
+        self.assertAlmostEqual(summary["micro"]["height"]["coverage"], 0.75)
 
 
 if __name__ == "__main__":

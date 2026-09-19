@@ -1,7 +1,7 @@
 """R5 tests: verify the paper-shaped four-level 4D U-Net structure."""
 import unittest
 import torch
-from r5_terrain_dataset import make_structured_terrain_sample, prepare_sparse_sample
+from r5_test_fixtures import make_structured_terrain_sample, prepare_sparse_sample
 from r5_sparse_model import FourLevel4DCompletionModel
 from r5_sparse_loss import downsample_occupancy_target
 

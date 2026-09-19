@@ -26,6 +26,8 @@ from dataclasses import dataclass
 import numpy as np
 import trimesh
 
+from paper_config import PAPER_TERRAINS
+
 # ---------------------------------------------------------------------------
 # Structural geometry records (local frame, 0..8 m) for dense target sampling
 # ---------------------------------------------------------------------------
@@ -98,14 +100,14 @@ def _front_positions(rng: np.random.Generator, count: int, min_gap: float) -> li
 def stairs_terrain(difficulty: float, cfg, layout_seed: int) -> tuple[list[trimesh.Trimesh], np.ndarray]:
     """One run of 4 steps climbing up the +x path.
 
-    Step rise is kept in 0.08-0.15 m (within the official rough policy's training
-    distribution) so the ANYmal reliably climbs instead of tripping; the paper's
-    upper range 0.25 m is not reachable with the current checkpoint.
+    Step width and rise use the ranges stated in the paper.  Whether the current
+    locomotion checkpoint can survive the upper end is a separate data-collection
+    concern and must be recorded in the capture manifest.
     """
     del difficulty, cfg  # parameters are fixed by the paper ranges below
     rng = np.random.default_rng(layout_seed)
-    step_width = float(rng.uniform(0.3, 0.5))
-    step_height = float(rng.uniform(0.08, 0.15))
+    step_width = float(rng.uniform(0.2, 0.5))
+    step_height = float(rng.uniform(0.08, 0.25))
     step_depth = float(rng.uniform(1.5, 2.5))
     boxes: list[Box] = []
     meshes: list[trimesh.Trimesh] = [_ground()]
@@ -178,7 +180,7 @@ def corridors_terrain(difficulty: float, cfg, layout_seed: int) -> tuple[list[tr
     """Two long parallel walls forming a corridor along the +x path."""
     del difficulty, cfg
     rng = np.random.default_rng(layout_seed)
-    corridor_width = float(min(rng.uniform(2.0, 6.0), 3.4))  # clipped to fit the 8 m terrain
+    corridor_width = float(rng.uniform(2.0, 6.0))
     wall_height = 1.2
     wall_thickness = 0.08
     walls: list[Box] = []
@@ -199,3 +201,6 @@ GENERATORS = {
     "poles": poles_terrain,
     "corridors": corridors_terrain,
 }
+
+if tuple(GENERATORS) != PAPER_TERRAINS:
+    raise RuntimeError("terrain generator keys must match the paper terrain list")

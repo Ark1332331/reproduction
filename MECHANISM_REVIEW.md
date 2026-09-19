@@ -102,3 +102,25 @@ baseline F1=0.3594、MAE=0.0006 vs baseline 0.0680。无历史 F1=0.7525，时�
 5. **alpha=0.5 的下一项有效验证**：短 smoke 已证明 alpha=0.5 可运行；数据规模扩展后，应如何预先注册一个最低成本的多-seed、训练集对照，来判断 pruning 是否提高而非损害 F1/MAE？
 6. **指标与 baseline**：模型在 occupancy F1 上可超过 current-measurement baseline，但 offset height MAE 常落后。当前 height MAE 的比较是否存在“只对 matched occupancy 计算”的选择偏差？论文使用什么更公平的完整几何指标？
 7. **整体判断**：当前应优先稳定训练（例如 feedback/优化日程的受控 ablation），还是暂停实现调研作者细节/论文补充材料？哪些证据才足以允许进入独立 validation？
+
+## 7. 2026-09-06 论文实现对齐冻结（当前目标）
+
+本节是后续实验的唯一 canonical 入口；在它通过小规模验收前，不启动 5k/10k/20k 长时间训练。
+
+### 必须与论文一致或明确标注的项目
+
+1. **输入与时序**：当前帧与上一帧体素化点云使用 `k=0/1`；训练和推理都验证 12-step detached autoregressive feedback，且只把合约规定的预测送入下一帧。
+2. **生成与逐层监督**：四个 decoder 层均生成候选并输出 likelihood；每层使用 stride-grid 对齐后的 occupancy target 做 BCE，target 坐标不再除以 stride 而改变 MinkowskiEngine 坐标单位。
+3. **最终输出与损失**：最终候选只保留 `k=0`；最终 occupancy BCE、正样本 sub-voxel position loss、逐层 likelihood BCE 的权重固定并记录，禁止为追求单次 F1 临时关闭其中一项。
+4. **剪枝与阈值**：主结果使用内部 pruning、论文指定的 `alpha=0.5`；任何外部 logit offset 只能作为单独诊断，不得混入主结果。
+5. **随机性与预算**：固定 Python/NumPy/PyTorch seeds、轨迹顺序和 optimizer/scheduler；记录真实 12-step 展开与 optimizer step 定义，避免把当前全数据循环误称为论文训练预算。
+6. **数据与评估**：明确记录当前约 20k train/5k validation 与论文 200k+ observations 的差距、terrain 参数偏差、validation 轨迹数量和 baseline 口径；不能把受限复现写成论文级复现。
+
+### 对齐验收顺序
+
+- A1：现有代码/单元测试证明坐标、`k=0` 输出、逐层 target 和 pruning 合约。
+- A2：用 1--2 条轨迹做过拟合；若不能显著降低训练 loss 或提高候选覆盖，先修实现而非扩数据。
+- A3：对 seed0/1/2 现有 checkpoint 做只读 logits/候选覆盖审计，阈值只允许在 train split 校准，再固定到 validation。
+- A4：canonical 配置下做 1k、10-step、三 seed 小实验；要求没有近零 recall 的 seed，再考虑恢复 5k。
+
+当前 5k 探针只提供吞吐证据（约 1200 s/step），不构成模型质量证据；已有 A/B checkpoint 均保留，不覆盖、不重命名。

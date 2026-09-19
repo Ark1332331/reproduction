@@ -25,8 +25,14 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 import numpy as np
+from paper_config import (
+    PAPER_ROLLOUT_STEPS,
+    PAPER_TERRAINS,
+    REPRODUCTION_CAPTURE_SCHEMA_VERSION,
+    REPRODUCTION_TERRAIN_PROFILE,
+)
 
-DEFAULT_TERRAINS = ("stairs", "boxes", "walls", "poles", "corridors")
+DEFAULT_TERRAINS = PAPER_TERRAINS
 
 
 @dataclass(frozen=True)
@@ -104,6 +110,7 @@ def command_for(
     trajectory_steps: int,
     points_per_camera: int,
     isaaclab_env: str = "isaaclab",
+    random_motion: bool = True,
 ) -> list[str]:
     # IsaacLab launches the child Python process from its own installation root.
     # Relative project paths would therefore resolve under ``IsaacLab/`` rather
@@ -128,6 +135,7 @@ def command_for(
         str(trajectory_steps),
         "--points-per-camera",
         str(points_per_camera),
+        "--random-motion" if random_motion else "--no-random-motion",
         "--output",
         str(job.output.resolve()),
     ]
@@ -142,8 +150,12 @@ def main() -> int:
     parser.add_argument("--seed-start", type=int, required=True)
     parser.add_argument("--seed-count", type=int, required=True)
     parser.add_argument("--terrains", nargs="+", choices=DEFAULT_TERRAINS, default=DEFAULT_TERRAINS)
-    parser.add_argument("--trajectory-steps", type=int, default=12)
+    parser.add_argument("--trajectory-steps", type=int, default=PAPER_ROLLOUT_STEPS)
     parser.add_argument("--points-per-camera", type=int, default=1500)
+    parser.add_argument(
+        "--random-motion", action=argparse.BooleanOptionalAction, default=True,
+        help="Request randomized velocity/yaw capture (paper-aligned default).",
+    )
     parser.add_argument("--isaaclab-root", type=Path, default=Path("/home/ark/projects/IsaacLab"))
     parser.add_argument("--isaaclab-env", default="isaaclab", help="Conda environment containing IsaacLab.")
     parser.add_argument("--collector", type=Path, default=Path("reproduction/collect_isaaclab_anymal_trajectory.py"))
@@ -167,6 +179,9 @@ def main() -> int:
         "split": args.split,
         "trajectory_steps_requested": args.trajectory_steps,
         "points_per_camera": args.points_per_camera,
+        "random_motion": bool(args.random_motion),
+        "capture_schema_version": REPRODUCTION_CAPTURE_SCHEMA_VERSION,
+        "terrain_profile": REPRODUCTION_TERRAIN_PROFILE,
         "jobs": [],
     }
     args.data_dir.mkdir(parents=True, exist_ok=True)
@@ -187,6 +202,7 @@ def main() -> int:
                 args.trajectory_steps,
                 args.points_per_camera,
                 args.isaaclab_env,
+                args.random_motion,
             )
             record["command"] = command
             if args.dry_run:
