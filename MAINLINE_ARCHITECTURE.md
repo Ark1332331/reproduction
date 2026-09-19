@@ -45,7 +45,7 @@ configs/paper_config.py
 | 数据增强 | `training/r7_measurement_augmentation.py`、`training/r7_data_augmentation.py` | 模拟测量误差、遮挡、离群点、位姿噪声和轨迹镜像；目标数据保持干净 |
 | R7 方法 | `rollout/r7_autoregressive_rollout.py` | 将上一帧预测作为下一帧历史输入，执行 12 步滚动训练和评估 |
 | 评估指标 | `evaluation/r5_sparse_evaluation.py` | Precision、Recall、F1、macro/micro 汇总、高度误差和覆盖率 |
-| 运行入口 | `training/run_r7_paper_train.py`、`evaluation/run_r7_paper_eval.py` | 主线 checkpoint 训练和验证；根目录同名脚本仅作兼容入口 |
+| 运行入口 | `training/run_r7_paper_train.py`、`evaluation/run_r7_paper_eval.py` | 主线 checkpoint 训练和验证，分别使用 `python -m training.run_r7_paper_train` 和 `python -m evaluation.run_r7_paper_eval` 启动 |
 
 ## 两个必要环境
 

@@ -5,7 +5,8 @@ import unittest
 import torch
 
 from models.r5_sparse_input import SparseVoxelBatch, make_sparse_tensor
-from models.r5_sparse_model import Minimal4DCompletionModel, prune_candidates
+from models.r5_sparse_model import prune_candidates
+from tests.sparse_model_fixtures import Minimal4DCompletionModel
 
 
 class R5SparseModelTests(unittest.TestCase):

@@ -8,7 +8,7 @@ resume the remainder.
 
 Run from the project root, preferably first with ``--dry-run``:
 
-    python reproduction/collect_r7_dataset.py --split train-extra \
+    python simulation/collect_r7_dataset.py --split train-extra \
         --seed-start 4 --seed-count 2 --dry-run
 """
 

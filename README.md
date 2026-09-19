@@ -9,7 +9,7 @@ Structured Terrain*（结构化地形上的运动场景表示）。论文 PDF �
 
 1. 阅读 [`PAPER_ALIGNMENT.md`](PAPER_ALIGNMENT.md)，了解论文方法和当前代码的对应关系。
 2. 阅读 [`AGENTS.md`](AGENTS.md)，了解实验历史、已完成工作和当前状态。
-3. 使用根目录的 `run_r7_paper_train.py` 和 `run_r7_paper_eval.py` 进行主线训练和评估；真正实现分别位于 `training/` 和 `evaluation/`。
+3. 使用 `python -m training.run_r7_paper_train` 和 `python -m evaluation.run_r7_paper_eval` 进行主线训练和评估。
 4. 阅读 [`MAINLINE_ARCHITECTURE.md`](MAINLINE_ARCHITECTURE.md)，了解文件职责和执行顺序。
 
 论文相关的默认参数集中在 [`paper_config.py`](paper_config.py) 中，包括：
@@ -37,7 +37,6 @@ Structured Terrain*（结构化地形上的运动场景表示）。论文 PDF �
 | `rollout/` | 12 步自回归滚动预测 |
 | `training/`、`evaluation/` | 训练、评估、数据增强和评估指标 |
 | `tests/` | 单元测试和方法契约测试 |
-| 根目录入口脚本 | 兼容旧命令的薄封装，实际逻辑在上述目录中 |
 | `data/` | 本地轨迹、manifest、日志和诊断结果 |
 | `results/` | 本地 checkpoint 和评估结果 |
 

@@ -6,7 +6,7 @@ current-measurement merge baseline, optionally scanning evaluation alphas.
 
 Usage (GPU, nsr-me-cu130-t291 env):
 
-    python run_r7_paper_eval.py --validation-dir ../reproduction/data \
+    python -m evaluation.run_r7_paper_eval --validation-dir data \
         --checkpoint r7_train_a0.pt --alphas 0.05 0.1 0.2 0.3 0.5 \
         --results eval.json
 """

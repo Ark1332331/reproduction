@@ -7,7 +7,7 @@ r7_autoregressive_rollout.train_detached_rollout), saving a checkpoint every
 
 Usage (GPU, nsr-me-cu130-t291 env):
 
-    python run_r7_paper_train.py --train-dir ../reproduction/data \
+    python -m training.run_r7_paper_train --train-dir data \
         --seeds 0 1 2 3 --steps 200 \
         --checkpoint r7_paper_train.pt [--resume]
 """

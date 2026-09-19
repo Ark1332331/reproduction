@@ -56,61 +56,6 @@ def align_skip_to_candidates(
     )
 
 
-class Minimal4DCompletionModel(ME.MinkowskiNetwork):
-    """One downsample/upsample paper-style slice for an input with 3 features."""
-
-    def __init__(self, hidden_channels: int) -> None:
-        super().__init__(D=4)
-        if hidden_channels <= 0:
-            raise ValueError("hidden_channels must be positive")
-
-        # Stride [2, 2, 2, 1]: halve x/y/z resolution, preserve time k.
-        spatial_stride = (2, 2, 2, 1)
-        self.encoder = nn.Sequential(
-            ME.MinkowskiConvolution(
-                in_channels=3,
-                out_channels=hidden_channels,
-                kernel_size=spatial_stride,
-                stride=spatial_stride,
-                dimension=4,
-            ),
-            ME.MinkowskiReLU(),
-        )
-        # Generative transpose convolution can create unobserved spatial candidates.
-        self.decoder = nn.Sequential(
-            ME.MinkowskiGenerativeConvolutionTranspose(
-                in_channels=hidden_channels,
-                out_channels=hidden_channels,
-                kernel_size=spatial_stride,
-                stride=spatial_stride,
-                dimension=4,
-            ),
-            ME.MinkowskiReLU(),
-        )
-        self.occupancy_head = ME.MinkowskiConvolution(
-            in_channels=hidden_channels,
-            out_channels=1,
-            kernel_size=1,
-            dimension=4,
-        )
-        self.position_head = ME.MinkowskiConvolution(
-            in_channels=hidden_channels,
-            out_channels=3,
-            kernel_size=1,
-            dimension=4,
-        )
-
-    def forward(self, sparse_input: ME.SparseTensor) -> SparseCompletionPredictions:
-        """Run the minimal 4D network and keep both prediction heads aligned."""
-        latent = self.encoder(sparse_input)
-        candidates = self.decoder(latent)
-        return SparseCompletionPredictions(
-            candidates=candidates,
-            occupancy_logits=self.occupancy_head(candidates),
-            position_offsets=self.position_head(candidates),
-        )
-
-
 class FourLevel4DCompletionModel(ME.MinkowskiNetwork):
     """Paper-shaped 4D U-Net: four spatial scales and aligned skip connections.
 

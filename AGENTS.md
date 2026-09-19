@@ -8,6 +8,8 @@ R2/R3/R3b toy pipeline、R6 控制器原型、旧 R5 合成训练入口、旧深
 在本机 `data/` 和 `results/`，但这些运行产物被 `.gitignore` 排除，不随源码提交。
 具体文件职责和执行顺序见 `MAINLINE_ARCHITECTURE.md`，删除类别见
 `ARCHIVED_EXPERIMENTS.md`。主线测试在 `nsr-me-cu130-t291` 环境中已通过。
+当前训练、评估和采集调度使用包入口（例如 `python -m training.run_r7_paper_train`）；
+根目录转发脚本已删除，避免同一功能存在多个入口。
 
 ## 目标
 
