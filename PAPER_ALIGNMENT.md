@@ -8,28 +8,28 @@
 
 | 论文中的方法 | 对应代码 | 当前状态 |
 |---|---|---|
-| 当前输出和上一时刻输出转换到当前坐标系，再沿时间维拼接 | `r7_autoregressive_rollout.py`、`r1_data_representation.py` | 已实现；上一帧输入是模型停止梯度后的预测，标记为 `k=1` |
-| 使用 `64×64×64` 网格表示 `3.2×3.2×3.2 m` 空间 | `paper_config.py`、`r1_data_representation.py` | 默认配置一致 |
-| 体素特征是点相对于体素角点的质心偏移 | `r1_data_representation.py` | 已实现 |
-| 四次空间下采样卷积，时间维保持不变 | `r5_sparse_model.py` | 结构一致；论文没有公开精确 kernel 和 channel 数 |
-| U-Net 跳跃连接和稀疏生成式解码器上采样 | `r5_sparse_model.py` | 结构一致；具体 block 布局属于实现假设 |
-| 解码阶段使用 likelihood 剪枝，`α=0.5` | `r5_sparse_model.py` | 机制和默认阈值已实现；target guard 是额外的工程保护选项 |
-| 最终输出是 3D 子体素点估计 | `r5_sparse_model.py`、`r7_autoregressive_rollout.py` | 已实现；最终候选限制为 `k=0` 是根据方法契约作出的明确推断 |
-| 占用 BCE 加平均欧氏位置偏移损失 | `r5_sparse_loss.py` | 已实现；论文没有说明两项损失的精确权重 |
-| 12 步滚动预测，时间之间不传播梯度 | `r7_autoregressive_rollout.py` | 已实现 |
-| Adam，初始学习率 `0.01`，指数衰减到 `0.0001` | `paper_config.py`、`run_r7_paper_train.py` | 默认配置一致 |
-| 位置、倾角、高度 patch、剪枝、离群点、位姿噪声和 x/y 镜像增强 | `r7_data_augmentation.py`、`r7_measurement_augmentation.py` | 主线训练已实现；具体 patch 采样方式属于实现假设 |
-| 前后左右四个深度相机，向下倾斜 30° | `collect_isaaclab_anymal_vectorized.py` | 方向、数量和倾角意图一致；安装位置、分辨率和点数上限属于实现假设 |
+| 当前输出和上一时刻输出转换到当前坐标系，再沿时间维拼接 | `rollout/r7_autoregressive_rollout.py`、`representation/r1_data_representation.py` | 已实现；上一帧输入是模型停止梯度后的预测，标记为 `k=1` |
+| 使用 `64×64×64` 网格表示 `3.2×3.2×3.2 m` 空间 | `configs/paper_config.py`、`representation/r1_data_representation.py` | 默认配置一致 |
+| 体素特征是点相对于体素角点的质心偏移 | `representation/r1_data_representation.py` | 已实现 |
+| 四次空间下采样卷积，时间维保持不变 | `models/r5_sparse_model.py` | 结构一致；论文没有公开精确 kernel 和 channel 数 |
+| U-Net 跳跃连接和稀疏生成式解码器上采样 | `models/r5_sparse_model.py` | 结构一致；具体 block 布局属于实现假设 |
+| 解码阶段使用 likelihood 剪枝，`α=0.5` | `models/r5_sparse_model.py` | 机制和默认阈值已实现；target guard 是额外的工程保护选项 |
+| 最终输出是 3D 子体素点估计 | `models/r5_sparse_model.py`、`rollout/r7_autoregressive_rollout.py` | 已实现；最终候选限制为 `k=0` 是根据方法契约作出的明确推断 |
+| 占用 BCE 加平均欧氏位置偏移损失 | `losses/r5_sparse_loss.py` | 已实现；论文没有说明两项损失的精确权重 |
+| 12 步滚动预测，时间之间不传播梯度 | `rollout/r7_autoregressive_rollout.py` | 已实现 |
+| Adam，初始学习率 `0.01`，指数衰减到 `0.0001` | `configs/paper_config.py`、`training/run_r7_paper_train.py` | 默认配置一致 |
+| 位置、倾角、高度 patch、剪枝、离群点、位姿噪声和 x/y 镜像增强 | `training/r7_data_augmentation.py`、`training/r7_measurement_augmentation.py` | 主线训练已实现；具体 patch 采样方式属于实现假设 |
+| 前后左右四个深度相机，向下倾斜 30° | `simulation/collect_isaaclab_anymal_vectorized.py` | 方向、数量和倾角意图一致；安装位置、分辨率和点数上限属于实现假设 |
 
 ## 数据生成对应关系
 
 | 论文描述 | 当前实现 | 影响 |
 |---|---|---|
 | IsaacGym 随机生成 stairs、boxes、walls、roadblocks/结构化障碍物和 corridors | IsaacLab ANYmal-C 采集器和五类命名地形 | 仿真器和运动控制栈不同，因此不是完全相同的数据源；新的 vectorized 采集默认使用随机速度和初始 yaw |
-| stairs 宽度 `[0.2, 0.5] m`，高度 `[0.08, 0.25] m` | `paper_terrains.py` | 已按论文范围设置；修改前采集的 NPZ 仍属于历史数据 |
-| boxes 长宽 `[0.2, 2.0] m`，高度 `[0.08, 0.25] m` | `paper_terrains.py` | 是当前最接近论文的实现；box 数量和布局属于实现假设 |
-| walls 产生宽度 `[2, 6] m` 的 corridors | `paper_terrains.py` | 已使用该范围；墙体尺寸、高度和布局属于实现假设 |
-| pole 尺寸和完整场景采样过程 | `paper_terrains.py`、采集器 | 论文没有完整说明；当前 pole 几何是实现假设 |
+| stairs 宽度 `[0.2, 0.5] m`，高度 `[0.08, 0.25] m` | `simulation/paper_terrains.py` | 已按论文范围设置；修改前采集的 NPZ 仍属于历史数据 |
+| boxes 长宽 `[0.2, 2.0] m`，高度 `[0.08, 0.25] m` | `simulation/paper_terrains.py` | 是当前最接近论文的实现；box 数量和布局属于实现假设 |
+| walls 产生宽度 `[2, 6] m` 的 corridors | `simulation/paper_terrains.py` | 已使用该范围；墙体尺寸、高度和布局属于实现假设 |
+| pole 尺寸和完整场景采样过程 | `simulation/paper_terrains.py`、采集器 | 论文没有完整说明；当前 pole 几何是实现假设 |
 | 超过 200,000 个时间步观测，平均可见率 43% | `data/` 中的采集数据和 manifest | 当前数据量必须以 manifest 为准，不能仅凭运行评估声称达到论文规模；新数据包含代码、checkpoint 和环境溯源，历史 NPZ 不一定包含 |
 
 ## 评估对应关系

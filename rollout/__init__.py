@@ -1,0 +1,1 @@
+"""Temporal autoregressive rollout logic."""

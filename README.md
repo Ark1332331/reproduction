@@ -9,7 +9,7 @@ Structured Terrain*（结构化地形上的运动场景表示）。论文 PDF �
 
 1. 阅读 [`PAPER_ALIGNMENT.md`](PAPER_ALIGNMENT.md)，了解论文方法和当前代码的对应关系。
 2. 阅读 [`AGENTS.md`](AGENTS.md)，了解实验历史、已完成工作和当前状态。
-3. 使用 `run_r7_paper_train.py` 和 `run_r7_paper_eval.py` 进行主线训练和评估。
+3. 使用根目录的 `run_r7_paper_train.py` 和 `run_r7_paper_eval.py` 进行主线训练和评估；真正实现分别位于 `training/` 和 `evaluation/`。
 4. 阅读 [`MAINLINE_ARCHITECTURE.md`](MAINLINE_ARCHITECTURE.md)，了解文件职责和执行顺序。
 
 论文相关的默认参数集中在 [`paper_config.py`](paper_config.py) 中，包括：
@@ -28,14 +28,16 @@ Structured Terrain*（结构化地形上的运动场景表示）。论文 PDF �
 
 | 文件或目录 | 作用 |
 |---|---|
-| `paper_config.py` | 论文参数和明确标注的实现假设 |
-| `r1_*` | 位姿对齐、点云体素化和体素质心偏移表示 |
-| `r5_*` | MinkowskiEngine 稀疏输入、四层网络、损失、增强和评估指标 |
-| `r7_*` | 自回归滚动预测、数据增强和 IsaacLab 轨迹格式 |
-| `collect_*.py`、`paper_terrains.py` | 地形生成和仿真数据采集 |
-| `run_r7_paper_train.py`、`run_r7_paper_eval.py` | 主线训练和评估入口 |
-| `freeze_r7_split_manifest.py` | 固定训练集/验证集轨迹，防止场景 seed 交叉 |
-| `test_*.py` | 单元测试和方法契约测试 |
+| `configs/` | 论文参数和明确标注的实现假设 |
+| `simulation/` | 地形生成、IsaacLab 采集、采集调度和数据溯源 |
+| `data_pipeline/` | 训练/验证划分和数据接口工具 |
+| `representation/` | 位姿对齐、点云体素化和体素质心偏移表示 |
+| `models/` | MinkowskiEngine 稀疏输入和四层稀疏网络 |
+| `losses/` | 占用、likelihood 和位置偏移损失 |
+| `rollout/` | 12 步自回归滚动预测 |
+| `training/`、`evaluation/` | 训练、评估、数据增强和评估指标 |
+| `tests/` | 单元测试和方法契约测试 |
+| 根目录入口脚本 | 兼容旧命令的薄封装，实际逻辑在上述目录中 |
 | `data/` | 本地轨迹、manifest、日志和诊断结果 |
 | `results/` | 本地 checkpoint 和评估结果 |
 
@@ -56,7 +58,7 @@ Structured Terrain*（结构化地形上的运动场景表示）。论文 PDF �
 在仓库目录运行测试：
 
 ```bash
-python -m unittest discover -s . -p 'test_*.py'
+python -m unittest discover -s tests -p 'test_*.py'
 ```
 
 如果缺少依赖，这是环境配置问题，不代表模型或复现方法本身失败。

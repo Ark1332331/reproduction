@@ -7,22 +7,22 @@
 ## 整体执行流程
 
 ```text
-paper_config.py
+configs/paper_config.py
        │
        ├── IsaacLab 数据采集（isaaclab 环境）
-       │     paper_terrains.py                 地形生成
-       │     collect_isaaclab_anymal_vectorized.py  仿真采集
-       │     collect_r7_vectorized_dataset.py  批量采集
-       │     collect_r7_quota.py               按地形配额采集
-       │     freeze_r7_split_manifest.py      固定训练/验证划分
+       │     simulation/paper_terrains.py                 地形生成
+       │     simulation/collect_isaaclab_anymal_vectorized.py  仿真采集
+       │     simulation/collect_r7_vectorized_dataset.py  批量采集
+       │     simulation/collect_r7_quota.py               按地形配额采集
+       │     data_pipeline/freeze_r7_split_manifest.py    固定训练/验证划分
        │
        └── 模型训练和评估（nsr-me-cu130-t291 环境）
-             r1_data_representation.py         点云体素表示
-             r5_sparse_input.py                稀疏张量输入
-             r5_sparse_model.py                 稀疏补全网络
-             r5_sparse_loss.py                  损失函数
-             r7_autoregressive_rollout.py      自回归滚动预测
-             r7_data_augmentation.py           训练数据增强
+             representation/r1_data_representation.py  点云体素表示
+             models/r5_sparse_input.py                 稀疏张量输入
+             models/r5_sparse_model.py                 稀疏补全网络
+             losses/r5_sparse_loss.py                  损失函数
+             rollout/r7_autoregressive_rollout.py      自回归滚动预测
+             training/r7_data_augmentation.py          训练数据增强
                     │
                     ├── run_r7_paper_train.py  训练入口
                     └── run_r7_paper_eval.py   评估入口
@@ -32,20 +32,20 @@ paper_config.py
 
 | 模块 | 文件 | 负责内容 |
 |---|---|---|
-| 参数和契约 | `paper_config.py` | 论文中的空间范围、体素大小、滚动步数、剪枝阈值和优化器参数；同时记录实现假设 |
-| 地形生成 | `paper_terrains.py` | stairs、boxes、walls、poles、corridors 五类结构化地形 |
-| IsaacLab 采集 | `collect_isaaclab_anymal_vectorized.py`、`collect_isaaclab_anymal_trajectory.py` | 使用四个深度相机采集 ANYmal 数据；vectorized 版本是主路径，trajectory 版本是串行备用路径 |
-| 采集调度 | `collect_r7_dataset.py`、`collect_r7_vectorized_dataset.py`、`collect_r7_quota.py` | 分配 seed、重试失败任务、清理超时进程、生成 manifest、按地形配额采集 |
-| 数据划分 | `freeze_r7_split_manifest.py` | 固定训练集和验证集的轨迹成员，拒绝 scene seed 重叠 |
-| 采集溯源 | `r7_vectorized_capture_contract.py`、`r7_capture_provenance.py` | 固定文件格式、环境信息、代码版本、checkpoint 和采集配置 |
-| R1 表示 | `r1_data_representation.py` | 将点云变成机器人中心坐标系下的 3D 体素和质心偏移 |
-| 稀疏输入 | `r5_sparse_input.py` | 将 NumPy 体素数据转换为 MinkowskiEngine 稀疏张量 |
-| R5 网络 | `r5_sparse_model.py` | 四层 4D 稀疏 U-Net、生成式解码器、候选剪枝和最终 `k=0` 输出 |
-| 损失函数 | `r5_sparse_loss.py` | 占用损失、位置偏移损失、多尺度 likelihood 目标和 BCE |
-| 数据增强 | `r7_measurement_augmentation.py`、`r7_data_augmentation.py` | 模拟测量误差、遮挡、离群点、位姿噪声和轨迹镜像；目标数据保持干净 |
-| R7 方法 | `r7_autoregressive_rollout.py` | 将上一帧预测作为下一帧历史输入，执行 12 步滚动训练和评估 |
-| 评估指标 | `r5_sparse_evaluation.py` | Precision、Recall、F1、macro/micro 汇总、高度误差和覆盖率 |
-| 运行入口 | `run_r7_paper_train.py`、`run_r7_paper_eval.py` | 主线 checkpoint 训练和验证 |
+| 参数和契约 | `configs/paper_config.py` | 论文中的空间范围、体素大小、滚动步数、剪枝阈值和优化器参数；同时记录实现假设 |
+| 地形生成 | `simulation/paper_terrains.py` | stairs、boxes、walls、poles、corridors 五类结构化地形 |
+| IsaacLab 采集 | `simulation/collect_isaaclab_anymal_vectorized.py`、`simulation/collect_isaaclab_anymal_trajectory.py` | 使用四个深度相机采集 ANYmal 数据；vectorized 版本是主路径，trajectory 版本是串行备用路径 |
+| 采集调度 | `simulation/collect_r7_dataset.py`、`simulation/collect_r7_vectorized_dataset.py`、`simulation/collect_r7_quota.py` | 分配 seed、重试失败任务、清理超时进程、生成 manifest、按地形配额采集 |
+| 数据划分 | `data_pipeline/freeze_r7_split_manifest.py` | 固定训练集和验证集的轨迹成员，拒绝 scene seed 重叠 |
+| 采集溯源 | `simulation/r7_vectorized_capture_contract.py`、`simulation/r7_capture_provenance.py` | 固定文件格式、环境信息、代码版本、checkpoint 和采集配置 |
+| R1 表示 | `representation/r1_data_representation.py` | 将点云变成机器人中心坐标系下的 3D 体素和质心偏移 |
+| 稀疏输入 | `models/r5_sparse_input.py` | 将 NumPy 体素数据转换为 MinkowskiEngine 稀疏张量 |
+| R5 网络 | `models/r5_sparse_model.py` | 四层 4D 稀疏 U-Net、生成式解码器、候选剪枝和最终 `k=0` 输出 |
+| 损失函数 | `losses/r5_sparse_loss.py` | 占用损失、位置偏移损失、多尺度 likelihood 目标和 BCE |
+| 数据增强 | `training/r7_measurement_augmentation.py`、`training/r7_data_augmentation.py` | 模拟测量误差、遮挡、离群点、位姿噪声和轨迹镜像；目标数据保持干净 |
+| R7 方法 | `rollout/r7_autoregressive_rollout.py` | 将上一帧预测作为下一帧历史输入，执行 12 步滚动训练和评估 |
+| 评估指标 | `evaluation/r5_sparse_evaluation.py` | Precision、Recall、F1、macro/micro 汇总、高度误差和覆盖率 |
+| 运行入口 | `training/run_r7_paper_train.py`、`evaluation/run_r7_paper_eval.py` | 主线 checkpoint 训练和验证；根目录同名脚本仅作兼容入口 |
 
 ## 两个必要环境
 
