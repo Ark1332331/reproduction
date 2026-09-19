@@ -1,62 +1,62 @@
-# NSR reproduction workspace
+# NSR 复现项目
 
-This directory contains a staged, testable reproduction of *Neural Scene
-Representation for Locomotion on Structured Terrain*. The paper PDF is the
-source of truth for method claims. The code does not contain the authors'
-implementation; values not stated in the paper are labelled as assumptions.
+本目录用于复现论文 *Neural Scene Representation for Locomotion on
+Structured Terrain*（结构化地形上的运动场景表示）。论文 PDF 是判断方法是否
+符合原文的主要依据。仓库中没有作者的原始代码；论文没有明确说明的参数，都会
+在代码或文档中标记为“实现假设”。
 
-## Start here
+## 从这里开始
 
-1. Read [`PAPER_ALIGNMENT.md`](PAPER_ALIGNMENT.md) for the paper-to-code
-   contract and known deviations.
-2. Read [`AGENTS.md`](AGENTS.md) for the chronological experiment record and
-   the current reproduction status.
-3. Use `run_r7_paper_train.py` and `run_r7_paper_eval.py` as the canonical
-   training/evaluation entrypoints.
-4. Read [`MAINLINE_ARCHITECTURE.md`](MAINLINE_ARCHITECTURE.md) for the exact
-   source-file map and execution order.
+1. 阅读 [`PAPER_ALIGNMENT.md`](PAPER_ALIGNMENT.md)，了解论文方法和当前代码的对应关系。
+2. 阅读 [`AGENTS.md`](AGENTS.md)，了解实验历史、已完成工作和当前状态。
+3. 使用 `run_r7_paper_train.py` 和 `run_r7_paper_eval.py` 进行主线训练和评估。
+4. 阅读 [`MAINLINE_ARCHITECTURE.md`](MAINLINE_ARCHITECTURE.md)，了解文件职责和执行顺序。
 
-The canonical method defaults are centralized in [`paper_config.py`](paper_config.py):
-64³ voxels over 3.2 m³, 0.05 m cells, 12-step temporal rollout, alpha 0.5,
-and Adam learning rate 0.01 exponentially decayed to 0.0001. Canonical
-training also defaults to strict-paper candidate generation (`target_guard` is
-off); enable `--target-guard` only for a recorded engineering comparison.
+论文相关的默认参数集中在 [`paper_config.py`](paper_config.py) 中，包括：
 
-## Logical layout
+- `64×64×64` 体素网格；
+- `3.2×3.2×3.2 m` 的空间范围；
+- `0.05 m` 体素大小；
+- 12 步时间滚动预测；
+- 剪枝阈值 `alpha=0.5`；
+- Adam 学习率从 `0.01` 指数衰减到 `0.0001`。
 
-| Area | Role |
+主线训练默认关闭 `target_guard`，以保持论文方法的候选生成逻辑。只有在做工程对比
+时，才使用 `--target-guard`，并在实验记录中明确标注。
+
+## 项目目录和文件分工
+
+| 文件或目录 | 作用 |
 |---|---|
-| `paper_config.py` | Constants explicitly stated by the paper plus clearly named implementation defaults |
-| `r1_*` | Pose alignment and voxel/centroid representation |
-| `r5_*` | Minkowski sparse input, four-level network, losses, augmentation, metrics |
-| `r7_*` | Detached autoregressive rollout and IsaacLab trajectory contract |
-| `collect_*.py`, `paper_terrains.py` | Simulation data collection and terrain generation |
-| `r7_capture_provenance.py` | Code, checkpoint, package and paper-contract provenance for new captures |
-| `run_r7_paper_train.py`, `run_r7_paper_eval.py` | Canonical training and evaluation |
-| `collect_r7_*.py` | Recoverable collection orchestration |
-| `test_*.py` | Unit and mechanism-contract tests |
-| `data/` | Captured trajectories, manifests, logs, and diagnostic JSON/PT files |
-| `results/` | Checkpoints and selected result artifacts |
+| `paper_config.py` | 论文参数和明确标注的实现假设 |
+| `r1_*` | 位姿对齐、点云体素化和体素质心偏移表示 |
+| `r5_*` | MinkowskiEngine 稀疏输入、四层网络、损失、增强和评估指标 |
+| `r7_*` | 自回归滚动预测、数据增强和 IsaacLab 轨迹格式 |
+| `collect_*.py`、`paper_terrains.py` | 地形生成和仿真数据采集 |
+| `run_r7_paper_train.py`、`run_r7_paper_eval.py` | 主线训练和评估入口 |
+| `freeze_r7_split_manifest.py` | 固定训练集/验证集轨迹，防止场景 seed 交叉 |
+| `test_*.py` | 单元测试和方法契约测试 |
+| `data/` | 本地轨迹、manifest、日志和诊断结果 |
+| `results/` | 本地 checkpoint 和评估结果 |
 
-Generated data and checkpoints are evidence, not source code. They remain on
-the local machine but are ignored by Git so the source repository stays small.
+`data/` 和 `results/` 中的内容是实验证据，不是源代码。它们保留在本地，并被 Git
+忽略，不会进入源码仓库。
 
-Newly captured NPZ files carry `capture_schema_version` and a nested
-`provenance` record. Do not mix them with historical NPZ files without checking
-the terrain profile, motion randomization, and provenance fields.
+新采集的 NPZ 文件包含 `capture_schema_version` 和 `provenance` 信息。使用历史 NPZ
+文件时，需要检查地形配置、运动随机化方式和 provenance，不能直接与新数据混用。
 
-## Environment
+## Conda 环境
 
-The default system Python in this workspace does not provide `numpy`, `torch`,
-or `MinkowskiEngine`. Run tests and training in the project environment that
-provides those packages (the existing scripts refer to the IsaacLab and
-MinkowskiEngine environments in their module docstrings).
+本机默认 Python 环境没有 `numpy`、`torch` 或 `MinkowskiEngine`。请在正确的 Conda
+环境中运行代码：
 
-Example test command from this directory:
+- `isaaclab`：运行 IsaacLab/Isaac Sim、ANYmal、相机和地形采集；
+- `nsr-me-cu130-t291`：运行 PyTorch、MinkowskiEngine、模型训练、评估和稀疏网络测试。
+
+在仓库目录运行测试：
 
 ```bash
 python -m unittest discover -s . -p 'test_*.py'
 ```
 
-This command must be run in the configured environment; a missing dependency is
-an environment failure, not a model result.
+如果缺少依赖，这是环境配置问题，不代表模型或复现方法本身失败。

@@ -1,17 +1,16 @@
-# Removed experiment code
+# 已删除的历史实验代码
 
-The source tree now contains only the maintained R1→R5→R7 reproduction path.
-The following categories were removed during the cleanup because they are not
-required to run the current reproduction:
+当前源码目录只保留 R1→R5→R7 论文复现主线，以及运行主线所需的采集、数据划分和
+测试文件。以下内容在整理仓库时删除，因为它们不是当前复现必需的代码：
 
-- R2/R3/R3b toy completion and grid baselines;
-- R5 urban-depth and standalone R5 training experiments;
-- R6 controller/height-scan and policy-play prototypes;
-- historical R7 non-checkpointed wrappers;
-- one-off R7 pruning, feature, target, seed, temporal and overfit probes;
-- old GPU wait/scale launch scripts and legacy depth collectors;
-- generated Python bytecode and local runtime logs.
+- R2/R3/R3b toy 补全流程和二维网格 baseline；
+- R5 urban-depth 实验和独立 R5 训练入口；
+- R6 控制器、height scan 和 policy play 原型；
+- 历史 R7 非 checkpoint 训练包装器；
+- 一次性 R7 剪枝、特征、目标、随机种子、时间和过拟合探针；
+- 旧版 GPU 等待/scale 启动脚本和旧深度采集器；
+- 已生成的 Python 字节码和本地运行日志。
 
-Numeric evidence produced by those experiments remains local under `data/` and
-`results/` when present, but those paths are ignored by Git and are not part of
-the maintained source API.
+这些实验生成的数值证据，如果本机仍然存在，会保留在 `data/` 和 `results/` 中，
+用于追溯历史和排查问题。但这两个目录已被 Git 忽略，不属于当前维护的源码接口，
+也不能直接当作论文复现结果。
