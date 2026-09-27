@@ -61,12 +61,17 @@
 ### D-DATA-001 — terrain micro-distributions
 状态：`OPEN_APPROVAL`
 
-未给 poles 尺寸、wall 高厚、对象数量和完整布局分布等。
+未给 poles 尺寸、wall 厚度、对象数量和完整布局分布等；wall 训练高度单独见已批准的 `D-WALL-001`。
+
+### D-WALL-001 — 训练墙固定高度
+状态：`APPROVED`（Stage 1；用户于 2026-09-27 批准）
+
+论文明确要求所有训练墙同高，但未公布具体数值。用户批准 retry 的训练墙统一固定为 `1.2 m`，分类为 `IMPLEMENTATION_ASSUMPTION`，并在数据 manifest 与结果中记录。这个批准只覆盖训练墙高度，不批准墙体厚度/数量/位置，也不代表旧 `walls_terrain` 的随机墙高数据合格。采集前须测试每个训练场景所有 wall 的高度均为 `1.2 m`。
 
 ### D-SIM-001 — IsaacGym → IsaacLab
-状态：`OPEN_APPROVAL`
+状态：`APPROVED`（Stage 1；用户于 2026-09-27 批准）
 
-原文明确使用 IsaacGym；retry 现实上倾向继续使用 IsaacLab。这是明确的 simulator deviation，进入 Stage 1 时需要正式批准并记录影响。
+原文明确使用 IsaacGym；用户批准 retry 在 Stage 1 使用 IsaacLab 作为仿真器替代，须在数据 manifest、阶段报告和最终结果中标记 `SIMULATOR_DEVIATION: IsaacGym -> IsaacLab`。此批准不等于旧地形/相机/策略/GT/位姿参数自动获批，也不表示 IsaacLab 的观测分布与 IsaacGym 等价。后续对照应记录渲染、深度、运动策略和可见性差异。
 
 ### D-SENSOR-001 — camera micro-configuration
 状态：`OPEN_APPROVAL`
@@ -96,7 +101,7 @@
 ### D-SCOPE-001 — retry 阶段性成功边界
 状态：`APPROVED`（Stage 0；用户于 2026-09-27 确认候选 A）
 
-已确认第一阶段目标：完成可审计的仿真方法复现，包含论文方法机制与独立仿真验证；不把真实机器人数据、BLK2GO/ICP、Table I 数值、真实部署作为本阶段通过条件。真实机器人复现可作为后续独立目标，不能因此宣称已复现 Table I。此批准仅确定范围，不批准仿真器替代、指标计算、位姿或任何数值达标阈值；旧实验结果不得写作 retry 实测。
+已确认第一阶段目标：完成可审计的仿真方法复现，包含论文方法机制与独立仿真验证；不把真实机器人数据、BLK2GO/ICP、Table I 数值、真实部署作为本阶段通过条件。真实机器人复现可作为后续独立目标，不能因此宣称已复现 Table I。此项 Stage 0 批准本身仅确定范围；仿真器替代后来由 `D-SIM-001` 单独批准，指标计算、位姿及任何数值达标阈值仍未批准；旧实验结果不得写作 retry 实测。
 
 ### D-METRIC-001 — 仿真主指标协议
 状态：`OPEN_APPROVAL`（Stage 0 定义边界，Stage 7 落地）
